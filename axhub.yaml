@@ -1,0 +1,9 @@
+version: axhub/v1
+name: rebate-agent
+runtime:
+  port: 8080
+  health_path: /healthz
+build:
+  deploy_method: docker
+  dockerfile: Dockerfile
+  start: node server.mjs
