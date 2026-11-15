@@ -1,0 +1,8 @@
+record_id|warning_rule|due_field|condition|recipients|message|source_ref|effective_at|source_type|is_synthetic|generation_reason
+S4-02-01|W1|demand_input_due|version_status=유효인 수요 입력 버전 없음|MKT|수요 입력 마감 경과: 수요 미확인, 공급 판정 불가|problem4/명세.md S4-02|2026-07-01|가정|true|원본에 통보 규칙 없음
+S4-02-02|W2|judgment_due|공급 판정이 없거나 판정불가, 또는 재무 확인 미완|SCM,FIN|판정·재무 확인 마감 경과: 상신 자료 미완|problem4/명세.md S4-02|2026-07-01|가정|true|원본에 통보 규칙 없음
+S4-02-03|W3|submission_due|approval_status=미상신|MKT,FIN|상신 마감 경과|problem4/명세.md S4-02|2026-07-01|가정|true|원본에 통보 규칙 없음
+S4-02-04|W4|first_reply_due|approval_status=결재 대기|APPROVER|1차 결재 회신 마감 경과: 회신 필요, 거절 시 재상신 여유 감소|problem4/명세.md S4-02|2026-07-01|가정|true|원본에 통보 규칙 없음
+S4-02-05|W5|final_reply_due|approval_status가 승인·거절이 아님(당일)|APPROVER,MKT|미결정을 이유로 기한을 넘기는 것은 묵시적 승인과 같은 효과|00_common/approval_authority_policy.md 38~39행; problem4/명세.md S4-02|2026-07-01|가정|true|문구는 정책 원문, 시점·수신자는 가정
+S4-02-06|W6|approval_anchor_date|기준일이 settlement_date 또는 planned_order_date이고 그날까지 미승인|APPROVER,MKT,FIN|미승인 기준일 경과. 처리 방식은 확인 불가(규칙 없음)|사용자 결정 U13; problem4/명세.md S4-02|2026-07-01|가정|true|경고와 확인 요청만 낸다
+S4-02-07|W7|request_due_date|확인 요청이 회신 대기|REQUESTED_TO|확인 요청 회신 기한 경과|problem4/명세.md S4-02|2026-07-01|가정|true|원본에 통보 규칙 없음

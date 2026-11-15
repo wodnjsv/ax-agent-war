@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W01 운영 시스템</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">캠페인 기안 도우미</div>
+    <nav>
+      <a href="#/">업무 화면</a>
+      <span class="nav-sep">상세 근거:</span>
+      <a href="#/plans">기안 목록</a>
+      <a href="#/events">사건 기록</a>
+      <a href="#/mock">모의 입력·날짜 진행</a>
+    </nav>
+    <div class="status">
+      <span>가상 일자 <b id="clock">-</b></span>
+      <span>AI <b id="ai">-</b></span>
+    </div>
+  </header>
+  <div class="legend" id="legend"></div>
+  <main id="view"><p class="muted">불러오는 중…</p></main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -2,7 +2,12 @@
   "name": "rebate-agent",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
   "scripts": {
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "test": "node app/run-tests.mjs",
+    "reset": "node app/cli.mjs reset"
   }
 }

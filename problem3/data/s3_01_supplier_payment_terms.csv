@@ -1,0 +1,2 @@
+record_id|supplier_id|payment_term_code|payment_close_basis|payment_month_offset|payment_day|nonbusiness_day_rule|effective_at|source_ref|source_type|is_synthetic|scenario_id|generation_reason|spec_ref
+S3-01-001|Corevia|M1_D21|invoice_month|1|21|next_business_day|2026-07-01|02_masil/financials/fin_ap_aging_ms.csv#MAP-0001~MAP-0014;02_masil/inventory/sc_purchase_orders_ms.csv#SPO-0001~SPO-0014;02_masil/master/m_sku_ms.csv#source_company|가정|true|BASE|발주 지급일 규칙이 원본에 없어 발주안 지급일 산출에 필요. 사용자 결정 U10(월 마감 익월 21일). 원본 AP 14건(청구 06-22~26, 지급 07-21)과 일치|problem3/명세.md#S3-01

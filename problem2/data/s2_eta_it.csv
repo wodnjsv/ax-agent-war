@@ -1,0 +1,15 @@
+record_id|data_version|source_ref|sku_id|eta_date|eta_status|eta_qty|eta_replied_at|occurred_at|effective_at|source_type|is_synthetic|scenario_id|generation_reason|spec_ref
+S2-ETA-IT-v1-SKU-1001|v1|IN_TRANSIT:SKU-1001|SKU-1001|2026-07-06|확정|15821|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-1002|v1|IN_TRANSIT:SKU-1002|SKU-1002|2026-07-06|확정|14444|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-1003|v1|IN_TRANSIT:SKU-1003|SKU-1003|2026-07-06|확정|598|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-1004|v1|IN_TRANSIT:SKU-1004|SKU-1004|2026-07-20|지연|12998|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|불리한 건(A1): 운송 중 물량 07-20 주 입고|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-2001|v1|IN_TRANSIT:SKU-2001|SKU-2001|2026-07-06|확정|1823|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-2002|v1|IN_TRANSIT:SKU-2002|SKU-2002|2026-07-06|확정|1089|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-2003|v1|IN_TRANSIT:SKU-2003|SKU-2003|2026-07-06|확정|2459|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-3001|v1|IN_TRANSIT:SKU-3001|SKU-3001|2026-07-06|확정|16|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-3002|v1|IN_TRANSIT:SKU-3002|SKU-3002|2026-07-06|확정|857|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-3003|v1|IN_TRANSIT:SKU-3003|SKU-3003|2026-07-06|확정|3079|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-4001|v1|IN_TRANSIT:SKU-4001|SKU-4001|2026-07-06|확정|3129|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-4002|v1|IN_TRANSIT:SKU-4002|SKU-4002|2026-07-06|확정|3473|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-5001|v1|IN_TRANSIT:SKU-5001|SKU-5001|2026-07-06|확정|1779|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT
+S2-ETA-IT-v1-SKU-5002|v1|IN_TRANSIT:SKU-5002|SKU-5002|2026-07-06|확정|3382|2026-07-02|2026-07-02|2026-07-02|모의회신|true|BASE|운송 중 전량 07-06 주 입고 확인|problem2/명세.md 3.3 S2-ETA-IT

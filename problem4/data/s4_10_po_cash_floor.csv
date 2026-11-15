@@ -1,0 +1,3 @@
+record_id|scenario_id|approver|floor_krw|condition_text|source_ref|effective_at|source_type|is_synthetic|generation_reason
+S4-10-00|BASE|*|0|발주안 승인 후 재전망 최저 잔액 0원 이상(Masil 단독 기준 지급 재원. 그룹 지원은 판정에 넣지 않음)|problem4/명세.md 9.10; 조정자 확정 (E)-2; 02_masil/financials/covenant_terms stand-alone 원칙|2026-07-01|가정|true|기본 시나리오의 발주안 모의 승인 기준
+S4-10-01|S-CEO-FLOOR|GRP_CEO|1500000000|그룹 CEO 승인 조건: 발주안 승인 후 재전망 최저 잔액 15억원 이상|problem4/명세.md 9.12; 사용자 결정 2026-11-15; 조정자 마지막 조정 2026-11-15|2026-07-01|가정|true|원본에 없는 승인권자의 입장을 가정한 불리한 회신 시나리오. 그룹 CEO 결재 발주안에만 적용, 값은 이 파일에서 바꾼다. 값 변경 10억→15억(조정자 마지막 조정): 문제 2 정기 보충 가정(S2-BLC) 뒤 발주안이 줄어 승인 후 최저 잔액이 가장 낮아도 11.81억이라 10억 기준으로는 거절이 나지 않았다. 시나리오 목적(현금 규칙으로 발주안이 실제로 거절되는 장면)을 지키려고 올렸다

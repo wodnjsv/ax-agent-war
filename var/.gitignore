@@ -1,0 +1,3 @@
+# 실행 중 DB(w01.sqlite)와 WAL 파일은 커밋하지 않는다
+*
+!.gitignore

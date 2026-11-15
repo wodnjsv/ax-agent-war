@@ -1,0 +1,5 @@
+record_id|param|value_bd|basis|source_ref|effective_at|source_type|is_synthetic|generation_reason
+S4-01-01|demand_input_due_offset_bd|-2|submission_due|사용자 결정 U11(2026-11-15); problem4/명세.md S4-01|2026-07-01|가정|true|수요 입력 마감 역산 일수. 원본에 규칙 없음
+S4-01-02|judgment_due_offset_bd|-1|submission_due|사용자 결정 U11(2026-11-15); problem4/명세.md S4-01|2026-07-01|가정|true|판정·재무 확인 마감 역산 일수. 원본에 규칙 없음
+S4-01-03|final_reply_due_offset_bd|-1|approval_anchor_date|조정자 기준 C10; problem4/명세.md 4.2|2026-07-01|가정|true|최종 회신 마감 = 승인 기준일 − 1영업일
+S4-01-04|alt_selection_due_offset_bd|1|first_reply_due|조정자 기준 C10의 2×std+1 구성(1차 결재·대안 선택 1일·재상신); problem4/명세.md 4.2|2026-07-01|가정|true|대안 선택 마감 = 1차 회신 마감 + 1영업일

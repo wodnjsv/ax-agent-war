@@ -1,0 +1,386 @@
+<title>W01 해결 방식</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* 레이아웃: 한 칼럼 설계서. 중심 장치(확정 전 점검) → 구성요소 4개(같은 5칸 구조) → 상태·역할·데이터 → 시연 사례. 문제 정의서와 같은 토큰을 쓴다. */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --sunken:#eceff3; --line:#d5dae2;
+  --fg:#18202b; --muted:#5b6676; --accent:#1f4fa3; --accent-soft:#e3ebf8;
+  --auto:#0f6b5c; --auto-soft:#dcf1ec;
+  --ask:#8a5a00; --ask-soft:#fbeed1;
+  --appr:#a3312f; --appr-soft:#f9e1df;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1a2029; --sunken:#222a35; --line:#333d4b;
+  --fg:#e6eaf0; --muted:#9aa5b5; --accent:#8db1f2; --accent-soft:#1f2f4d;
+  --auto:#6fd0bd; --auto-soft:#16352f;
+  --ask:#e8bd62; --ask-soft:#3a2f14;
+  --appr:#f09a95; --appr-soft:#43201f;
+  color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1a2029; --sunken:#222a35; --line:#333d4b;
+  --fg:#e6eaf0; --muted:#9aa5b5; --accent:#8db1f2; --accent-soft:#1f2f4d;
+  --auto:#6fd0bd; --auto-soft:#16352f;
+  --ask:#e8bd62; --ask-soft:#3a2f14;
+  --appr:#f09a95; --appr-soft:#43201f;
+  color-scheme:dark }
+
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.7;
+  padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.page{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3,h4{margin:0;text-wrap:balance;line-height:1.3}
+h1{font-size:2rem;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.4rem;font-weight:700}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--accent)}
+.lede{font-size:1.08rem;max-width:66ch}
+.meta{font-size:.85rem;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-lg{display:flex;flex-direction:column;gap:24px}
+.prose{max-width:68ch}
+ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+ol{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:6px}
+strong{font-weight:600}
+code{font-family:var(--mono);font-size:.86em;background:var(--sunken);padding:1px 5px;border-radius:3px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.note{font-size:.86rem;color:var(--muted);max-width:70ch}
+
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;vertical-align:middle}
+.t-src{background:var(--sunken);color:var(--muted)}
+.t-auto{background:var(--auto-soft);color:var(--auto)}
+.t-ask{background:var(--ask-soft);color:var(--ask)}
+.t-appr{background:var(--appr-soft);color:var(--appr)}
+.t-syn{background:var(--accent-soft);color:var(--accent)}
+
+.central{background:var(--accent-soft);border-radius:6px;padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.central .lab{font-size:.78rem;font-weight:600;color:var(--accent)}
+.central p{font-size:1.08rem;font-weight:500;line-height:1.65}
+
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem;line-height:1.5}
+th,td{padding:8px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-weight:600;font-size:.78rem;color:var(--muted);background:var(--sunken);white-space:nowrap}
+td.k{white-space:nowrap;font-weight:500}
+pre.mermaid{margin:0;padding:12px;min-width:620px;background:var(--surface)}
+
+.comp{display:flex;flex-direction:column;gap:18px;border-top:2px solid var(--fg);padding-top:20px}
+.spec{display:grid;grid-template-columns:140px 1fr;border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden}
+.spec>div{padding:10px 14px;border-bottom:1px solid var(--line);min-width:0;font-size:.92rem}
+.spec>div:nth-last-child(-n+2){border-bottom:0}
+.spec>.h{background:var(--sunken);font-size:.8rem;font-weight:600;color:var(--muted)}
+@media (max-width:560px){.spec{grid-template-columns:1fr}.spec>.h{border-bottom:0;padding-bottom:2px}.spec>div:nth-last-child(2){border-bottom:0}}
+.formula{font-family:var(--mono);font-size:.84rem;background:var(--sunken);border-radius:4px;padding:10px 12px;overflow-x:auto;white-space:nowrap}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pair>div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.pair .lab{font-size:.78rem;font-weight:600;color:var(--muted)}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.case .name{font-weight:600;font-size:1.02rem}
+.case li{font-size:.93rem}
+</style>
+
+<div class="page">
+
+<header class="stack">
+  <div class="eyebrow">AX 인재전쟁 · W01 캠페인 수요와 공급 일정 · Masil Commerce</div>
+  <h1>W01 해결 방식</h1>
+  <p class="lede">확정기한이 있는 기안마다, 기한 전에 닫혀야 하는 확인을 시스템이 제공 부서에 요청하고 회신에 따라 판정·승인·계획을 갱신한다.</p>
+  <p class="meta">확정된 <a href="https://claude.ai/artifact/Am5S1KPGgqCxstoueQSrWq">W01 문제 정의</a>(5차 개정)를 전제로 한다 · 가상기업 기준일 2026-07-01 · 1차 작성<br>
+  표기: <span class="tag t-auto">계산·규칙</span> 시스템이 처리 &nbsp;<span class="tag t-ask">확인</span> 담당 부서가 회신 &nbsp;<span class="tag t-appr">승인</span> 권한자 결정 &nbsp;<span class="tag t-syn">모의</span> 시연용 가상 입력 &nbsp;<span class="tag t-src">가정</span> 이 문서의 가정</p>
+</header>
+
+<!-- ───────── 출발점 ───────── -->
+<section class="stack-lg">
+  <h2>문제 정의에서 가져오는 것</h2>
+  <div class="pair">
+    <div>
+      <span class="lab">중심 문제</span>
+      <p>기안의 계약은 2026-07-17부터 자동 확정된다. 공급 가능성은 판단할 입력이 없고, 정책 기준으로 식별되는 상위 승인 경로가 검토에 반영됐는지 확인되지 않는다.</p>
+    </div>
+    <div>
+      <span class="lab">확정한 기준과 범위</span>
+      <ul>
+        <li>늦어진다는 것은 필요한 정보가 기한 전에 건네지지 않은 상태다.</li>
+        <li>주업무는 캠페인 추가분의 공급 가능성과 승인 경로 확인이다.</li>
+        <li>기존 판매의 공급 공백은 배경 제약으로 쓴다.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="central">
+    <span class="lab">해결의 중심 장치 — 확정 전 점검</span>
+    <p>기안 한 건마다 세 가지 확인을 둔다. 수요 입력, 공급 판정, 승인 경로. 셋이 모두 닫혀야 "확정 가능"이 된다. 닫히지 않은 확인은 제공 부서에 요청으로 나가고, 확정기한에서 역산한 날짜에 다시 올라온다.</p>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>문제 정의의 조건</th><th>건네져야 하는 정보</th><th>해결 구성요소</th><th>닫히는 확인</th></tr></thead>
+    <tbody>
+      <tr><td class="k">1. 수요 수량·기간 부재</td><td>마케팅 → SCM</td><td><a href="#c1">가. 수요 입력 요청과 등록</a></td><td>수요 입력</td></tr>
+      <tr><td class="k">2. 공급 공백·일정 불일치</td><td>Corevia → SCM → 마케팅</td><td><a href="#c2">나. 공급 판정과 대안</a></td><td>공급 판정</td></tr>
+      <tr><td class="k">3. 승인 경로 반영 미확인</td><td>재무 → SCM·마케팅·승인권자, 기안 부서 → 승인권자</td><td><a href="#c3">다. 승인 경로 판정과 상신</a></td><td>승인 경로</td></tr>
+      <tr><td class="k">4. 이력 부재</td><td>각 단계 처리 부서 → 전 부서</td><td><a href="#c4">라. 사건 기록과 재검토</a></td><td>세 확인 전체의 추적</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">문제 정의에서 승인 경로 문제는 캠페인 수요와 무관하게 성립한다고 정리했다. 그래서 승인 경로 판정은 수요 입력을 기다리지 않고 기안 접수와 동시에 시작한다.</p>
+</section>
+
+<!-- ───────── 흐름 ───────── -->
+<section class="stack-lg" id="flow">
+  <h2>기안 한 건이 지나는 길</h2>
+  <div class="scroll"><pre class="mermaid">
+flowchart TD
+  A["기안 접수<br/>확정기한·집행 예정일 등록"] --> B["가. 수요 입력 요청<br/>마케팅"]
+  A --> C["다. 승인 경로 판정<br/>정책 방식 재전망과 대조"]
+  B -->|"등록"| D["나. 공급 판정<br/>SCM"]
+  B -.->|"미등록"| H["수요 미확인<br/>기한 역산 재요청"]
+  D -->|"가능"| G["확정 가능"]
+  D -->|"부족·조건부"| E["대안 선택<br/>마케팅·SCM"]
+  E --> D
+  C --> F["승인 요청<br/>평시 권한 또는 그룹 CEO"]
+  F -->|"승인"| G
+  F -->|"거절·조건부"| E
+  G --> I["계획·발주안·상태 갱신"]
+  J["새 사건<br/>입고 회신·회수일 정정·수요 정정"] -.-> D
+  J -.-> C
+  </pre></div>
+  <p class="note">"확정 가능"은 공급 판정과 승인이 둘 다 닫혀야 열린다. 점선은 조건이 바뀌거나 정보가 없을 때의 경로다. 교육용 현재 흐름은 마케팅 → SCM → 재무 → 승인권자 순서의 한 줄이었고, 여기서는 수요·공급 확인과 승인 경로 판정을 나란히 진행한다.</p>
+</section>
+
+<!-- ───────── 가 ───────── -->
+<section class="comp" id="c1">
+  <div class="stack">
+    <div class="eyebrow">구성요소 가 · 조건 1에 대응</div>
+    <h2>수요 입력 요청과 등록</h2>
+    <p class="prose">원본으로 캠페인 수요를 예측하지 않는다. 마케팅이 가진 판단을 SCM이 쓸 수 있는 형식으로 받는다. 요청할 때 SKU별 수용 여지를 함께 보여줘 마케팅이 공급 상황을 알고 답하게 한다.</p>
+  </div>
+  <div class="spec">
+    <div class="h">시작</div><div>기안 접수. 확정기한이 가까운 건부터 요청이 나간다.</div>
+    <div class="h">시스템이 하는 일</div><div><span class="tag t-auto">계산·규칙</span> 캠페인 → 제품라인 → SKU 전개(원본에서 전건 일치를 확인한 관계). SKU별 기준 수요와 주차별 수용 여지 계산. 기안 배수와 같은 캠페인의 과거 명목 실적을 나란히 제시.</div>
+    <div class="h">사람이 하는 일</div><div><span class="tag t-ask">확인</span> 마케팅 담당이 SKU, 판매 시작 주, 판매 주수, 추가 수요(기준 대비 증가율 또는 수량), 근거를 등록한다.</div>
+    <div class="h">정보가 없으면</div><div>상태는 <strong>수요 미확인</strong>. 공급 판정은 "판정 불가"로 남는다. 판매 기간에 기본값을 넣지 않는다. 집행 예정일은 대금 집행일이라 판매 시점의 근거가 되지 않기 때문이다.</div>
+    <div class="h">결과</div><div>수요 입력(버전, 작성자, 기준 시점)이 생기고 공급 판정이 시작된다. 정정하면 새 버전이 되고 그 버전을 쓴 판정이 재검토 대상이 된다.</div>
+  </div>
+  <p class="note">수용 여지는 "현재 재고와 확인된 입고만으로, 추가 보충 없이" 계산한 참고값이다. 마케팅의 입력을 그 값으로 제한하지 않는다. 한도를 넘는 수요도 등록되며, 그 경우 구성요소 나에서 부족 판정과 대안이 나온다.</p>
+</section>
+
+<!-- ───────── 나 ───────── -->
+<section class="comp" id="c2">
+  <div class="stack">
+    <div class="eyebrow">구성요소 나 · 조건 2에 대응</div>
+    <h2>공급 판정과 대안</h2>
+    <p class="prose">캠페인 추가분을 기존 수요 위에 얹어 주차별로 전개한다. 기존 판매의 공급 공백은 여기서 배경 제약으로 작동한다. 더마처럼 기존 수요만으로 공백이 전망되는 SKU는 추가분을 받을 여지가 없다는 판정이 나온다.</p>
+  </div>
+  <div class="formula">예상 재고[주] = 예상 재고[전 주] + 입고[주] − 기준 수요 − 캠페인 추가분[주]</div>
+  <div class="spec">
+    <div class="h">시작</div><div>수요 입력 등록, 또는 입고 일정을 바꾸는 회신.</div>
+    <div class="h">시스템이 하는 일</div><div><span class="tag t-auto">계산·규칙</span> 판매 기간 동안의 주차별 재고 전개와 판정. 입고예정일이 미확인이면 두 경우(일정대로 / 지연)를 모두 계산한다.</div>
+    <div class="h">판정</div><div><strong>가능</strong>: 판매 기간 내내 재고가 남는다. <strong>조건부</strong>: 미확인 입고가 일정대로 올 때만 가능하다. <strong>부족</strong>: 부족한 주와 수량이 특정된다. <strong>판정 불가</strong>: 수요 입력이 없다.</div>
+    <div class="h">사람이 하는 일</div><div><span class="tag t-ask">확인</span> SCM이 입고예정일을 확인한다. Corevia 공급 담당이 기발주 납기와 조기·분할·추가 공급 가능 여부를 회신한다. 부족·조건부 건은 마케팅과 SCM이 대안을 고른다.</div>
+    <div class="h">결과</div><div>기안의 공급 판정 상태. 대안을 고르면 기안의 계획(시기·물량·구성)이 갱신되고, 보충 발주를 고르면 발주안이 생겨 구성요소 다로 넘어간다.</div>
+  </div>
+  <div class="stack">
+    <h3>부족·조건부일 때 제시하는 대안</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>대안</th><th>시스템이 계산하는 것</th><th>실행에 필요한 확인·승인</th></tr></thead>
+      <tbody>
+        <tr><td class="k">시기 이동</td><td>재고가 받쳐주는 가장 이른 시작 주</td><td>마케팅 선택. 계약 조건상 이동이 되는지는 마케팅 확인</td></tr>
+        <tr><td class="k">물량 상한</td><td>품절 없이 받을 수 있는 최대 추가분</td><td>마케팅 선택</td></tr>
+        <tr><td class="k">구성 이동</td><td>같은 제품라인 안에서 여유 있는 SKU의 비중</td><td>마케팅 선택. 라인을 넘는 대체는 마케팅 확인</td></tr>
+        <tr><td class="k">보충 발주</td><td>필요 수량(MOQ 반영), 정상 리드타임 기준 도착 주, 금액, 지급 예정일</td><td>승인 경로 판정을 거쳐 SCM 또는 그룹 CEO 승인</td></tr>
+        <tr><td class="k">조기·분할 공급 요청</td><td>요청할 수량과 필요 주</td><td>Corevia 회신. 회신 전에는 가능하다고 가정하지 않는다</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">대안의 범위를 시스템이 미리 좁히지 않는다. 다섯 가지를 모두 계산해 보여주고, 각 대안에 어떤 확인이 남아 있는지를 표시한다. 품절 비용은 원본에 기록이 없어 금액으로 비교하지 않고 부족 수량과 주수로 비교한다.</p>
+  </div>
+</section>
+
+<!-- ───────── 다 ───────── -->
+<section class="comp" id="c3">
+  <div class="stack">
+    <div class="eyebrow">구성요소 다 · 조건 3에 대응</div>
+    <h2>승인 경로 판정과 상신</h2>
+    <p class="prose">정책이 정한 순서를 그대로 실행한다. 하회 예상 구간을 구하고, 약정의 현금 유출일을 대조하고, 구간 안이면 그룹에 상신한다. 문제 정의에서 확인되지 않은 것은 이 경로가 검토에 반영됐는지였으므로, 여기서는 판정 결과와 상신 여부를 기안마다 상태로 남긴다.</p>
+  </div>
+  <div class="spec">
+    <div class="h">시작</div><div>기안 접수(수요 입력을 기다리지 않는다), 새 발주안 생성, 미수금·매입채무·발주의 변경.</div>
+    <div class="h">시스템이 하는 일</div><div><span class="tag t-auto">계산·규칙</span> 정책 방식의 영업일별 재전망과 하회 예상 구간 산출. 현금이 나가는 약정(기발주, 새 발주안, 기안 집행)의 유출일 대조. 권한 규칙표에 따른 승인권자 지정. 확정기한이 구간보다 앞서면 상신 마감일을 기한 전으로 설정.</div>
+    <div class="h">사람이 하는 일</div><div><span class="tag t-ask">확인</span> 재무가 재전망 결과와 대형 파트너 회수 예정일을 확인한다. <span class="tag t-appr">승인</span> 지정된 권한자가 승인·거절·조건부로 회신한다.</div>
+    <div class="h">재무 확인 전</div><div>정책 방식 재계산을 기준으로 경로를 잡고 "재무 확인 대기"로 표시한다. 공식 전망은 대조 자료로 함께 보여주되 판정 기준으로 쓰지 않는다. 원본 정책이 산정근거를 지정하고 있기 때문이다.</div>
+    <div class="h">결과</div><div>약정의 승인 상태. 승인이면 확정 가능으로, 거절·조건부면 대안 선택으로 돌아간다. 구간이 바뀌면 승인 대기·승인 완료 건의 경로를 다시 검증한다.</div>
+  </div>
+  <div class="stack">
+    <h3>권한 규칙표 <span class="tag t-src">원본 정책을 규칙으로 옮김</span></h3>
+    <div class="scroll"><table>
+      <thead><tr><th>순서</th><th>조건</th><th>승인권자</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>약정의 현금 유출일이 하회 예상 구간 안 (종류·금액 불문)</td><td>그룹 CEO</td></tr>
+        <tr><td class="num">2</td><td>캠페인 확대안: 건별 1천만 초과 또는 기안 총액 1억 초과</td><td>Masil 대표 + 그룹 보고</td></tr>
+        <tr><td class="num">3</td><td>캠페인 확대안: 건별 1천만 이하이고 총액 1억 이하</td><td>마케팅팀</td></tr>
+        <tr><td class="num">4</td><td>재고 발주 (평시)</td><td>SCM</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">순서 1이 나머지에 우선한다. 평시 금액 기준은 없어지지 않고 구간 밖 약정에 그대로 적용된다. 시스템은 경로를 지정하고 상신 문서를 준비할 뿐 승인을 확정하지 않는다.</p>
+  </div>
+</section>
+
+<!-- ───────── 라 ───────── -->
+<section class="comp" id="c4">
+  <div class="stack">
+    <div class="eyebrow">구성요소 라 · 조건 4에 대응</div>
+    <h2>사건 기록과 재검토</h2>
+    <p class="prose">앞의 세 구성요소가 주고받는 모든 요청·회신·판정·결정을 사건으로 남긴다. 판단마다 어떤 전제 위에 섰는지 연결해 두고, 전제가 바뀌면 그 판단을 다시 연다.</p>
+  </div>
+  <div class="spec">
+    <div class="h">기록하는 것</div><div>기안 접수, 확인 요청, 수요 입력 등록·정정, 입고 회신, 재무 확인, 판정, 대안 선택, 승인 요청·회신, 보류. 각 사건은 발생일과 적용일을 따로 가진다.</div>
+    <div class="h">전제 연결</div><div><span class="tag t-auto">계산·규칙</span> 공급 판정에는 수요 입력 버전과 입고 일정 버전을, 승인 경로 판정에는 하회 구간 버전을 붙인다.</div>
+    <div class="h">재검토</div><div>전제를 바꾸는 사건이 오면 그 전제를 쓴 판정·승인 요청을 찾아 재검토 작업을 만든다. 결론이 그대로면 유지 근거를 기록하고 닫는다.</div>
+    <div class="h">보류</div><div>담당 부서, 기한, 재개 조건이 있어야 보류할 수 있다. 기한이 지나거나 조건이 충족되면 다시 올라온다.</div>
+    <div class="h">기한 관리</div><div>확정기한에서 역산해 미확인 건을 올린다. 세 확인 중 하나라도 열린 채 기한이 임박하면 승인권자에게 "미확인 상태로 자동 확정 예정"으로 알린다. <span class="tag t-src">가정</span> 역산 일수는 운영 가정으로 둔다.</div>
+  </div>
+  <p class="note">과거의 요청·승인 지연 이력은 합성하지 않는다. 단계별 소요 시간은 이 기록이 쌓인 뒤부터 잴 수 있다.</p>
+</section>
+
+<!-- ───────── 역할 ───────── -->
+<section class="stack-lg" id="roles">
+  <h2>운영 중 AI·사람·도구의 역할</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>주체</th><th>맡는 일</th><th>맡지 않는 일</th></tr></thead>
+    <tbody>
+      <tr><td class="k">AI</td><td>자유 서술 회신(공급자 납기 답변, 조건부 승인 문장, 마케팅의 수요 설명)을 구조화된 입력으로 바꾼다. 판정이 바뀐 이유와 대안별 차이를 담당자가 읽을 문장으로 쓴다. 상신 문서 초안을 쓴다. 새 사건이 어느 기안에 영향을 주는지 요약한다.</td><td>수량·잔액·구간 계산, 판정, 승인 확정. 구조화한 입력은 담당자가 확인한 뒤 반영된다.</td></tr>
+      <tr><td class="k">규칙·계산 도구</td><td>재고 전개, 현금 재전망, 유출일 대조, 권한 규칙 적용, 상태 전이, 기한 역산.</td><td>원본에 없는 값을 채워 넣는 일.</td></tr>
+      <tr><td class="k">사람</td><td>마케팅: 수요 입력, 대안 선택. SCM: 입고 확인, 발주안 검토. 재무: 재전망 확인. 승인권자: 승인·거절·조건부. Corevia 공급 담당: 납기 회신.</td><td>부서 사이의 대조와 재계산. 시스템이 먼저 끝낸다.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">계산과 판정을 규칙으로 두는 이유는 같은 입력에 같은 결과가 나와야 승인 근거가 되기 때문이다. AI는 형식이 정해지지 않은 정보를 읽고 쓰는 자리에 둔다.</p>
+</section>
+
+<!-- ───────── 데이터 ───────── -->
+<section class="stack-lg" id="data">
+  <h2>쓰는 데이터</h2>
+  <div class="stack">
+    <h3>원본에서 그대로 쓰는 것</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>원본</th><th>쓰는 곳</th></tr></thead>
+      <tbody>
+        <tr><td class="k">확대 기안, 캠페인·SKU 마스터</td><td>기안 접수, 캠페인 → 제품라인 → SKU 전개, 확정기한·집행 예정일</td></tr>
+        <tr><td class="k">재고 스냅숏, 주간 판매, 발주</td><td>기준 수요, 재고 전개, 기발주 수량, 리드타임·MOQ</td></tr>
+        <tr><td class="k">미수금, 매입채무, 자금일보</td><td>정책 방식 현금 재전망</td></tr>
+        <tr><td class="k">승인권한 정책, 차입 약정 조건</td><td>권한 규칙표, 하회 판정 기준</td></tr>
+        <tr><td class="k">원가 마스터</td><td>새 발주안 금액 (기발주 단가와 일치 확인)</td></tr>
+        <tr><td class="k">Corevia 제품군·라인 가동률·원료</td><td>조기·추가 공급 회신의 타당성 범위</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="stack">
+    <h3>새로 채우는 것</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>추가 데이터</th><th>제공 부서</th><th>왜 필요한가</th><th>채우는 방법</th></tr></thead>
+      <tbody>
+        <tr><td class="k">수요 입력</td><td>마케팅</td><td>공급 판정의 입력. 기안에 SKU·수량·판매 기간이 없다</td><td><span class="tag t-ask">확인 요청</span> <span class="tag t-syn">모의 회신</span></td></tr>
+        <tr><td class="k">입고 일정</td><td>SCM (원천 Corevia)</td><td>주차별 공급 가능량을 정한다. 원본에는 리드타임만 있다</td><td>초기값은 원본 도출(발주일 + 리드타임, 미확인 표시), 이후 <span class="tag t-ask">확인 요청</span> <span class="tag t-syn">모의 회신</span></td></tr>
+        <tr><td class="k">공급 회신</td><td>Corevia 공급 담당</td><td>기발주 납기와 조기·분할·추가 공급 가능 여부</td><td><span class="tag t-syn">모의 회신</span></td></tr>
+        <tr><td class="k">재전망 확인</td><td>재무</td><td>하회 예상 구간을 판정 기준으로 확정한다</td><td><span class="tag t-ask">확인 요청</span> <span class="tag t-syn">모의 회신</span></td></tr>
+        <tr><td class="k">발주 지급일 규칙</td><td>재무</td><td>새 발주안의 유출일이 구간 안인지를 가른다. 원본 14건은 모두 07-21이라 규칙을 알 수 없다</td><td><span class="tag t-src">가정</span> 후 <span class="tag t-ask">확인 요청</span></td></tr>
+        <tr><td class="k">승인 요청·회신</td><td>승인권자</td><td>판정 이후의 처리를 움직인다</td><td>요청은 시스템 생성, 회신은 <span class="tag t-syn">모의 회신</span></td></tr>
+        <tr><td class="k">사건 기록</td><td>각 단계</td><td>상태·재검토·기한 관리의 근거</td><td>시스템 생성</td></tr>
+        <tr><td class="k">운영 가정</td><td>—</td><td>기한 역산 일수, 역할 지정, 상태 정의</td><td><span class="tag t-src">가정</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="stack">
+    <h3>채우는 원칙</h3>
+    <ul class="prose">
+      <li>원본 폴더는 그대로 둔다. 추가 데이터는 별도 폴더에 두고 행마다 출처 구분, 생성 이유, 적용 시점, 연결되는 원본 키를 남긴다.</li>
+      <li>합성은 시스템이 받아야 할 외부 입력을 모의하는 데만 쓴다. 과거 기록을 만들지 않는다.</li>
+      <li>모의 회신에는 불리한 경우를 반드시 넣는다. 입고 지연, 조기 공급 불가, 승인 거절, 회수일 추가 지연.</li>
+      <li>원본 제약을 지우는 값은 기본 사실로 넣지 않는다. 리드타임 단축, MOQ 면제, 더마 증산은 별도 시나리오로 두고 필요한 확인을 함께 적는다.</li>
+      <li>근거를 댈 수 없는 수치는 만들지 않는다. 표본 주문의 전사 환산 계수, 품절 비용, 과거 지연 이력.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── 시연 사례 ───────── -->
+<section class="stack-lg" id="cases">
+  <h2>대표 시연 사례</h2>
+  <p class="prose">대회 요건의 정상, 변경, 정보 부족 또는 승인 거절 사례를 07-17 확정 건과 더마 건에서 고른다. 아래 회신과 수치 입력은 모두 가상 입력이고, 판정 결과는 구현 후 실제 계산값으로 채운다.</p>
+
+  <div class="case">
+    <div class="name">정상 — 색조 기안이 기한 전에 그룹 승인을 받아 확정된다</div>
+    <ul>
+      <li><strong>대상:</strong> PLAN-002 (혜인 색조, 요청 1,680만, 확정기한 07-17, 집행 예정 08-06)</li>
+      <li><strong>입력:</strong> 마케팅의 수요 입력 <span class="tag t-syn">모의</span>, 재무의 재전망 확인 <span class="tag t-syn">모의</span></li>
+      <li><strong>처리:</strong> 색조 3종으로 전개 → 공급 판정 → 집행 예정일이 하회 예상 구간 안이므로 그룹 CEO 경로, 상신 마감은 07-17 전 → 승인 회신 <span class="tag t-syn">모의</span></li>
+      <li><strong>갱신되는 것:</strong> 기안 상태(확정 가능), 약정 원장, 사건 기록</li>
+      <li><strong>보여주는 것:</strong> 승인 경로 판정이 없으면 이 기안은 Masil 대표 승인으로 끝난다. 있으면 그룹 CEO 상신 대상으로 바뀐다.</li>
+    </ul>
+  </div>
+
+  <div class="case">
+    <div class="name">변경 — 입고 지연 회신으로 기존 판정이 다시 열린다</div>
+    <ul>
+      <li><strong>대상:</strong> PLAN-001 (혜인 기초 라이브, 요청 1,896만, 확정기한 07-17)</li>
+      <li><strong>변경 입력:</strong> Corevia의 기초 기발주분 입고 지연 회신 <span class="tag t-syn">모의</span></li>
+      <li><strong>처리:</strong> 입고 일정 새 버전 → 그 일정을 쓴 공급 판정을 찾아 재검토 → 판정이 바뀌면 대안 제시 → 마케팅이 대안 선택 <span class="tag t-syn">모의</span> → 기안 계획 갱신</li>
+      <li><strong>함께 확인:</strong> 같은 SKU를 쓰는 다른 기안도 재검토 대상에 오르고, 결론이 그대로인 건은 유지 근거가 기록된다.</li>
+    </ul>
+  </div>
+
+  <div class="case">
+    <div class="name">정보 부족 — 더마 기안은 수요 입력이 없어 판정이 보류된다</div>
+    <ul>
+      <li><strong>대상:</strong> PLAN-011 (Lila SEA 더마, 요청 679만, 확정기한 08-14)</li>
+      <li><strong>처리:</strong> 수요 미확인 → 판정 불가, 확인 요청과 기한 생성 → 수요 입력 등록 <span class="tag t-syn">모의</span> → 더마는 기존 수요만으로 공백이 전망되어 부족 판정 → 조기 공급 요청 → Corevia의 불가 회신 <span class="tag t-syn">모의</span> → 남은 대안(시기 이동, 물량 상한) 중 선택</li>
+      <li><strong>보여주는 것:</strong> 기존 판매의 공급 공백과 Corevia 생산 제약이 캠페인 계획을 바꾸는 지점.</li>
+    </ul>
+  </div>
+
+  <div class="case">
+    <div class="name">승인 거절 — 거절된 건이 대안으로 돌아가 재상신된다</div>
+    <ul>
+      <li><strong>대상:</strong> PLAN-003 (혜인 색조, 요청 1,493만, 확정기한 07-17, 집행 예정 08-17)</li>
+      <li><strong>입력:</strong> 그룹 CEO의 거절 회신 <span class="tag t-syn">모의</span></li>
+      <li><strong>처리:</strong> 약정 상태 거절 → 대안 계산(집행일을 구간 밖으로 옮길 때의 경로, 물량 축소) → 마케팅 선택 → 재상신 또는 철회 통보 작업 생성</li>
+    </ul>
+  </div>
+  <p class="note">대회 요건은 정보 부족과 승인 거절 중 하나면 충족된다. 둘 다 준비하되 시간에 따라 하나를 대표로 삼는다.</p>
+</section>
+
+<!-- ───────── 요건 대응 ───────── -->
+<section class="stack-lg" id="req">
+  <h2>대회 요건과의 대응</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>요건</th><th>이 설계에서 충족하는 자리</th></tr></thead>
+    <tbody>
+      <tr><td class="k">필수 확장</td><td>현금 하회 예상 구간에 따른 승인 경로 판정. 판정이 없을 때와 있을 때 승인권자와 상신 마감이 달라지는 것을 정상 사례에서 비교한다.</td></tr>
+      <tr><td class="k">다른 부서 영향</td><td>재무의 최소 현금 유지 제약이 승인 경로와 대안(집행일·지급일)을 바꾼다. Corevia의 생산 제약이 더마 기안의 대안을 좁힌다.</td></tr>
+      <tr><td class="k">대상·관계·규칙</td><td>기안, 캠페인, SKU, 수요 입력, 입고 일정, 약정, 승인 요청, 사건. 권한 규칙표와 판정 규칙.</td></tr>
+      <tr><td class="k">판단을 돕는 화면</td><td>기안별 세 확인의 상태, 확정기한까지 남은 영업일, SKU별 주차 재고, 잔액 전망과 하회 구간, 대안 비교. 화면에서 등록·선택·승인을 입력한다.</td></tr>
+      <tr><td class="k">판단 이후의 처리</td><td>기안 계획 갱신, 발주안 생성, 승인 요청, 재검토 작업, 확인 요청이 사건으로 생성·갱신된다.</td></tr>
+      <tr><td class="k">교육용 흐름에서 바꾼 것</td><td>한 줄 순차 흐름을 병행 확인으로 바꿨다. "보류·재검토" 종료에 담당·기한·재개 조건을 붙였다. 승인권한은 원본 정책 그대로다.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>구간</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td class="k">실제 작동</td><td>SKU 전개, 재고 전개와 판정, 현금 재전망, 유출일 대조와 권한 지정, 대안 계산, 상태 전이, 재검토 생성, 기한 역산</td></tr>
+      <tr><td class="k">모의 처리</td><td>마케팅·SCM·재무·승인권자·Corevia의 회신, 발주서 전달, 통보</td></tr>
+      <tr><td class="k">설계 단계</td><td>기존 보충발주 기준의 개선, 실제 사내 시스템 연결</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ───────── 남은 결정 ───────── -->
+<section class="stack">
+  <h2>남은 결정</h2>
+  <ul class="prose">
+    <li><strong>본인의 전문성.</strong> 필수 확장을 승인 경로 판정으로 잡았는데, 제출 양식은 어떤 경험·관점을 적용했는지 묻는다. 살릴 분야에 따라 확장의 설명과 깊이가 달라진다.</li>
+    <li><strong>시연 사례.</strong> 위 네 건을 그대로 쓸지, 대상 기안을 바꿀지.</li>
+    <li><strong>구현 형태.</strong> 화면 구성과 기술 선택. 이 폴더는 이미 배포 설정이 연결돼 있어 웹 앱 형태가 자연스럽다.</li>
+    <li><strong>운영 가정의 값.</strong> 기한 역산 일수, 발주 지급일 규칙. 시연에서는 지급일 규칙의 두 경우를 모두 실행한다.</li>
+  </ul>
+</section>
+
+</div>

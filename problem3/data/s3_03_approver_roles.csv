@@ -1,0 +1,5 @@
+record_id|approver|approver_name|policy_ref|std_approval_bd|effective_at|source_ref|source_type|is_synthetic|scenario_id|generation_reason|spec_ref
+S3-03-001|GRP_CEO|그룹 CEO(Aurora)|00_common/approval_authority_policy.md#L11,L18-L20|2|2026-07-01|00_common/approval_authority_policy.md#L11,L18-L20|가정|true|BASE|승인권자별 결재 소요일이 원본에 없어 문제 4 마감 역산에 필요. 사용자 결정 U10|problem3/명세.md#S3-03
+S3-03-002|MS_CEO|Masil 대표|00_common/approval_authority_policy.md#L9|2|2026-07-01|00_common/approval_authority_policy.md#L9|가정|true|BASE|승인권자별 결재 소요일이 원본에 없어 문제 4 마감 역산에 필요. 사용자 결정 U10|problem3/명세.md#S3-03
+S3-03-003|MKT_TEAM|Masil 마케팅팀|00_common/approval_authority_policy.md#L9|1|2026-07-01|00_common/approval_authority_policy.md#L9|가정|true|BASE|승인권자별 결재 소요일이 원본에 없어 문제 4 마감 역산에 필요. 사용자 결정 U10|problem3/명세.md#S3-03
+S3-03-004|SCM|Masil SCM|00_common/approval_authority_policy.md#L6|1|2026-07-01|00_common/approval_authority_policy.md#L6|가정|true|BASE|승인권자별 결재 소요일이 원본에 없어 문제 4 마감 역산에 필요. 사용자 결정 U10|problem3/명세.md#S3-03

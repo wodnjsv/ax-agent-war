@@ -1,0 +1,3 @@
+record_id|kind|issue_id|request_topic|requested_to|request_due_date|decision|reply_text|scenario_id|source_ref|effective_at|source_type|is_synthetic|generation_reason
+S4-06-00|request|OI-3|group_allocation|GROUP|2026-07-08|||BASE|00_common/mkt_meeting_notes_ms.md 56~58행|2026-07-01|가정|true|회신 기한은 가장 이른 판정·재무 확인 마감(07-08). 기본 시나리오는 회신 없음(원본이 '정리되지 않음' 상태)
+S4-06-01|reply|OI-3|group_allocation|GROUP||대상|본 기안 묶음은 그룹 300억 배분 검토 대상에 포함된다(가상 회신). 승인 경로 변경 여부는 사람이 판단한다|S4-OI3-A|00_common/mkt_meeting_notes_ms.md 56~58행; 00_common/approval_authority_policy.md 13행|2026-07-08|모의회신|true|불리한 경우 시나리오: 재검토가 열리고 경로가 자동 변경되지 않는지 확인

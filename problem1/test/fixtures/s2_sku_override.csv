@@ -1,0 +1,2 @@
+record_id|reply_record_id|plan_id|sku_id|override_uplift_pct|source_ref|effective_at|source_type|is_synthetic|generation_reason
+T-S2-001|T-S1-003|PLAN-014|SKU-3003|5.0|problem1/test/fixtures/s2_sku_override.csv#T-S2-001|2026-07-13|모의회신|true|테스트 고정 입력(시연 자료 아님)

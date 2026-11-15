@@ -1,14 +1,13 @@
-import { createServer } from 'node:http';
-import { readFileSync } from 'node:fs';
+// 진입점. 실제 앱은 app/main.mjs
+import { createApp } from './app/main.mjs';
 
-const page = readFileSync(new URL('./index.html', import.meta.url));
+const app = await createApp();
+const port = await app.listen();
+console.log(`[app] W01 운영 시스템 http://localhost:${port} (sim_clock ${app.clock.today()}, AI ${app.ai.status()})`);
 
-createServer((request, response) => {
-  if (request.url === '/healthz') {
-    response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-    response.end('ok');
-    return;
-  }
-  response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-  response.end(page);
-}).listen(Number(process.env.PORT || 8080), '0.0.0.0');
+for (const signal of ['SIGINT', 'SIGTERM']) {
+  process.on(signal, async () => {
+    await app.close();
+    process.exit(0);
+  });
+}

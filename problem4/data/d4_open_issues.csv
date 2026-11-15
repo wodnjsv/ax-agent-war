@@ -1,0 +1,4 @@
+record_id|issue_id|quote|source_ref|source_line|closing_rule|effective_at|source_type|is_synthetic|generation_reason
+D4-OI-1|OI-1|(실행 제약) 승인 주체가 회의에서 정리되지 않았다. 총액 기준상 **전결 범위를 넘는지 확인 필요**.|00_common/mkt_meeting_notes_ms.md|44|기안별 ROUTE_JUDGED로 기안 단위 종결, 25건 모두 닫히면 종결|2026-07-01|원본도출|false|회의록 미결을 초기 사건으로 등록
+D4-OI-2|OI-2|(실행 제약) **집행 예정일**(`settlement_date`)이 자금일보·현금 전망과 겹치는지 대조 필요. — 재무팀|00_common/mkt_meeting_notes_ms.md|45|기안별 ROUTE_JUDGED(cash_outflow_date·window_version)로 기안 단위 종결, 25건 모두 닫히면 종결|2026-07-01|원본도출|false|회의록 미결을 초기 사건으로 등록
+D4-OI-3|OI-3|**본 건이 그룹 300억 배분 검토 대상인지 확인이 필요하다.**|00_common/mkt_meeting_notes_ms.md|56|그룹 확인 회신(S4-06)으로 종결, 판정 전제에 넣지 않음|2026-07-01|원본도출|false|회의록 미결을 초기 사건으로 등록
