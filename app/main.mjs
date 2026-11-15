@@ -1,5 +1,6 @@
 // 앱 조립: 저장소·시계·사건·AI·라우터·모듈 로딩·화면 제공.
 import { createServer } from 'node:http';
+import { createHash, timingSafeEqual } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -149,6 +150,12 @@ export async function createApp({
   router.add('POST', '/api/clock/advance', async ({ body }) => clock.advance({ to: body.to, days: body.days, maxDays: Number(body.max_days) || undefined }));
   router.add('POST', '/api/reset', async () => { await reset(); return { ok: true, sim_clock: clock.today() }; });
 
+  // ── 접속 비밀번호 ── APP_PASSWORD가 있을 때만 건다. 쿠키 값은 비밀번호의 해시라 서버를 다시 띄워도 유지된다.
+  const tokenOf = (pw) => createHash('sha256').update(`w01:${pw}`).digest();
+  const authToken = env.APP_PASSWORD ? tokenOf(env.APP_PASSWORD) : null;
+  const authCookie = authToken && `w01_auth=${authToken.toString('hex')}`;
+  const authed = (req) => !authToken || (req.headers.cookie ?? '').split(/;\s*/).includes(authCookie);
+
   // ── HTTP 처리 ──
   async function handle(req, res) {
     const url = new URL(req.url, 'http://localhost');
@@ -156,6 +163,17 @@ export async function createApp({
       if (url.pathname === '/healthz') {
         res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
         return res.end('ok');
+      }
+      if (authToken && req.method === 'POST' && url.pathname === '/api/login') {
+        const { password } = await readJsonBody(req);
+        if (!timingSafeEqual(tokenOf(String(password ?? '')), authToken)) throw new HttpError(401, '비밀번호가 맞지 않습니다');
+        const secure = req.headers['x-forwarded-proto'] === 'https' ? '; Secure' : '';
+        res.setHeader('Set-Cookie', `${authCookie}; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000${secure}`);
+        return sendJson(res, 200, { ok: true });
+      }
+      if (!authed(req)) {
+        if (url.pathname !== '/') throw new HttpError(401, '비밀번호 입력이 필요합니다');
+        return serveStatic('/login.html', res);
       }
       if (url.pathname.startsWith('/api/')) {
         const m = router.match(req.method, url.pathname);

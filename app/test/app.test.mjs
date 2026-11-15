@@ -148,3 +148,29 @@ test('승인 요청 초안 확인 상태: 양식 초안(AI 미연결)은 화면�
   assert.equal(draftConfirmed({ ...ai, review_status: '확인', usable: true }), true);
   assert.equal(draftConfirmed(null), false);
 });
+
+test('접속 비밀번호: APP_PASSWORD가 있으면 로그인 전에는 화면·API를 주지 않는다', async () => {
+  const emptyRoot = mkdtempSync(path.join(tmpdir(), 'w01-'));
+  const app = await createApp({ rootDir: emptyRoot, dbPath: ':memory:', env: { APP_PASSWORD: 'test-pw' }, log: quiet });
+  const port = await app.listen(0, '127.0.0.1');
+  try {
+    const base = `http://127.0.0.1:${port}`;
+    const login = (password) => fetch(`${base}/api/login`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }) });
+    assert.equal(await (await fetch(`${base}/healthz`)).text(), 'ok'); // 상태 확인은 막지 않는다
+    assert.match(await (await fetch(`${base}/`)).text(), /비밀번호/);
+    assert.equal((await fetch(`${base}/api/plans`)).status, 401);
+    assert.equal((await fetch(`${base}/app.js`)).status, 401);
+    assert.equal((await login('wrong')).status, 401);
+    assert.equal((await login()).status, 401);
+    const ok = await login('test-pw');
+    assert.equal(ok.status, 200);
+    const cookie = ok.headers.get('set-cookie').split(';')[0];
+    assert.ok(!cookie.includes('test-pw'));
+    assert.equal((await fetch(`${base}/api/plans`, { headers: { cookie } })).status, 200);
+    assert.match(await (await fetch(`${base}/`, { headers: { cookie } })).text(), /W01 운영 시스템<\/title>/);
+    assert.equal((await fetch(`${base}/api/plans`, { headers: { cookie: 'w01_auth=0000' } })).status, 401);
+  } finally {
+    await app.close();
+    rmSync(emptyRoot, { recursive: true, force: true });
+  }
+});
