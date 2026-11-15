@@ -146,7 +146,7 @@ export async function createApp({
     return { total, by_type };
   });
   router.add('GET', '/api/clock', () => ({ sim_clock: clock.today() }));
-  router.add('POST', '/api/clock/advance', async ({ body }) => clock.advance({ to: body.to, days: body.days }));
+  router.add('POST', '/api/clock/advance', async ({ body }) => clock.advance({ to: body.to, days: body.days, maxDays: Number(body.max_days) || undefined }));
   router.add('POST', '/api/reset', async () => { await reset(); return { ok: true, sim_clock: clock.today() }; });
 
   // ── HTTP 처리 ──

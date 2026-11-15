@@ -79,6 +79,18 @@ export const api = {
     return data;
   },
   async post(path, body = {}) {
+    // 날짜를 여러 날 넘길 때는 하루씩 나눠 부른다(긴 요청 하나가 서버의 상태 확인을 막지 않게).
+    if (path === '/api/clock/advance' && body.to && !body.max_days) {
+      let from = null;
+      const processed = [];
+      let r;
+      do {
+        r = await api.post(path, { to: body.to, max_days: 1 });
+        from ??= r.from;
+        processed.push(...r.processed);
+      } while (r.done === false);
+      return { ...r, from, processed };
+    }
     const res = await fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);

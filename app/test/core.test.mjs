@@ -78,6 +78,23 @@ test('시계: 영업일마다 onDay, 뒤로 돌리지 않음', async () => {
   assert.equal(clock.today(), '2026-07-08');
 });
 
+test('시계: maxDays를 주면 그만큼만 처리하고 done=false로 돌려준다(화면이 하루씩 나눠 부름)', async () => {
+  const { clock } = makeBus();
+  const days = [];
+  clock.onDay('p4', (d) => days.push(d));
+  const a = await clock.advance({ to: '2026-07-07', maxDays: 1 });
+  assert.deepEqual([a.to, a.done, a.target, a.processed], ['2026-07-02', false, '2026-07-07', ['2026-07-02']]);
+  assert.equal(clock.today(), '2026-07-02');
+  let r = a;
+  while (r.done === false) r = await clock.advance({ to: '2026-07-07', maxDays: 1 });
+  assert.equal(r.done, true);
+  assert.deepEqual(days, ['2026-07-02', '2026-07-03', '2026-07-06', '2026-07-07']);
+  assert.equal(clock.today(), '2026-07-07');
+  // 이미 도착한 날짜를 다시 요청해도 처리할 날이 없고 done이다
+  const again = await clock.advance({ to: '2026-07-07', maxDays: 1 });
+  assert.deepEqual([again.done, again.processed.length], [true, 0]);
+});
+
 test('저장소: 모듈 테이블은 접두어 필수, 초기화는 행만 지운다', () => {
   const { store } = makeBus();
   assert.throws(() => store.defineTable('p2', 'p1_x', 'a TEXT'));
