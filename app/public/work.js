@@ -306,6 +306,7 @@ function demandPanel(panel, v, ctx) {
     ${pend ? `<div class="ai-box"><b>${pend.ai_status === '구조화됨' || pend.extracted_fields ? 'AI가 정리한 값' : '정리 대기'}</b> <span class="muted">원문: “${esc(pend.reply_text ?? '')}”</span>
       ${(pend.missing_fields ?? []).length ? `<div class="warn">비어 있는 값: ${esc(pend.missing_fields.join(', '))}${(pend.unclear_reasons ?? []).length ? ` — ${esc(pend.unclear_reasons.join(' / '))}` : ''}</div>` : ''}</div>` : ''}
     ${pstep(2, `값 확인${pend ? '·수정 후 등록' : '(직접 입력)'}`)}
+    ${e.example_fields ? '<div class="row" style="margin-bottom:8px"><button type="button" id="d-example-val" class="btn-ghost">예시 값 넣기</button><span class="note">시연용 예시입니다(가상 입력). 아래 값을 예시로 바꿉니다.</span></div>' : ''}
     <div class="form-grid">
       ${field('증가율(%)', `<input id="d-up" type="number" step="0.1" min="0" value="${esc(val('uplift_pct'))}" aria-describedby="d-up-help">`, { req: true, help: '기준 수요 대비, 0 이상', id: 'd-up' })}
       ${field('판매 시작 주', `<input id="d-start" type="date" value="${esc(val('sale_start_week'))}" aria-describedby="d-start-help">`, { req: true, help: '월요일 날짜', id: 'd-start' })}
@@ -341,6 +342,14 @@ function demandPanel(panel, v, ctx) {
   };
   const exBtn = panel.querySelector('#d-example');
   if (exBtn) exBtn.onclick = () => { const ta = panel.querySelector('#d-text'); ta.value = e.example_text; ta.focus(); };
+  const exValBtn = panel.querySelector('#d-example-val');
+  if (exValBtn) exValBtn.onclick = () => {
+    const x = e.example_fields;
+    panel.querySelector('#d-up').value = x.uplift_pct; panel.querySelector('#d-start').value = x.sale_start_week; panel.querySelector('#d-weeks').value = x.sale_weeks;
+    panel.querySelector('#d-note').value = x.rationale_text ?? '';
+    for (const inp of panel.querySelectorAll('[data-ov]')) inp.value = x.overrides.find((o) => o.sku_id === inp.dataset.ov)?.override_uplift_pct ?? '';
+    check();
+  };
   panel.querySelector('#d-ai').onclick = async () => {
     const text = panel.querySelector('#d-text').value.trim();
     if (!text) { panel.querySelector('#d-text').focus(); return; }

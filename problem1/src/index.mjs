@@ -467,12 +467,18 @@ export async function register(ctx) {
     const closed = closedReason(planId);
     const ex = pendingRow?.extracted_json ? JSON.parse(pendingRow.extracted_json) : null;
     const g = grid();
+    const exRec = loadMock().s1.find((r) => r.plan_id === planId) ?? null; // 시연용 예시: 이 기안의 모의 수요 회신(S1) 첫 회신
     return {
       plan: { plan_id: plan.plan_id, campaign_name: plan.campaign_name, product_line: plan.product_line,
         requested_budget_krw: plan.requested_budget_krw, settlement_date: plan.settlement_date, contract_deadline: plan.contract_deadline },
       sim_clock: ctx.clock.today(), ai_status: ctx.ai.status(),
-      // 시연용 예시 문장: 이 기안의 모의 수요 회신(S1) 첫 회신 원문. 자료가 없는 기안은 null
-      example_text: loadMock().s1.find((r) => r.plan_id === planId)?.reply_text ?? null,
+      // 시연용 예시: 문장은 회신 원문, 값은 그 회신의 확정 값과 품목별 증가율(S2). 자료가 없는 기안은 null
+      example_text: exRec?.reply_text ?? null,
+      example_fields: exRec?.confirmed_decision === '확인' ? {
+        uplift_pct: exRec.confirmed_uplift_pct, sale_start_week: exRec.confirmed_sale_start_week, sale_weeks: exRec.confirmed_sale_weeks,
+        rationale_text: humanize(exRec.rationale_text, skuNames),
+        overrides: loadMock().s2.filter((o) => o.reply_record_id === exRec.record_id).map((o) => ({ sku_id: o.sku_id, override_uplift_pct: o.override_uplift_pct })),
+      } : null,
       status: demandStatus(planId),
       deadline: { demand_input_due: deadline.value?.demand_input_due ?? null, contract_deadline: plan.contract_deadline, connected: deadline.connected },
       request: (reqs.value ?? []).at(-1) ?? null,

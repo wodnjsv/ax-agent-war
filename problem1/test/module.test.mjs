@@ -415,7 +415,9 @@ test('기안 담당자 화면 API: 참고 정보 → 자유 서술 → 확인, �
     assert.equal(e.actions.mode, '최초 입력');
     assert.equal(e.actions.can_submit_text, true);
     assert.equal(e.deadline.demand_input_due, '2026-07-07');
-    assert.match(e.example_text, /기준 수요 대비 20% 증가/); // 시연용 예시 문장(모의 수요 회신 원문)
+    assert.match(e.example_text, /기준 수요 대비 20% 증가/);
+    assert.deepEqual([e.example_fields.uplift_pct, e.example_fields.sale_start_week, e.example_fields.sale_weeks, Array.isArray(e.example_fields.overrides)], [20, '2026-07-20', 4, true]); // 예시 값(그 회신의 확정 값)
+    assert.equal((await get('/entry/PLAN-005')).example_fields, null); // 시연용 예시 문장(모의 수요 회신 원문)
     assert.equal((await get('/entry/PLAN-005')).example_text, null); // 모의 회신이 없는 기안
     const ref = e.reference.skus.find((s) => s.sku_id === 'SKU-3001');
     // 문제 2 v2.0: 확약 입고만(not_arrived)이 기준, 예상 입고 포함(on_schedule)은 참고. 품절 예상 주도 확약 기준
