@@ -301,7 +301,8 @@ function demandPanel(panel, v, ctx) {
     ${pstep(1, '자유롭게 적기(선택)')}
     ${field('예상 판매를 문장으로 적기', '<textarea id="d-text" rows="3" placeholder="예: 8월 셋째 주부터 3주 동안 평소보다 25% 정도 더 팔릴 것 같습니다."></textarea>',
       { help: e.ai_status === '연결' ? 'AI가 증가율·시작 주·주수로 정리합니다. 정리된 값은 아래에서 확인합니다.' : 'AI가 연결되지 않아 문장은 기록만 하고, 값은 아래에서 직접 넣습니다.' })}
-    <div class="row" style="margin-top:8px"><button type="button" id="d-ai" class="btn-secondary">${e.ai_status === '연결' ? 'AI로 정리하기' : '보내기'}</button></div>
+    <div class="row" style="margin-top:8px"><button type="button" id="d-ai" class="btn-secondary">${e.ai_status === '연결' ? 'AI로 정리하기' : '보내기'}</button>
+      ${e.example_text ? '<button type="button" id="d-example" class="btn-ghost">예시 문장 넣기</button><span class="note">시연용 예시입니다(가상 입력).</span>' : ''}</div>
     ${pend ? `<div class="ai-box"><b>${pend.ai_status === '구조화됨' || pend.extracted_fields ? 'AI가 정리한 값' : '정리 대기'}</b> <span class="muted">원문: “${esc(pend.reply_text ?? '')}”</span>
       ${(pend.missing_fields ?? []).length ? `<div class="warn">비어 있는 값: ${esc(pend.missing_fields.join(', '))}${(pend.unclear_reasons ?? []).length ? ` — ${esc(pend.unclear_reasons.join(' / '))}` : ''}</div>` : ''}</div>` : ''}
     ${pstep(2, `값 확인${pend ? '·수정 후 등록' : '(직접 입력)'}`)}
@@ -338,6 +339,8 @@ function demandPanel(panel, v, ctx) {
     }
     return !Object.keys(errs).length;
   };
+  const exBtn = panel.querySelector('#d-example');
+  if (exBtn) exBtn.onclick = () => { const ta = panel.querySelector('#d-text'); ta.value = e.example_text; ta.focus(); };
   panel.querySelector('#d-ai').onclick = async () => {
     const text = panel.querySelector('#d-text').value.trim();
     if (!text) { panel.querySelector('#d-text').focus(); return; }

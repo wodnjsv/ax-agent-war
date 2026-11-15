@@ -471,6 +471,8 @@ export async function register(ctx) {
       plan: { plan_id: plan.plan_id, campaign_name: plan.campaign_name, product_line: plan.product_line,
         requested_budget_krw: plan.requested_budget_krw, settlement_date: plan.settlement_date, contract_deadline: plan.contract_deadline },
       sim_clock: ctx.clock.today(), ai_status: ctx.ai.status(),
+      // 시연용 예시 문장: 이 기안의 모의 수요 회신(S1) 첫 회신 원문. 자료가 없는 기안은 null
+      example_text: loadMock().s1.find((r) => r.plan_id === planId)?.reply_text ?? null,
       status: demandStatus(planId),
       deadline: { demand_input_due: deadline.value?.demand_input_due ?? null, contract_deadline: plan.contract_deadline, connected: deadline.connected },
       request: (reqs.value ?? []).at(-1) ?? null,
