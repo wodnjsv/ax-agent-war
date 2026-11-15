@@ -1,6 +1,6 @@
 // 화면 셸: 기안 목록 / 기안 상세(진행 요약 + 문제별 탭) / 사건 기록 / 모의 입력·날짜 진행
 import { api, ui, esc, tag, krw, table, label } from './common.js';
-import { renderWork, modal, guardDirect } from './work.js';
+import { renderWork, modal, guardDirect, busy, flowState, toast } from './work.js';
 
 const view = document.getElementById('view');
 let meta = null;
@@ -23,7 +23,9 @@ async function refreshMeta() {
   if (n !== metaSeq) return;
   meta = fresh;
   document.getElementById('clock').textContent = meta.sim_clock;
-  document.getElementById('ai').textContent = meta.ai.status;
+  const ai = document.getElementById('ai');
+  ai.textContent = `AI ${meta.ai.status}`;
+  ai.className = `btag ${meta.ai.status === '연결' ? 'success' : ''}`;
   document.getElementById('legend').innerHTML =
     `자료 구분 ${tag('원본도출')} ${tag('계산')} ${tag('가정')} ${tag('모의회신')} ${tag('사람입력', true)} ${tag(null, false, true)}` +
     ' <span class="muted">시뮬레이션 = 가상 전제(사람입력·모의·가정)에 기대어 계산된 값. 표시는 구역·열 제목에 한 번만 붙인다</span>';
@@ -220,6 +222,11 @@ async function route() {
     // 첫 화면: 좌우 분할(왼쪽 기안 담당자, 오른쪽 데이터 흐름). 기존 화면은 '상세 근거'로 남긴다.
     const work = p === '/' || p === '' || p.startsWith('/w/');
     document.body.classList.toggle('work-mode', work);
+    // 내비게이션: 지금 화면 표시, 업무 화면에서만 '다음 날로'·'데이터 흐름' 버튼
+    const navKey = work ? 'work' : p.startsWith('/plan') ? 'plans' : p.slice(1);
+    document.querySelectorAll('[data-nav]').forEach((a) => { a.classList.toggle('on', a.dataset.nav === navKey); if (a.dataset.nav === navKey) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    document.getElementById('next-day').hidden = !work;
+    document.getElementById('flow-toggle').hidden = !work;
     if (work) {
       const [, , planId, sub] = p.split('/');
       return await renderWork(view, { planId: planId ? decodeURIComponent(planId) : null, sub: sub ?? null, onRefreshMeta: refreshMeta });
@@ -233,6 +240,19 @@ async function route() {
   }
 }
 
+// ── 내비게이션 바의 '데이터 흐름' 창 버튼과 '다음 날로'(사용자 지시 2026-11-15) ──
+const flowBtn = document.getElementById('flow-toggle');
+flowBtn.setAttribute('aria-pressed', String(flowState.get()));
+flowBtn.onclick = () => { flowState.set(!flowState.get()); flowBtn.setAttribute('aria-pressed', String(flowState.get())); route(); };
+document.getElementById('next-day').onclick = async () => {
+  try {
+    if (!(await guardDirect())) return; // 직접 처리 기안이 사용자 행동을 기다리면 먼저 알린다(L8)
+    const r = await busy('다음 영업일로 진행하는 중입니다. 다른 부서의 모의 회신과 마감 점검을 처리합니다…', () => api.post('/api/clock/advance', { days: 1 }));
+    toast(`${r.from} → ${r.to}로 진행했습니다.`);
+    await route();
+  } catch (err) { toast(`진행할 수 없습니다: ${err.message}`, true); }
+};
+window.addEventListener('flowstate', () => flowBtn.setAttribute('aria-pressed', String(flowState.get())));
 window.addEventListener('hashchange', route);
 // 뒤로·앞으로 가기로 페이지가 캐시에서 되살아나면 옛 화면이 남으므로 다시 그린다
 window.addEventListener('pageshow', (ev) => { if (ev.persisted) route(); });

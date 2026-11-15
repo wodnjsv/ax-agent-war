@@ -1077,7 +1077,10 @@ test('화면 다듬기: 근거 > 공급은 결론 한 문장 + 조건 종류별 
       { condition_type: 'reorder_required', sku_id: 'SKU-1002', po_draft_id: 'POD-0007', order_deadline: '2026-08-28', needed_by_week: '2026-11-16', additional_reorder_qty_ea: 2130, po_draft_preview: { order_qty: 24000 } },
     ];
     const one = [{ condition_type: 'supply_commitment_pending', sku_id: 'SKU-3003', po_draft_id: 'POD-0003', qty: 10000 }];
-    const cbOf = { 'PLAN-011': many, 'PLAN-014': one };
+    // SCM이 보충 계획을 아직 확인하지 않은 품목은 입고 행이 없다('정기 보충 0건'이 아니라 확인 대기로 말한다)
+    const none = [{ condition_type: 'baseline_replenishment_unconfirmed', reason: 'SCM 미확인', sku_id: 'SKU-3003', inbound_rows: [] },
+      { condition_type: 'inbound_unconfirmed', sku_id: 'SKU-3003', inbound_rows: [{ source_ref: 'SPO-0010', eta_date: '2026-08-27', qty: 10000 }] }];
+    const cbOf = { 'PLAN-011': many, 'PLAN-014': one, 'PLAN-002': none };
     const longText = '조건이 채워지면 공급할 수 있습니다. SKU-1001 SCM 기준 수요 보충 입고 SCM 정기 보충(SKU-1001 1회차)(2026-09-28)…';
     const p2 = app.module('p2');
     const baseLatest = p2.latestSupplyJudgment;
@@ -1090,7 +1093,7 @@ test('화면 다듬기: 근거 > 공급은 결론 한 문장 + 조건 종류별 
     Object.assign(app.module('p3'), { commitmentBySource: (src) => (src === 'POD-0003' ? { approval_status: '승인' } : src === 'POD-0007' ? { approval_status: '결재 대기' } : null) });
     Object.assign(app.module('p1'), { entryView: (id) => ({ reference: { skus: id === 'PLAN-011'
       ? [['SKU-1001', '더마 리페어 세럼'], ['SKU-1002', '더마 카밍 크림'], ['SKU-1003', '더마 배리어 로션'], ['SKU-1004', '더마 시카 앰플']].map(([sku_id, sku_name]) => ({ sku_id, sku_name }))
-      : [{ sku_id: 'SKU-3003', sku_name: '색조 아이팔레트' }] } }) });
+      : [{ sku_id: 'SKU-3003', sku_name: '색조 아이팔레트' }] } }) }); // PLAN-002·014는 색조
     const s11 = (await get('/api/p4/user/plans/PLAN-011')).why;
     assert.equal(s11.supply.summary, '조건이 채워지면 공급할 수 있습니다. 남은 조건 3가지:');
     assert.deepEqual(s11.supply.groups, [
@@ -1107,6 +1110,9 @@ test('화면 다듬기: 근거 > 공급은 결론 한 문장 + 조건 종류별 
     assert.equal(s14.supply.summary, '조건이 채워지면 공급할 수 있습니다 — 내부 승인만 난 보충 발주: 색조 아이팔레트 10,000개, 회신 예정 7월 21일.');
     assert.deepEqual(s14.supply.groups, []);
     assert.equal(s14.supply_commit.filter((l) => /내부 승인됐지만 Corevia 공급 확약을 기다리는/.test(l.text)).length, 0);
+    const s02 = (await get('/api/p4/user/plans/PLAN-002')).why.supply;
+    assert.equal(s02.groups[0], 'SCM 보충 계획 확인을 기다리는 품목: 색조 아이팔레트(판매 기간 뒤 기존 판매분이 모자랄 수 있음)');
+    assert.doesNotMatch(s02.groups.join(' '), /0건/);
     // 철회한 기안: 결론은 철회 때 상태로, 취소된 보충 발주는 '취소된 보충 발주'로(회신 대기로 보이지 않게)
     await fetch(`http://127.0.0.1:${port}/api/p4/plans/PLAN-011/withdraw`, { method: 'POST', body: JSON.stringify({ reason: '시험' }) });
     Object.assign(app.module('p3'), { commitmentBySource: (src) => (src === 'POD-0007' ? { approval_status: '취소', cancel_info: { kind: '기안 철회로 취소' } } : null) });

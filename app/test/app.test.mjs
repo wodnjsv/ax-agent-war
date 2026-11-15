@@ -134,3 +134,17 @@ test('수요 입력 참고 표: 문제 1 새 필드(headroom_committed, baseline
   assert.match(demandRefRow({ sku_name: 'A', headroom_committed: { headroom_state: 'none', min_residual_headroom_qty: null }, baseline_plan: { status: 'SCM 미확인', plan_qty_total: 0 } }), /제한 없음.*SCM 미확인<\/td>/);
   assert.match(demandRefRow({ sku_name: 'B', headroom_committed: null, baseline_plan: null }), /<td>-<\/td><td>없음<\/td><td>-<\/td>/);
 });
+
+test('승인 요청 초안 확인 상태: 양식 초안(AI 미연결)은 화면에서 이대로 사용을 누르면 확인, AI 초안은 문제 3 확인 기록으로', async () => {
+  const { draftConfirmed } = await import('../public/work.js');
+  const seen = new Set();
+  const form = { draft_id: 'DR-1', mode: '양식', review_status: '해당 없음', usable: true };
+  assert.equal(draftConfirmed(form, seen), false); // 누르기 전에는 확인 전(올리기 잠김)
+  seen.add('DR-1');
+  assert.equal(draftConfirmed(form, seen), true); // 문제 3은 양식 초안의 단순 확인을 받지 않으므로 화면이 기억한다
+  assert.equal(draftConfirmed({ ...form, review_status: '수정 후 확인' }, new Set()), true);
+  const ai = { draft_id: 'DR-2', mode: 'AI', review_status: '확인 대기', usable: false };
+  assert.equal(draftConfirmed(ai, new Set(['DR-2'])), false); // AI 초안은 화면 기억으로 확인되지 않는다
+  assert.equal(draftConfirmed({ ...ai, review_status: '확인', usable: true }), true);
+  assert.equal(draftConfirmed(null), false);
+});

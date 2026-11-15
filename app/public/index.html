@@ -9,16 +9,22 @@
 <body>
   <header class="top">
     <div class="brand">캠페인 기안 도우미</div>
-    <nav>
-      <a href="#/">업무 화면</a>
-      <span class="nav-sep">상세 근거:</span>
-      <a href="#/plans">기안 목록</a>
-      <a href="#/events">사건 기록</a>
-      <a href="#/mock">모의 입력·날짜 진행</a>
+    <nav aria-label="주요 화면">
+      <a href="#/" data-nav="work">내 기안</a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <span class="nav-sep">상세 근거</span>
+      <a href="#/plans" data-nav="plans" class="detail-link">기안 목록</a>
+      <a href="#/events" data-nav="events" class="detail-link">사건 기록</a>
+      <a href="#/mock" data-nav="mock" class="detail-link">모의 입력</a>
     </nav>
     <div class="status">
-      <span>가상 일자 <b id="clock">-</b></span>
-      <span>AI <b id="ai">-</b></span>
+      <span class="clock">가상 일자 <b id="clock">-</b></span>
+      <span id="ai" class="btag">AI -</span>
+      <button id="next-day" type="button" title="가상 일자를 다음 영업일로 진행(시연 조작)">다음 날로</button>
+      <button id="flow-toggle" class="flow-btn" type="button" aria-pressed="false" aria-controls="w-flow" title="데이터 흐름 창 열기·닫기">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M1 2h14v12H1V2zm1.5 1.5v9h6v-9h-6zm7.5 0v9h3.5v-9H10z"/></svg>
+        <span>데이터 흐름</span><span class="dot" id="flow-dot" hidden></span>
+      </button>
     </div>
   </header>
   <div class="legend" id="legend"></div>

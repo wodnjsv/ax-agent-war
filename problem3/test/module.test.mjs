@@ -352,7 +352,7 @@ test('상신 첨부: 조건부 판정의 조건 종류(inbound_unconfirmed / reo
     assert.deepEqual(Object.fromEntries(['po_draft_id', 'sku_id', 'required_qty', 'order_deadline', 'order_deadline_basis', 'payment_due_date', 'approver', 'approval_status'].map((k) => [k, row.po_draft_conditions[0][k]])),
       { po_draft_id: 'PD-1', sku_id: 'SKU-3001', required_qty: 1200, order_deadline: '2026-07-24', order_deadline_basis: 'order_deadline', payment_due_date: '2026-08-21', approver: 'GRP_CEO', approval_status: '미상신' });
     const { draft } = await (await fetch(`http://127.0.0.1:${await app.listen(0, '127.0.0.1')}/api/p3/draft`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ commitment_id: 'CMT-PLAN-002' }) })).json();
-    assert.match(draft.text, /발주안 PD-1\(SKU-3001\): 발주 시한 2026-07-24/);
+    assert.match(draft.text, /보충 발주\(색조 벨벳 립\): 발주 시한 2026-07-24/); // 품목은 이름으로
   } finally { await app.close(); rmSync(root, { recursive: true, force: true }); }
 });
 
@@ -747,7 +747,7 @@ test('공급 확약 (가)·(라): 발주안마다 내부 승인과 Corevia 공�
     const { draft } = await (await fetch(`http://127.0.0.1:${port}/api/p3/draft`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ commitment_id: 'CMT-PLAN-001' }) })).json();
     assert.match(draft.text, /내부 승인됨\(구매·지출 허용, 공급 확약 아님\)/);
     assert.match(draft.text, /Corevia 공급 확약: 부분 확약: 8000EA\(도착 2026-09-14\), 미확약 잔량 8000EA\(남은 조건: 검사 1일, 운송 3일\)/);
-    assert.match(draft.text, /미확인 공급 조건\(승인으로 풀리지 않고 Corevia·SCM 회신으로만 풀림\): SKU-2001 공급 확약 대기/);
+    assert.match(draft.text, /미확인 공급 조건\(승인으로 풀리지 않고 Corevia·SCM 회신으로만 풀림\): 기초 토너 대용량 공급 확약 대기/);
     assert.match(draft.text, /현금 재전망 한계: SCM 기준 수요 정기 보충/);
     const v = await (await fetch(`http://127.0.0.1:${port}/api/p3/plan/PLAN-001/approval`)).json();
     assert.deepEqual([v.po_drafts[0].internal_approval_status, v.po_drafts[0].supply_commitment.supply_commitment_status], ['승인', '부분 확약']);
@@ -972,4 +972,46 @@ test('L5: 회수일 지연(MAR-0004·0005 각 14일)에서는 PLAN-003을 08-31�
     assert.match(ev.payload.rationale, /유출일 2026-08-31는 현행 재전망의 하회 조각 1\/1\(2026-07-21~2026-09-04/);
     assert.match(p3.describeEvent(ev).result, /유출일 2026-08-31이 하회 구간\(2026-07-21~2026-09-04\) 안 → 승인권자 그룹 CEO/);
   } finally { await cleanup(); }
+});
+
+// ── 마무리: 승인 요청 초안에 코드가 남지 않는다(양식·AI 입력·AI 출력) ──
+const CODE_RE = /SKU-\d|PLAN-\d|POD-\d|\bPD-|CMT-|\bRJ-\d|\bCW-\d|APR-\d|GRP_CEO|MS_CEO|MKT_TEAM|\bR-0\d\b|\b[a-z]+_[a-z_]+\b/;
+test('승인 요청 초안: 양식 문장은 캠페인·품목 이름과 한국어 조건 이름만 쓰고, AI 출력에 섞인 코드는 화면에 보이기 전에 바꾼다(수치는 그대로)', async () => {
+  // 양식(AI 미연결): 발주안·조건부 공급 판정이 있는 기안
+  const root = mkdtempSync(path.join(tmpdir(), 'w01-p3cd-'));
+  symlinkSync(P3_DIR, path.join(root, 'problem3'), 'dir');
+  mkdirSync(path.join(root, 'problem2', 'src'), { recursive: true });
+  writeFileSync(path.join(root, 'problem2', 'src', 'index.mjs'), FAKE_P2_SC);
+  let aiOut = null;
+  const fetchImpl = async () => ({ ok: true, json: async () => ({ model: 'anthropic/claude-fable-5.2', choices: [{ message: { content: aiOut } }] }) });
+  const mk = (env) => createApp({ rootDir: root, dbPath: ':memory:', env, fetchImpl, log: quiet });
+  globalThis.__P3T_SC = [];
+  const app = await mk({});
+  try {
+    await app.events.emit({ event_type: 'PO_DRAFT_CREATED', source_type: '계산', payload: { ...DRAFT_A, sku_id: 'SKU-2001' } }, 'p2');
+    const port = await app.listen(0, '127.0.0.1');
+    const { draft } = await (await fetch(`http://127.0.0.1:${port}/api/p3/draft`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ commitment_id: 'CMT-PLAN-001' }) })).json();
+    assert.equal(draft.mode, '양식');
+    assert.doesNotMatch(draft.text, CODE_RE);
+    const plan = (await (await fetch(`http://127.0.0.1:${port}/api/plans`)).json()).plans.find((x) => x.plan_id === 'PLAN-001');
+    assert.ok(draft.text.includes(`캠페인 ${plan.campaign_name}(${plan.product_line})`));
+    assert.match(draft.text, /승인권자 그룹 CEO: 현금 잔액이 재무 약정상 최소 잔액/);
+    assert.match(draft.text, /조건: 공급 확약 대기, 기준 수요 보충 미확인/);
+    assert.match(draft.text, /보충 발주\([^)A-Z]+\): 발주 시한/);
+  } finally { await app.close(); }
+  // AI 연결: 입력에 코드가 없고, 출력에 섞인 코드는 업무 용어·이름으로 바뀐다
+  const app2 = await mk({ OPENROUTER_API_KEY: 'x' });
+  try {
+    await app2.events.emit({ event_type: 'PO_DRAFT_CREATED', source_type: '계산', payload: { ...DRAFT_A, sku_id: 'SKU-2001' } }, 'p2');
+    aiOut = 'CMT-PLAN-001의 contract_deadline은 2026-07-17이다. PD-A(SKU-2001)는 supply_commitment_pending이고 GRP_CEO 결재(R-01, RJ-000003, CW-001) 대상이다. 금액 201,600,000원.';
+    const port = await app2.listen(0, '127.0.0.1');
+    const { draft } = await (await fetch(`http://127.0.0.1:${port}/api/p3/draft`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ commitment_id: 'CMT-PLAN-001' }) })).json();
+    assert.equal(draft.mode, 'AI');
+    assert.doesNotMatch(draft.text, CODE_RE);
+    const plan = (await (await fetch(`http://127.0.0.1:${port}/api/plans`)).json()).plans.find((x) => x.plan_id === 'PLAN-001');
+    assert.ok(draft.text.startsWith(`${plan.campaign_name} 캠페인의 확정기한은 2026-07-17이다.`), draft.text);
+    assert.match(draft.text, /공급 확약 대기이고 그룹 CEO 결재\('하회 예상 구간 안 유출' 기준\) 대상이다\. 금액 201,600,000원\./); // 수치는 그대로
+    const ai = app2.events.query({ event_type: 'AI_CALL_RECORDED' }).at(-1);
+    assert.match(ai.payload.output, /CMT-PLAN-001/); // 원문은 AI 호출 기록에 남는다
+  } finally { await app2.close(); rmSync(root, { recursive: true, force: true }); globalThis.__P3T_SC = []; }
 });

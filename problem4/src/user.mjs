@@ -371,13 +371,17 @@ export function createUserViews({ ctx, store, engine, describeOwn, lapseStory, p
     const eaK = (n) => `${Number(n).toLocaleString('ko-KR')}개`;
     const groups = []; const details = [];
     const br = cb.filter((c) => c.condition_type === 'baseline_replenishment_unconfirmed');
-    if (br.length) {
-      const rows = br.flatMap((c) => c.inbound_rows ?? []);
+    // 정기 보충: 입고 행이 있으면 Corevia 확약 대기(회차·가장 빠른 도착), 없으면 SCM이 보충 계획 자체를 아직 확인하지 않은 품목
+    const brRows = br.filter((c) => (c.inbound_rows ?? []).length);
+    const brNone = br.filter((c) => !(c.inbound_rows ?? []).length);
+    const skuList = (list) => (list.length > 2 ? `${line} ${list.length}개 품목` : list.map((c) => nm(c.sku_id)).join(', '));
+    if (brRows.length) {
+      const rows = brRows.flatMap((c) => c.inbound_rows);
       const first = rows.map((r) => r.eta_date).sort()[0];
-      const unconfirmedScm = br.some((c) => !/미확약/.test(c.reason ?? ''));
-      groups.push(`${unconfirmedScm ? 'SCM 확인·Corevia 확약을 기다리는 입고' : 'Corevia 확약을 기다리는 입고'}: ${br.length > 1 ? `${line} ${br.length}개 품목` : nm(br[0].sku_id)}의 정기 보충 ${rows.length}건${first ? `, 가장 빠른 도착 ${md(first)}` : ''}`);
-      for (const c of br) details.push(`${nm(c.sku_id)} 정기 보충: ${(c.inbound_rows ?? []).map((r, i) => `${i + 1}회차 ${md(r.eta_date)} ${eaK(r.qty)}`).join(', ')}`);
+      groups.push(`Corevia 확약을 기다리는 입고: ${skuList(brRows)}의 정기 보충 ${rows.length}건${first ? `, 가장 빠른 도착 ${md(first)}` : ''}`);
+      for (const c of brRows) details.push(`${nm(c.sku_id)} 정기 보충: ${c.inbound_rows.map((r, i) => `${i + 1}회차 ${md(r.eta_date)} ${eaK(r.qty)}`).join(', ')}`);
     }
+    if (brNone.length) groups.push(`SCM 보충 계획 확인을 기다리는 품목: ${skuList(brNone)}(판매 기간 뒤 기존 판매분이 모자랄 수 있음)`);
     const iu = cb.filter((c) => c.condition_type === 'inbound_unconfirmed');
     if (iu.length) {
       groups.push(`확정되지 않은 기존 발주: ${iu.map((c) => `${nm(c.sku_id)} ${(c.inbound_rows ?? [c]).length}건`).join(', ')}`);

@@ -235,7 +235,7 @@ export async function register(ctx) {
       draft_version: d.draft_version ?? 1, approval_anchor_date: d.planned_order_date, anchor_basis: 'planned_order_date',
       effective_at: today(), is_simulation: 1, active: 1,
       // 수량 내역은 사전 3.2 po_draft.qty_breakdown을 그대로 보관한다(문제 2 소유 값)
-      qty_detail: json({ order_qty: d.order_qty ?? null, qty_breakdown: d.qty_breakdown ?? null }),
+      qty_detail: json({ order_qty: d.order_qty ?? null, qty_breakdown: d.qty_breakdown ?? null, sku_id: d.sku_id ?? null }),
     };
     // 기안 철회에 따른 문제 2의 처리 구분을 그대로 남긴다(조정자: 스스로 추정하지 않음). 기안만 뗌 / 발주 전달 뒤 남음
     const wd = d.withdrawal ?? null;
@@ -789,22 +789,49 @@ export async function register(ctx) {
 
   const krwText = (n) => (n == null ? '-' : `${Number(n).toLocaleString('ko-KR')}원`);
   const windowText = (x) => (x.shortfall_window_start ? `${x.shortfall_window_start}~${x.shortfall_window_end}(${x.shortfall_bd_count}영업일)` : '없음');
+  // 품목 이름과, 승인권자가 읽는 문서에서 코드를 업무 용어로 바꾸는 도구
+  const skuNameOf = (id) => (id ? raw.sku.find((x) => x.sku_id === id)?.sku_name ?? '품목 미상' : '품목 미상');
+  const skuOfDraft = (poDraftId) => p('p2')?.poDrafts?.({ po_draft_id: poDraftId })?.[0]?.sku_id ?? parse(commitRow(`CMT-${poDraftId}`)?.qty_detail, {})?.sku_id ?? null;
+  const TERM_KO = {
+    contract_deadline: '확정기한', settlement_date: '집행 예정일', cash_outflow_date: '현금 유출일', planned_order_date: '발주 예정일',
+    order_deadline: '발주 시한', payment_due_date: '지급 예정일', approval_anchor_date: '승인 기준일', submission_due: '상신 마감',
+    final_reply_due: '최종 회신 마감', min_balance_krw: '최저 잔액', min_date: '최저 잔액일', shortfall_window_start: '하회 구간 시작',
+    shortfall_window_end: '하회 구간 끝', approval_status: '승인 상태', supply_verdict: '공급 판정', demand_status: '수요 입력 상태',
+    supply_commitment: '공급 확약', requested_budget_krw: '요청액', amount_krw: '금액', ...CONDITION_KO,
+  };
+  // AI 출력·양식 문장에 섞인 코드를 화면에 보이기 전에 바꾼다(수치·날짜는 건드리지 않는다)
+  function businessTerms(text) {
+    return String(text ?? '')
+      .replace(/\bCMT-(?=PLAN-|POD-|PD-)/g, '')
+      .replace(/\bPLAN-\d{3}\b/g, (m) => { const c = campaignOf(m); return c ? `${c.campaign_name} 캠페인` : '해당 기안'; })
+      .replace(/\b(?:POD-\d+|PD-[A-Z0-9]+)\b(?:\s*\(SKU-\d{4}\))?/g, (m) => `${skuNameOf(skuOfDraft(m.replace(/\s*\(.*$/, '')))} 보충 발주`)
+      .replace(/\bSKU-\d{4}\b/g, (m) => skuNameOf(m))
+      .replace(/\b(GRP_CEO|MS_CEO|MKT_TEAM)\b/g, (m) => approverName(m))
+      .replace(/\bR-0[0-4]\b/g, (m) => `'${LABELS.route[m]}' 기준`)
+      .replace(/\b[a-z]+(?:_[a-z]+)+\b/g, (m) => TERM_KO[m] ?? m)
+      .replace(/\b(?:RJ|CW|APR|DRF)-\d+\b/g, '')
+      .replace(/\(\s*(?:,\s*)+/g, '(').replace(/(?:\s*,)+\s*\)/g, ')').replace(/,\s*(?:,\s*)+/g, ', ')
+      .replace(/\(\s*\)/g, '').replace(/[ \t]{2,}/g, ' ');
+  }
   function templateDraft(pkg) {
     const lines = ['[상신 문서 초안 · 양식(AI 미연결 또는 미사용)]'];
     for (const r of pkg.rows) {
       const c = r.commitment;
       const rj = r.route_judgment;
-      lines.push(`- ${c.source_id}(${c.commitment_type}): 현금 유출일 ${c.cash_outflow_date}, 금액 ${Number(c.amount_krw).toLocaleString('ko-KR')}원${c.amount_scale === 'sample' ? '(표본 스케일)' : ''}.`);
-      lines.push(`  경로 ${rj?.route_rule_id ?? '-'} → ${c.approval_route ?? '-'}. 구간 버전 ${c.window_version}, 재무 확인 ${c.finance_confirmation_status}.`);
-      lines.push(`  승인 기준일 ${c.approval_anchor_date}(${c.anchor_basis}), 최종 회신 마감 ${r.deadline_schedule?.final_reply_due ?? '연결 안 됨'}.`);
-      lines.push(`  공급 판정 ${r.supply_judgment?.supply_verdict ?? (r.supply_connected ? '없음' : '연결 안 됨')}${r.condition_types.length ? `(조건: ${r.condition_types.join(', ')})` : ''}, 수요 입력 ${r.demand_status_by_plan?.demand_status ?? (r.demand_connected ? '없음' : '연결 안 됨')}.`);
+      // 승인권자가 읽는 문서: 캠페인·품목 이름과 업무 용어만 쓴다(시스템 번호·영문 이름 없음)
+      const camp = c.plan_id !== 'NONE' ? campaignOf(c.plan_id) : null;
+      const title = c.commitment_type === '발주안' ? `보충 발주(${skuNameOf(skuOfDraft(c.source_id))})` : `캠페인 ${camp ? `${camp.campaign_name}(${camp.product_line})` : '기안'}`;
+      lines.push(`- ${title}: 현금 유출일 ${c.cash_outflow_date}, 금액 ${Number(c.amount_krw).toLocaleString('ko-KR')}원${c.amount_scale === 'sample' ? '(표본 스케일)' : ''}.`);
+      lines.push(`  승인권자 ${approverName(c.approver)}${c.group_report_required ? '(그룹 보고 필요)' : ''}: ${RULE_TEXT[c.route_rule_id] ?? '-'} 유출일은 하회 구간 ${rj?.in_window ? '안' : '밖'}. 재무 확인 ${c.finance_confirmation_status}.`);
+      lines.push(`  승인 기준일 ${c.approval_anchor_date}(${LABELS.anchor_basis[c.anchor_basis] ?? '기준일'}), 상신 마감 ${r.deadline_schedule?.submission_due ?? '연결 안 됨'}, 최종 회신 마감 ${r.deadline_schedule?.final_reply_due ?? '연결 안 됨'}.`);
+      lines.push(`  공급 판정 ${r.supply_judgment?.supply_verdict ?? (r.supply_connected ? '없음' : '연결 안 됨')}${r.condition_types.length ? `(조건: ${r.condition_types.map((t) => LABELS.condition_type[t] ?? '기타 조건').join(', ')})` : ''}, 수요 입력 ${r.demand_status_by_plan?.demand_status ?? (r.demand_connected ? '없음' : '연결 안 됨')}.`);
       for (const d of r.po_draft_conditions) {
-        lines.push(`  발주안 ${d.po_draft_id}(${d.sku_id ?? '-'}): 발주 시한 ${d.order_deadline ?? '-'}${d.order_deadline_basis === 'planned_order_date' ? '(발주 예정일로 대신 표시)' : ''}, 지급 ${d.payment_due_date ?? '-'}, ${d.approver ?? '-'} ${d.internal_approval_label}.`);
+        lines.push(`  보충 발주(${skuNameOf(d.sku_id ?? skuOfDraft(d.po_draft_id))}): 발주 시한 ${d.order_deadline ?? '-'}${d.order_deadline_basis === 'planned_order_date' ? '(발주 예정일로 대신 표시)' : ''}, 지급 ${d.payment_due_date ?? '-'}, ${approverName(d.approver)} ${d.internal_approval_label}.`);
         if (d.residual_after_withdrawal) lines.push(`    기안 철회 뒤 남은 발주: 발주가 이미 전달돼 취소하지 않음, 지급 유출 유지, SCM 취소·조정 확인 대상.`);
         lines.push(`    Corevia 공급 확약: ${d.supply_commitment?.label ?? '-'}${d.supply_commitment?.remaining_conditions ? `(남은 조건: ${d.supply_commitment.remaining_conditions})` : ''}.`);
         if (d.cash_impact) lines.push(`    승인 시 최저 잔액 ${krwText(d.cash_impact.before.min_balance_krw)} → ${krwText(d.cash_impact.after.min_balance_krw)}, 하회 구간 ${windowText(d.cash_impact.before)} → ${windowText(d.cash_impact.after)}${d.campaign_share?.provided ? `, 발주 ${d.campaign_share.order_qty.toLocaleString('ko-KR')}EA = 캠페인 추가분 ${d.campaign_share.campaign_added_ea.toLocaleString('ko-KR')}EA(${d.campaign_share.campaign_share_pct}%) + MOQ·올림분 ${Number(d.campaign_share.rounding_ea ?? 0).toLocaleString('ko-KR')}EA` : ', 수량 내역 없음'}.`);
       }
-      if (r.unconfirmed_supply_conditions.length) lines.push(`  미확인 공급 조건(승인으로 풀리지 않고 Corevia·SCM 회신으로만 풀림): ${r.unconfirmed_supply_conditions.map((x) => `${x.sku_id ?? ''} ${x.text}`.trim()).join(' / ')}.`);
+      if (r.unconfirmed_supply_conditions.length) lines.push(`  미확인 공급 조건(승인으로 풀리지 않고 Corevia·SCM 회신으로만 풀림): ${r.unconfirmed_supply_conditions.map((x) => `${x.sku_id ? `${skuNameOf(x.sku_id)} ` : ''}${x.text}`).join(' / ')}.`);
       const ci = r.cash_impact;
       lines.push(`  현금 영향(관련 발주안 모두 승인 가정): 최저 잔액 ${krwText(ci.before.min_balance_krw)}(${ci.before.min_date}) → ${krwText(ci.after.min_balance_krw)}(${ci.after.min_date}), 하회 구간 ${windowText(ci.before)} → ${windowText(ci.after)}${ci.after_below_zero ? '. 승인 후 최저 잔액이 0원 미만(Masil 단독 지급 재원 없음)' : ''}.`);
       lines.push(`  현금 재전망 한계: ${r.cash_limitations.join(' ')}`);
@@ -854,7 +881,7 @@ export async function register(ctx) {
         관련_발주_모두_승인_시_최저_잔액: r.cash_impact?.added_outflows.length ? `${wonT(r.cash_impact.after.min_balance_krw)}(${r.cash_impact.after.min_date}), 하회 구간 ${winT(r.cash_impact.after)}` : '추가 현금 유출 없음',
         공급_판정: r.supply_judgment?.supply_verdict ?? (r.supply_connected ? '없음' : '연결 안 됨'),
         공급_조건: r.condition_types.map((t) => LABELS.condition_type[t] ?? '기타 조건'),
-        미확인_공급_조건: r.unconfirmed_supply_conditions.map((x) => x.text.replace(/SKU-\d+\s?/g, '')),
+        미확인_공급_조건: r.unconfirmed_supply_conditions.map((x) => `${x.sku_id ? `${skuNameOf(x.sku_id)}: ` : ''}${businessTerms(x.text)}`),
         현금_재전망_한계: r.cash_limitations,
         정기_보충_발주_민감도: r.scm_sensitivity.confirmed_row_count ? {
           확인된_보충_발주: `${r.scm_sensitivity.confirmed_row_count}건, 재전망 기간 지급 ${r.scm_sensitivity.in_horizon_row_count}건 ${wonT(r.scm_sensitivity.in_horizon_amount_krw)}(원본 단가로 도출, 수량·발주일은 SCM 모의 회신)`,
@@ -880,7 +907,7 @@ export async function register(ctx) {
     if (pkg.rows.length === 0) throw ctx.httpError(404, `약정이 없습니다: ${commitmentId}`);
     const n = nextN('p3_draft');
     const id = `DRF-${pad(n, 4)}`;
-    let text = templateDraft(pkg);
+    let text = businessTerms(templateDraft(pkg));
     let mode = '양식';
     let aiCallId = null;
     let review = '해당 없음';
@@ -892,7 +919,8 @@ export async function register(ctx) {
         { role: 'user', content: `상신 자료:\n${JSON.stringify(submissionDocInput(pkg), null, 2)}` },
       ],
     });
-    if (r.status === '연결') { text = String(r.output); mode = 'AI'; aiCallId = r.ai_call_id; review = '확인 대기'; }
+    // AI 출력에 코드가 섞여 와도 화면에 보이기 전에 품목 이름·업무 용어로 바꾼다(원문은 AI 호출 기록에 남는다)
+    if (r.status === '연결') { text = businessTerms(r.output); mode = 'AI'; aiCallId = r.ai_call_id; review = '확인 대기'; }
     db.prepare('INSERT INTO p3_draft (draft_id, n, commitment_id, text, mode, ai_call_id, review_status, created_on) VALUES (?,?,?,?,?,?,?,?)').run(id, n, commitmentId, text, mode, aiCallId, review, today());
     return db.prepare('SELECT * FROM p3_draft WHERE draft_id = ?').get(id);
   }
@@ -1195,7 +1223,8 @@ export async function register(ctx) {
       submit_group: canSubmit ? [{ commitment_id: cid, plan_id: planId, amount_krw: c.amount_krw }] : [],
       bundle_candidates: candidates,
       draft: latest ? {
-        draft_id: latest.draft_id, mode: latest.mode, review_status: latest.review_status, text: latest.text,
+        draft_id: latest.draft_id, mode: latest.mode, review_status: latest.review_status,
+        text: latest.review_status === '수정 후 확인' ? latest.text : businessTerms(latest.text),
         original_text: latest.original_text ?? null, created_on: latest.created_on, usable: draftUsable(latest),
       } : null,
       requests, latest_reply: requests.flatMap((r) => r.replies).at(-1) ?? null,
