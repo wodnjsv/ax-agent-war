@@ -1,0 +1,8 @@
+# 용량이 큰 촬영 원본·음성·편집 파일과 중간본은 올리지 않는다(GitHub 100MB 제한)
+w01-video/raw/
+*.wav
+*.vrew
+w01-video/W01_시연영상.mp4
+w01-video/W01_시연영상_무음자막.mp4
+w01-video/W01_시연영상_배속강조.mp4
+w01-video/W01_시연영상_배속표시.mp4

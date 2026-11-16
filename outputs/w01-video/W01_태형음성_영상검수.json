@@ -1,0 +1,1095 @@
+{
+  "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/W01_시연영상_배속표시.mp4",
+  "output": "/private/tmp/w01-small-badge/retimed-silent.mp4",
+  "source_sha256_unchanged": "1b1cad2012c8f62f6a0264259e9164dc7e962bdf2af0c107e8416ac6d9daa57a",
+  "source_srt": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/W01_더빙용_자막.srt",
+  "target_srt": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/W01_태형음성_타임라인.srt",
+  "source_frames": 7398,
+  "output_frames": 7720,
+  "fps": 24,
+  "source_duration": 308.25,
+  "target_srt_duration": 321.66,
+  "output_duration": 321.6666666666667,
+  "end_difference_ms": 6.667,
+  "cue_count": 56,
+  "added_hold_frames": 322,
+  "original_frames_dropped": 0,
+  "original_frame_order_preserved": true,
+  "wait_frames_unchanged": [
+    26,
+    64,
+    18
+  ],
+  "all_output_frames_decoded": 7720,
+  "parts": [
+    {
+      "kind": "cue",
+      "cue": 1,
+      "source_start": 0,
+      "source_end": 144,
+      "target_start": 0,
+      "target_end": 144,
+      "hold_frames": 0,
+      "target_srt_start": 0.0,
+      "target_srt_end": 6.0
+    },
+    {
+      "kind": "cue",
+      "cue": 2,
+      "source_start": 144,
+      "source_end": 288,
+      "target_start": 144,
+      "target_end": 288,
+      "hold_frames": 0,
+      "target_srt_start": 6.0,
+      "target_srt_end": 12.0
+    },
+    {
+      "kind": "cue",
+      "cue": 3,
+      "source_start": 288,
+      "source_end": 432,
+      "target_start": 288,
+      "target_end": 432,
+      "hold_frames": 0,
+      "target_srt_start": 12.0,
+      "target_srt_end": 18.0
+    },
+    {
+      "kind": "cue",
+      "cue": 4,
+      "source_start": 432,
+      "source_end": 576,
+      "target_start": 432,
+      "target_end": 576,
+      "hold_frames": 0,
+      "target_srt_start": 18.0,
+      "target_srt_end": 24.0
+    },
+    {
+      "kind": "cue",
+      "cue": 5,
+      "source_start": 576,
+      "source_end": 720,
+      "target_start": 576,
+      "target_end": 720,
+      "hold_frames": 0,
+      "target_srt_start": 24.0,
+      "target_srt_end": 30.0
+    },
+    {
+      "kind": "cue",
+      "cue": 6,
+      "source_start": 720,
+      "source_end": 870,
+      "target_start": 720,
+      "target_end": 870,
+      "hold_frames": 0,
+      "target_srt_start": 30.0,
+      "target_srt_end": 36.25
+    },
+    {
+      "kind": "wait",
+      "source_start": 870,
+      "source_end": 896,
+      "target_start": 870,
+      "target_end": 896,
+      "hold_frames": 0
+    },
+    {
+      "kind": "cue",
+      "cue": 7,
+      "source_start": 896,
+      "source_end": 1064,
+      "target_start": 896,
+      "target_end": 1064,
+      "hold_frames": 0,
+      "target_srt_start": 37.33,
+      "target_srt_end": 44.33
+    },
+    {
+      "kind": "cue",
+      "cue": 8,
+      "source_start": 1064,
+      "source_end": 1256,
+      "target_start": 1064,
+      "target_end": 1256,
+      "hold_frames": 0,
+      "target_srt_start": 44.33,
+      "target_srt_end": 52.33
+    },
+    {
+      "kind": "cue",
+      "cue": 9,
+      "source_start": 1256,
+      "source_end": 1424,
+      "target_start": 1256,
+      "target_end": 1424,
+      "hold_frames": 0,
+      "target_srt_start": 52.33,
+      "target_srt_end": 59.33
+    },
+    {
+      "kind": "cue",
+      "cue": 10,
+      "source_start": 1424,
+      "source_end": 1616,
+      "target_start": 1424,
+      "target_end": 1616,
+      "hold_frames": 0,
+      "target_srt_start": 59.33,
+      "target_srt_end": 67.33
+    },
+    {
+      "kind": "cue",
+      "cue": 11,
+      "source_start": 1616,
+      "source_end": 1760,
+      "target_start": 1616,
+      "target_end": 1762,
+      "hold_frames": 2,
+      "target_srt_start": 67.33,
+      "target_srt_end": 73.42
+    },
+    {
+      "kind": "cue",
+      "cue": 12,
+      "source_start": 1760,
+      "source_end": 1928,
+      "target_start": 1762,
+      "target_end": 1930,
+      "hold_frames": 0,
+      "target_srt_start": 73.42,
+      "target_srt_end": 80.42
+    },
+    {
+      "kind": "cue",
+      "cue": 13,
+      "source_start": 1928,
+      "source_end": 2012,
+      "target_start": 1930,
+      "target_end": 2022,
+      "hold_frames": 8,
+      "target_srt_start": 80.42,
+      "target_srt_end": 84.23
+    },
+    {
+      "kind": "wait",
+      "source_start": 2012,
+      "source_end": 2076,
+      "target_start": 2022,
+      "target_end": 2086,
+      "hold_frames": 0
+    },
+    {
+      "kind": "cue",
+      "cue": 14,
+      "source_start": 2076,
+      "source_end": 2220,
+      "target_start": 2086,
+      "target_end": 2230,
+      "hold_frames": 0,
+      "target_srt_start": 86.9,
+      "target_srt_end": 92.9
+    },
+    {
+      "kind": "cue",
+      "cue": 15,
+      "source_start": 2220,
+      "source_end": 2388,
+      "target_start": 2230,
+      "target_end": 2398,
+      "hold_frames": 0,
+      "target_srt_start": 92.9,
+      "target_srt_end": 99.9
+    },
+    {
+      "kind": "cue",
+      "cue": 16,
+      "source_start": 2388,
+      "source_end": 2580,
+      "target_start": 2398,
+      "target_end": 2590,
+      "hold_frames": 0,
+      "target_srt_start": 99.9,
+      "target_srt_end": 107.9
+    },
+    {
+      "kind": "cue",
+      "cue": 17,
+      "source_start": 2580,
+      "source_end": 2724,
+      "target_start": 2590,
+      "target_end": 2734,
+      "hold_frames": 0,
+      "target_srt_start": 107.9,
+      "target_srt_end": 113.9
+    },
+    {
+      "kind": "cue",
+      "cue": 18,
+      "source_start": 2724,
+      "source_end": 2844,
+      "target_start": 2734,
+      "target_end": 2854,
+      "hold_frames": 0,
+      "target_srt_start": 113.9,
+      "target_srt_end": 118.9
+    },
+    {
+      "kind": "cue",
+      "cue": 19,
+      "source_start": 2844,
+      "source_end": 2988,
+      "target_start": 2854,
+      "target_end": 2998,
+      "hold_frames": 0,
+      "target_srt_start": 118.9,
+      "target_srt_end": 124.9
+    },
+    {
+      "kind": "cue",
+      "cue": 20,
+      "source_start": 2988,
+      "source_end": 3060,
+      "target_start": 2998,
+      "target_end": 3110,
+      "hold_frames": 40,
+      "target_srt_start": 124.9,
+      "target_srt_end": 129.6
+    },
+    {
+      "kind": "cue",
+      "cue": 21,
+      "source_start": 3060,
+      "source_end": 3180,
+      "target_start": 3110,
+      "target_end": 3230,
+      "hold_frames": 0,
+      "target_srt_start": 129.6,
+      "target_srt_end": 134.6
+    },
+    {
+      "kind": "cue",
+      "cue": 22,
+      "source_start": 3180,
+      "source_end": 3282,
+      "target_start": 3230,
+      "target_end": 3340,
+      "hold_frames": 8,
+      "target_srt_start": 134.6,
+      "target_srt_end": 139.15
+    },
+    {
+      "kind": "cue",
+      "cue": 23,
+      "source_start": 3282,
+      "source_end": 3384,
+      "target_start": 3340,
+      "target_end": 3448,
+      "hold_frames": 6,
+      "target_srt_start": 139.15,
+      "target_srt_end": 143.67000000000002
+    },
+    {
+      "kind": "cue",
+      "cue": 24,
+      "source_start": 3384,
+      "source_end": 3504,
+      "target_start": 3448,
+      "target_end": 3576,
+      "hold_frames": 8,
+      "target_srt_start": 143.67000000000002,
+      "target_srt_end": 149.0
+    },
+    {
+      "kind": "wait",
+      "source_start": 3504,
+      "source_end": 3522,
+      "target_start": 3576,
+      "target_end": 3594,
+      "hold_frames": 0
+    },
+    {
+      "kind": "cue",
+      "cue": 25,
+      "source_start": 3522,
+      "source_end": 3666,
+      "target_start": 3594,
+      "target_end": 3738,
+      "hold_frames": 0,
+      "target_srt_start": 149.75,
+      "target_srt_end": 155.75
+    },
+    {
+      "kind": "cue",
+      "cue": 26,
+      "source_start": 3666,
+      "source_end": 3810,
+      "target_start": 3738,
+      "target_end": 3882,
+      "hold_frames": 0,
+      "target_srt_start": 155.75,
+      "target_srt_end": 161.75
+    },
+    {
+      "kind": "cue",
+      "cue": 27,
+      "source_start": 3810,
+      "source_end": 3954,
+      "target_start": 3882,
+      "target_end": 4026,
+      "hold_frames": 0,
+      "target_srt_start": 161.75,
+      "target_srt_end": 167.75
+    },
+    {
+      "kind": "cue",
+      "cue": 28,
+      "source_start": 3954,
+      "source_end": 4074,
+      "target_start": 4026,
+      "target_end": 4146,
+      "hold_frames": 0,
+      "target_srt_start": 167.75,
+      "target_srt_end": 172.75
+    },
+    {
+      "kind": "cue",
+      "cue": 29,
+      "source_start": 4074,
+      "source_end": 4218,
+      "target_start": 4146,
+      "target_end": 4290,
+      "hold_frames": 0,
+      "target_srt_start": 172.75,
+      "target_srt_end": 178.75
+    },
+    {
+      "kind": "cue",
+      "cue": 30,
+      "source_start": 4218,
+      "source_end": 4290,
+      "target_start": 4290,
+      "target_end": 4388,
+      "hold_frames": 26,
+      "target_srt_start": 178.75,
+      "target_srt_end": 182.85
+    },
+    {
+      "kind": "cue",
+      "cue": 31,
+      "source_start": 4290,
+      "source_end": 4391,
+      "target_start": 4388,
+      "target_end": 4506,
+      "hold_frames": 17,
+      "target_srt_start": 182.85,
+      "target_srt_end": 187.73
+    },
+    {
+      "kind": "cue",
+      "cue": 32,
+      "source_start": 4391,
+      "source_end": 4475,
+      "target_start": 4506,
+      "target_end": 4600,
+      "hold_frames": 10,
+      "target_srt_start": 187.73,
+      "target_srt_end": 191.67
+    },
+    {
+      "kind": "cue",
+      "cue": 33,
+      "source_start": 4475,
+      "source_end": 4559,
+      "target_start": 4600,
+      "target_end": 4705,
+      "hold_frames": 21,
+      "target_srt_start": 191.67,
+      "target_srt_end": 196.06
+    },
+    {
+      "kind": "cue",
+      "cue": 34,
+      "source_start": 4559,
+      "source_end": 4703,
+      "target_start": 4705,
+      "target_end": 4849,
+      "hold_frames": 0,
+      "target_srt_start": 196.06,
+      "target_srt_end": 202.06
+    },
+    {
+      "kind": "cue",
+      "cue": 35,
+      "source_start": 4703,
+      "source_end": 4847,
+      "target_start": 4849,
+      "target_end": 4993,
+      "hold_frames": 0,
+      "target_srt_start": 202.06,
+      "target_srt_end": 208.06
+    },
+    {
+      "kind": "cue",
+      "cue": 36,
+      "source_start": 4847,
+      "source_end": 4943,
+      "target_start": 4993,
+      "target_end": 5090,
+      "hold_frames": 1,
+      "target_srt_start": 208.06,
+      "target_srt_end": 212.07999999999998
+    },
+    {
+      "kind": "cue",
+      "cue": 37,
+      "source_start": 4943,
+      "source_end": 5063,
+      "target_start": 5090,
+      "target_end": 5244,
+      "hold_frames": 34,
+      "target_srt_start": 212.07999999999998,
+      "target_srt_end": 218.51
+    },
+    {
+      "kind": "cue",
+      "cue": 38,
+      "source_start": 5063,
+      "source_end": 5250,
+      "target_start": 5244,
+      "target_end": 5431,
+      "hold_frames": 0,
+      "target_srt_start": 218.51,
+      "target_srt_end": 226.3
+    },
+    {
+      "kind": "cue",
+      "cue": 39,
+      "source_start": 5250,
+      "source_end": 5322,
+      "target_start": 5431,
+      "target_end": 5523,
+      "hold_frames": 20,
+      "target_srt_start": 226.3,
+      "target_srt_end": 230.11
+    },
+    {
+      "kind": "cue",
+      "cue": 40,
+      "source_start": 5322,
+      "source_end": 5442,
+      "target_start": 5523,
+      "target_end": 5673,
+      "hold_frames": 30,
+      "target_srt_start": 230.11,
+      "target_srt_end": 236.38
+    },
+    {
+      "kind": "cue",
+      "cue": 41,
+      "source_start": 5442,
+      "source_end": 5562,
+      "target_start": 5673,
+      "target_end": 5810,
+      "hold_frames": 17,
+      "target_srt_start": 236.38,
+      "target_srt_end": 242.07
+    },
+    {
+      "kind": "cue",
+      "cue": 42,
+      "source_start": 5562,
+      "source_end": 5658,
+      "target_start": 5810,
+      "target_end": 5924,
+      "hold_frames": 18,
+      "target_srt_start": 242.07,
+      "target_srt_end": 246.82
+    },
+    {
+      "kind": "cue",
+      "cue": 43,
+      "source_start": 5658,
+      "source_end": 5778,
+      "target_start": 5924,
+      "target_end": 6044,
+      "hold_frames": 0,
+      "target_srt_start": 246.82,
+      "target_srt_end": 251.82
+    },
+    {
+      "kind": "cue",
+      "cue": 44,
+      "source_start": 5778,
+      "source_end": 5874,
+      "target_start": 6044,
+      "target_end": 6149,
+      "hold_frames": 9,
+      "target_srt_start": 251.82,
+      "target_srt_end": 256.21
+    },
+    {
+      "kind": "cue",
+      "cue": 45,
+      "source_start": 5874,
+      "source_end": 5982,
+      "target_start": 6149,
+      "target_end": 6257,
+      "hold_frames": 0,
+      "target_srt_start": 256.21,
+      "target_srt_end": 260.71
+    },
+    {
+      "kind": "cue",
+      "cue": 46,
+      "source_start": 5982,
+      "source_end": 6090,
+      "target_start": 6257,
+      "target_end": 6368,
+      "hold_frames": 3,
+      "target_srt_start": 260.71,
+      "target_srt_end": 265.33
+    },
+    {
+      "kind": "cue",
+      "cue": 47,
+      "source_start": 6090,
+      "source_end": 6210,
+      "target_start": 6368,
+      "target_end": 6500,
+      "hold_frames": 12,
+      "target_srt_start": 265.33,
+      "target_srt_end": 270.83
+    },
+    {
+      "kind": "cue",
+      "cue": 48,
+      "source_start": 6210,
+      "source_end": 6318,
+      "target_start": 6500,
+      "target_end": 6608,
+      "hold_frames": 0,
+      "target_srt_start": 270.83,
+      "target_srt_end": 275.33
+    },
+    {
+      "kind": "cue",
+      "cue": 49,
+      "source_start": 6318,
+      "source_end": 6438,
+      "target_start": 6608,
+      "target_end": 6728,
+      "hold_frames": 0,
+      "target_srt_start": 275.33,
+      "target_srt_end": 280.33
+    },
+    {
+      "kind": "cue",
+      "cue": 50,
+      "source_start": 6438,
+      "source_end": 6558,
+      "target_start": 6728,
+      "target_end": 6848,
+      "hold_frames": 0,
+      "target_srt_start": 280.33,
+      "target_srt_end": 285.33
+    },
+    {
+      "kind": "cue",
+      "cue": 51,
+      "source_start": 6558,
+      "source_end": 6678,
+      "target_start": 6848,
+      "target_end": 6968,
+      "hold_frames": 0,
+      "target_srt_start": 285.33,
+      "target_srt_end": 290.33
+    },
+    {
+      "kind": "cue",
+      "cue": 52,
+      "source_start": 6678,
+      "source_end": 6798,
+      "target_start": 6968,
+      "target_end": 7094,
+      "hold_frames": 6,
+      "target_srt_start": 290.33,
+      "target_srt_end": 295.58
+    },
+    {
+      "kind": "cue",
+      "cue": 53,
+      "source_start": 6798,
+      "source_end": 6990,
+      "target_start": 7094,
+      "target_end": 7286,
+      "hold_frames": 0,
+      "target_srt_start": 295.58,
+      "target_srt_end": 303.58
+    },
+    {
+      "kind": "cue",
+      "cue": 54,
+      "source_start": 6990,
+      "source_end": 7098,
+      "target_start": 7286,
+      "target_end": 7407,
+      "hold_frames": 13,
+      "target_srt_start": 303.58,
+      "target_srt_end": 308.62
+    },
+    {
+      "kind": "cue",
+      "cue": 55,
+      "source_start": 7098,
+      "source_end": 7206,
+      "target_start": 7407,
+      "target_end": 7528,
+      "hold_frames": 13,
+      "target_srt_start": 308.62,
+      "target_srt_end": 313.66
+    },
+    {
+      "kind": "cue",
+      "cue": 56,
+      "source_start": 7206,
+      "source_end": 7398,
+      "target_start": 7528,
+      "target_end": 7720,
+      "hold_frames": 0,
+      "target_srt_start": 313.66,
+      "target_srt_end": 321.66
+    }
+  ],
+  "qa_images": [
+    "/private/tmp/w01-small-badge/retimed-883-36.792s.jpg",
+    "/private/tmp/w01-small-badge/retimed-2054-85.583s.jpg",
+    "/private/tmp/w01-small-badge/retimed-3100-129.167s.jpg",
+    "/private/tmp/w01-small-badge/retimed-3585-149.375s.jpg",
+    "/private/tmp/w01-small-badge/retimed-5600-233.333s.jpg",
+    "/private/tmp/w01-small-badge/retimed-7719-321.625s.jpg"
+  ],
+  "bytes": 6644236,
+  "elapsed": 48.88,
+  "narration_text_verification": {
+    "source_cue_count": 56,
+    "final_cue_count": 56,
+    "all_56_texts_preserved": true,
+    "comparison": "Cue order and text equal after removal of whitespace only; no spoken words omitted or replaced.",
+    "source_srt_sha256": "55e618c2edba598d085d050b8ade2361ae78f7286ba3be4c7faf23655421db95",
+    "final_srt_sha256": "d9cec324886d75a30f17628331401ae9de5b03a636eb5ed09513c7faae6761c6",
+    "cues": [
+      {
+        "cue": 1,
+        "source_timing": "00:00:00,000 --> 00:00:06,000",
+        "final_timing": "00:00:00,000 --> 00:00:06,000",
+        "text": "마실 커머스 마케팅 담당자의 캠페인 확대 기안 25건을 다룹니다."
+      },
+      {
+        "cue": 2,
+        "source_timing": "00:00:06,000 --> 00:00:12,000",
+        "final_timing": "00:00:06,000 --> 00:00:12,000",
+        "text": "확정기한 전에 진행할지, 바꿀지, 철회할지 결정하도록 돕습니다."
+      },
+      {
+        "cue": 3,
+        "source_timing": "00:00:12,000 --> 00:00:18,000",
+        "final_timing": "00:00:12,000 --> 00:00:18,000",
+        "text": "수요 입력, 공급 확인, 승인과 후속 처리를 한 흐름으로 연결합니다."
+      },
+      {
+        "cue": 4,
+        "source_timing": "00:00:18,000 --> 00:00:24,000",
+        "final_timing": "00:00:18,000 --> 00:00:24,000",
+        "text": "다른 부서의 회신과 승인은 모의 입력입니다."
+      },
+      {
+        "cue": 5,
+        "source_timing": "00:00:24,000 --> 00:00:30,000",
+        "final_timing": "00:00:24,000 --> 00:00:30,000",
+        "text": "그 입력에 따른 계산, 재판정과 상태 기록은 구현이 직접 처리합니다."
+      },
+      {
+        "cue": 6,
+        "source_timing": "00:00:30,000 --> 00:00:36,250",
+        "final_timing": "00:00:30,000 --> 00:00:36,250",
+        "text": "시연용 가상 회신 문장을 불러오고, 실제 엘엘엠 에이피아이로 항목을 정리합니다."
+      },
+      {
+        "cue": 7,
+        "source_timing": "00:00:37,333 --> 00:00:44,333",
+        "final_timing": "00:00:37,330 --> 00:00:44,330",
+        "text": "에이아이는 모호한 증가율을 추측하지 않고 비웁니다. 담당자가 확인해야 합니다."
+      },
+      {
+        "cue": 8,
+        "source_timing": "00:00:44,333 --> 00:00:52,333",
+        "final_timing": "00:00:44,330 --> 00:00:52,330",
+        "text": "예시 값으로 공통 20%, 7월 20일 주부터 4주, 아이팔레트 0%를 확인합니다."
+      },
+      {
+        "cue": 9,
+        "source_timing": "00:00:52,333 --> 00:00:59,333",
+        "final_timing": "00:00:52,330 --> 00:00:59,330",
+        "text": "확인한 수요를 등록하면 공급 가능과 다음 승인 요청이 표시됩니다."
+      },
+      {
+        "cue": 10,
+        "source_timing": "00:00:59,333 --> 00:01:07,333",
+        "final_timing": "00:00:59,330 --> 00:01:07,330",
+        "text": "품목별 추가 수량은 총 1,404개입니다. 수량 계산과 공급 판정은 에이아이가 하지 않습니다."
+      },
+      {
+        "cue": 11,
+        "source_timing": "00:01:07,333 --> 00:01:13,333",
+        "final_timing": "00:01:07,330 --> 00:01:13,420",
+        "text": "사람 입력과 원본 판매 데이터에서 계산 규칙, 결과로 이어지는 흐름을 확인합니다."
+      },
+      {
+        "cue": 12,
+        "source_timing": "00:01:13,333 --> 00:01:20,333",
+        "final_timing": "00:01:13,420 --> 00:01:20,420",
+        "text": "8월 6일 집행이 현금 하회 구간에 들어가 그룹 씨이오 승인이 필요합니다."
+      },
+      {
+        "cue": 13,
+        "source_timing": "00:01:20,333 --> 00:01:23,833",
+        "final_timing": "00:01:20,420 --> 00:01:24,230",
+        "text": "실제 엘엘엠 호출로 승인 요청 초안을 만듭니다."
+      },
+      {
+        "cue": 14,
+        "source_timing": "00:01:26,500 --> 00:01:32,500",
+        "final_timing": "00:01:26,900 --> 00:01:32,900",
+        "text": "초안은 확인 전 상태입니다. 사람이 문서를 확인해야 승인 요청을 올릴 수 있습니다."
+      },
+      {
+        "cue": 15,
+        "source_timing": "00:01:32,500 --> 00:01:39,500",
+        "final_timing": "00:01:32,900 --> 00:01:39,900",
+        "text": "내용을 확인하고 이대로 확인을 누릅니다."
+      },
+      {
+        "cue": 16,
+        "source_timing": "00:01:39,500 --> 00:01:47,500",
+        "final_timing": "00:01:39,900 --> 00:01:47,900",
+        "text": "승인 요청을 올리면 그룹 씨이오의 7월 3일 회신을 기다리는 상태가 됩니다."
+      },
+      {
+        "cue": 17,
+        "source_timing": "00:01:47,500 --> 00:01:53,500",
+        "final_timing": "00:01:47,900 --> 00:01:53,900",
+        "text": "그룹 씨이오의 승인은 모의 회신입니다. 조건이 닫히면 담당자가 직접 확정합니다."
+      },
+      {
+        "cue": 18,
+        "source_timing": "00:01:53,500 --> 00:01:58,500",
+        "final_timing": "00:01:53,900 --> 00:01:58,900",
+        "text": "7월 3일 확정한 기안으로 기록됩니다."
+      },
+      {
+        "cue": 19,
+        "source_timing": "00:01:58,500 --> 00:02:04,500",
+        "final_timing": "00:01:58,900 --> 00:02:04,900",
+        "text": "결정 시점의 공급 판정, 승인 상태, 확정 규칙과 결과가 함께 남습니다."
+      },
+      {
+        "cue": 20,
+        "source_timing": "00:02:04,500 --> 00:02:07,500",
+        "final_timing": "00:02:04,900 --> 00:02:09,600",
+        "text": "초기화 후 전체 자동 처리입니다. 행동과 회신은 모의입니다."
+      },
+      {
+        "cue": 21,
+        "source_timing": "00:02:07,500 --> 00:02:12,500",
+        "final_timing": "00:02:09,600 --> 00:02:14,600",
+        "text": "처음에는 공급 가능이며, 승인권자는 마실 대표입니다."
+      },
+      {
+        "cue": 22,
+        "source_timing": "00:02:12,500 --> 00:02:16,750",
+        "final_timing": "00:02:14,600 --> 00:02:19,150",
+        "text": "보충 발주 승인으로 현금이 30억 원 아래인 기간이 늘어납니다."
+      },
+      {
+        "cue": 23,
+        "source_timing": "00:02:16,750 --> 00:02:21,000",
+        "final_timing": "00:02:19,150 --> 00:02:23,670",
+        "text": "집행일이 그 기간에 들어가 승인권자가 그룹 씨이오로 바뀝니다."
+      },
+      {
+        "cue": 24,
+        "source_timing": "00:02:21,000 --> 00:02:26,000",
+        "final_timing": "00:02:23,670 --> 00:02:29,000",
+        "text": "하회 구간의 끝이 8월 21일에서 28일로 늘어난 계산 기록입니다."
+      },
+      {
+        "cue": 25,
+        "source_timing": "00:02:26,750 --> 00:02:32,750",
+        "final_timing": "00:02:29,750 --> 00:02:35,750",
+        "text": "원료 지연 회신이 들어오자 공급 판정이 부족으로 바뀝니다."
+      },
+      {
+        "cue": 26,
+        "source_timing": "00:02:32,750 --> 00:02:38,750",
+        "final_timing": "00:02:35,750 --> 00:02:41,750",
+        "text": "판매 시기 이동, 조기 공급 요청 등 대안을 비교합니다."
+      },
+      {
+        "cue": 27,
+        "source_timing": "00:02:38,750 --> 00:02:44,750",
+        "final_timing": "00:02:41,750 --> 00:02:47,750",
+        "text": "추천 대안은 판매 시작을 9월 14일로 늦추는 것입니다."
+      },
+      {
+        "cue": 28,
+        "source_timing": "00:02:44,750 --> 00:02:49,750",
+        "final_timing": "00:02:47,750 --> 00:02:52,750",
+        "text": "원료 지연을 반영한 새 계획으로 공급을 다시 계산합니다."
+      },
+      {
+        "cue": 29,
+        "source_timing": "00:02:49,750 --> 00:02:55,750",
+        "final_timing": "00:02:52,750 --> 00:02:58,750",
+        "text": "판매 시작을 옮기자 공급 가능으로 바뀝니다."
+      },
+      {
+        "cue": 30,
+        "source_timing": "00:02:55,750 --> 00:02:58,750",
+        "final_timing": "00:02:58,750 --> 00:03:02,850",
+        "text": "공급과 승인을 다시 확인한 뒤 확정 상태를 남깁니다."
+      },
+      {
+        "cue": 31,
+        "source_timing": "00:02:58,750 --> 00:03:02,950",
+        "final_timing": "00:03:02,850 --> 00:03:07,730",
+        "text": "수요 회신이 없으면 판정불가입니다. 기한 경과 경위도 남깁니다."
+      },
+      {
+        "cue": 32,
+        "source_timing": "00:03:02,958 --> 00:03:06,458",
+        "final_timing": "00:03:07,730 --> 00:03:11,670",
+        "text": "공급이 부족해 코어비아에 조기·분할 공급을 요청합니다."
+      },
+      {
+        "cue": 33,
+        "source_timing": "00:03:06,458 --> 00:03:09,958",
+        "final_timing": "00:03:11,670 --> 00:03:16,060",
+        "text": "요청한 대안과 다음 회신 대기가 데이터 흐름 카드에 남습니다."
+      },
+      {
+        "cue": 34,
+        "source_timing": "00:03:09,958 --> 00:03:15,958",
+        "final_timing": "00:03:16,060 --> 00:03:22,060",
+        "text": "생산·원료 제약으로 조기 공급이 불가합니다. 이 대안을 제외하고 재계산합니다."
+      },
+      {
+        "cue": 35,
+        "source_timing": "00:03:15,958 --> 00:03:21,958",
+        "final_timing": "00:03:22,060 --> 00:03:28,060",
+        "text": "시기를 옮겨도 공급은 조건부입니다. 코어비아 확약을 계속 기다립니다."
+      },
+      {
+        "cue": 36,
+        "source_timing": "00:03:21,958 --> 00:03:25,958",
+        "final_timing": "00:03:28,060 --> 00:03:32,080",
+        "text": "기안은 승인됐지만 공급 조건이 남아 확정 대기합니다."
+      },
+      {
+        "cue": 37,
+        "source_timing": "00:03:25,958 --> 00:03:30,958",
+        "final_timing": "00:03:32,080 --> 00:03:38,510",
+        "text": "내부 발주 승인 후에도 공급은 미확약입니다. 승인권자의 위험 수용이 별도로 필요합니다."
+      },
+      {
+        "cue": 38,
+        "source_timing": "00:03:30,958 --> 00:03:38,748",
+        "final_timing": "00:03:38,510 --> 00:03:46,300",
+        "text": "위험 수용으로 확정돼도 공급 판정은 조건부로 남습니다. 확약 회신을 계속 확인합니다."
+      },
+      {
+        "cue": 39,
+        "source_timing": "00:03:38,750 --> 00:03:41,750",
+        "final_timing": "00:03:46,300 --> 00:03:50,110",
+        "text": "별도 실행: 씨이오 최저 잔액 조건은 추가 가정입니다."
+      },
+      {
+        "cue": 40,
+        "source_timing": "00:03:41,750 --> 00:03:46,750",
+        "final_timing": "00:03:50,110 --> 00:03:56,380",
+        "text": "승인 후 최저 14.16억 원이 기준 15억 원보다 낮아 발주안을 거절했습니다."
+      },
+      {
+        "cue": 41,
+        "source_timing": "00:03:46,750 --> 00:03:51,750",
+        "final_timing": "00:03:56,380 --> 00:04:02,070",
+        "text": "해당 발주에 기대던 기안은 공급 부족입니다.\n품목 구성을 바꾸는 대안이 제시됩니다."
+      },
+      {
+        "cue": 42,
+        "source_timing": "00:03:51,750 --> 00:03:55,750",
+        "final_timing": "00:04:02,070 --> 00:04:06,820",
+        "text": "구성 변경으로 수요를 정정하면,\n부족에서 가능으로 바뀝니다."
+      },
+      {
+        "cue": 43,
+        "source_timing": "00:03:55,750 --> 00:04:00,750",
+        "final_timing": "00:04:06,820 --> 00:04:11,820",
+        "text": "7월 21일, 변경한 구성으로 확정됩니다."
+      },
+      {
+        "cue": 44,
+        "source_timing": "00:04:00,750 --> 00:04:04,750",
+        "final_timing": "00:04:11,820 --> 00:04:16,210",
+        "text": "다른 사례인 기안 11은\n공급 위험 수용 없이 철회합니다."
+      },
+      {
+        "cue": 45,
+        "source_timing": "00:04:04,750 --> 00:04:09,250",
+        "final_timing": "00:04:16,210 --> 00:04:20,710",
+        "text": "발주 전 보충안을 취소했습니다."
+      },
+      {
+        "cue": 46,
+        "source_timing": "00:04:09,250 --> 00:04:13,750",
+        "final_timing": "00:04:20,710 --> 00:04:25,330",
+        "text": "약정과 예정 현금 유출에서\n5.24억 원을 뺐습니다."
+      },
+      {
+        "cue": 47,
+        "source_timing": "00:04:13,750 --> 00:04:18,750",
+        "final_timing": "00:04:25,330 --> 00:04:30,830",
+        "text": "내부 발주 승인은 구매·지출 허용입니다. 코어비아 공급 확약과 분리합니다."
+      },
+      {
+        "cue": 48,
+        "source_timing": "00:04:18,750 --> 00:04:23,250",
+        "final_timing": "00:04:30,830 --> 00:04:35,330",
+        "text": "재무의 현금 하회 구간이 바뀌면 관련 판단을 다시 엽니다."
+      },
+      {
+        "cue": 49,
+        "source_timing": "00:04:23,250 --> 00:04:28,250",
+        "final_timing": "00:04:35,330 --> 00:04:40,330",
+        "text": "결론이 같은 건은 유지하고, 바뀐 건은 승인 경로를 재검토합니다."
+      },
+      {
+        "cue": 50,
+        "source_timing": "00:04:28,250 --> 00:04:33,250",
+        "final_timing": "00:04:40,330 --> 00:04:45,330",
+        "text": "공급 회신에는 원료 확보일과 생산 라인 배정이 함께 들어갑니다."
+      },
+      {
+        "cue": 51,
+        "source_timing": "00:04:33,250 --> 00:04:38,250",
+        "final_timing": "00:04:45,330 --> 00:04:50,330",
+        "text": "기발주 24,000개 중 12,000개만 공급 가능하다는 회신입니다."
+      },
+      {
+        "cue": 52,
+        "source_timing": "00:04:38,250 --> 00:04:43,250",
+        "final_timing": "00:04:50,330 --> 00:04:55,580",
+        "text": "원료·생산 일정 자체는 계산하지 않습니다. 받은 회신을 검증해 판정합니다."
+      },
+      {
+        "cue": 53,
+        "source_timing": "00:04:43,250 --> 00:04:51,250",
+        "final_timing": "00:04:55,580 --> 00:05:03,580",
+        "text": "회수일 지연 시나리오에서는\n현금 하회 구간이 9월 4일까지 늘어납니다."
+      },
+      {
+        "cue": 54,
+        "source_timing": "00:04:51,250 --> 00:04:55,750",
+        "final_timing": "00:05:03,580 --> 00:05:08,620",
+        "text": "정기 보충 발주 지급은 기준선에 넣지 않고 민감도로 따로 봅니다."
+      },
+      {
+        "cue": 55,
+        "source_timing": "00:04:55,750 --> 00:05:00,250",
+        "final_timing": "00:05:08,620 --> 00:05:13,660",
+        "text": "향후 판매대금 유입이 없어, 지급만 더하면 잔액이 과도하게 낮아집니다."
+      },
+      {
+        "cue": 56,
+        "source_timing": "00:05:00,250 --> 00:05:08,250",
+        "final_timing": "00:05:13,660 --> 00:05:21,660",
+        "text": "직접 처리 기안을 방치하면 경고 후 기한 경과 확정됩니다. 담당자 입력 없음이 남습니다."
+      }
+    ]
+  },
+  "speed_waits": [
+    {
+      "kind": "wait",
+      "source_start": 870,
+      "source_end": 896,
+      "target_start": 870,
+      "target_end": 896,
+      "hold_frames": 0,
+      "source_start_seconds": 36.25,
+      "source_end_seconds": 37.333333333333336,
+      "target_start_seconds": 36.25,
+      "target_end_seconds": 37.333333333333336,
+      "duration_seconds": 1.0833333333333333,
+      "frame_boundary_convention": "start inclusive, end exclusive",
+      "source_speed_preserved": 8
+    },
+    {
+      "kind": "wait",
+      "source_start": 2012,
+      "source_end": 2076,
+      "target_start": 2022,
+      "target_end": 2086,
+      "hold_frames": 0,
+      "source_start_seconds": 83.83333333333333,
+      "source_end_seconds": 86.5,
+      "target_start_seconds": 84.25,
+      "target_end_seconds": 86.91666666666667,
+      "duration_seconds": 2.6666666666666665,
+      "frame_boundary_convention": "start inclusive, end exclusive",
+      "source_speed_preserved": 8
+    },
+    {
+      "kind": "wait",
+      "source_start": 3504,
+      "source_end": 3522,
+      "target_start": 3576,
+      "target_end": 3594,
+      "hold_frames": 0,
+      "source_start_seconds": 146.0,
+      "source_end_seconds": 146.75,
+      "target_start_seconds": 149.0,
+      "target_end_seconds": 149.75,
+      "duration_seconds": 0.75,
+      "frame_boundary_convention": "start inclusive, end exclusive",
+      "source_speed_preserved": 8
+    }
+  ],
+  "provenance": {
+    "temporary_render_script": "/private/tmp/w01-retime-small-badge.py",
+    "temporary_render_report": "/private/tmp/w01-small-badge/retimed-silent.json",
+    "small_badge_script": "/private/tmp/w01-small-speed-overlay.py",
+    "small_badge_report": "/private/tmp/w01-small-badge/report.json",
+    "artifacts_in_tmp_may_be_cleaned_later": true
+  },
+  "validation_scope": {
+    "video": "Silent video prior to mux: all 7720 frames decoded, original 7398 frames preserved in sequence, 322 cue-end hold frames added; no source frames dropped.",
+    "visual": "Representative date-wait image at output frame 3585 directly inspected; upper-right small badge visible and body unobstructed.",
+    "narration": "All 56 narration texts verified against final Vrew SRT; audio listening is not covered by this report.",
+    "post_mux": "Final mux video-copy expected; final output sampling delegated to root and not claimed here."
+  },
+  "final_visual_review": {
+    "file": "W01_시연영상_태형음성.mp4",
+    "reviewed_seconds": [
+      36.8,
+      85.58,
+      149.375,
+      272,
+      288,
+      321.4
+    ],
+    "result": "Final mux frames visually inspected: three small upper-right speed badges visible; no central banners; finance and Corevia data-flow cards readable; final direct-neglect scene and original captions retained.",
+    "audio_listening_claimed": false
+  }
+}

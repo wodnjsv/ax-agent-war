@@ -1,0 +1,680 @@
+{
+  "output": "outputs/w01-video/W01_시연영상_태형음성.mp4",
+  "bytes": 16238600,
+  "sha256": "1f294d38475ded4d3756364e9bf21e56caf58b8d02f53faff1fd497f8ebd69ad",
+  "container_and_streams": {
+    "duration": 321.6669921875,
+    "tracks": [
+      {
+        "codecs": [
+          "avc1"
+        ],
+        "duration": 321.6669921875,
+        "height": 1080,
+        "id": 1,
+        "nominal_fps": 24,
+        "start": 0,
+        "type": "vide",
+        "width": 1920
+      },
+      {
+        "channels": 2,
+        "codecs": [
+          "aac "
+        ],
+        "duration": 321.61192447916665,
+        "id": 2,
+        "sample_rate": 48000,
+        "start": 0,
+        "type": "soun"
+      }
+    ]
+  },
+  "decoded_video_frames": 7720,
+  "video_all_frames_identical_to_retimed_source": true,
+  "video_mux_mode": "H.264 passthrough; no video re-encode during mux",
+  "audio_mux_mode": "Vrew WAV decoded and encoded to AAC by AVFoundation AppleM4A preset, then passthrough mux",
+  "source_wav": "outputs/w01-video/W01_태형음성.wav",
+  "source_wav_duration": 321.656,
+  "audio": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "source_format": "IEEE Float32 WAV",
+    "cue_count": 56,
+    "all_56_cues_have_nonzero_speech_level_audio": true,
+    "source_peak_dbfs": -2.2736786664830775,
+    "encoded_peak_dbfs": -2.275967266344833,
+    "source_clipped_scalar_samples": 0,
+    "encoded_peak_below_0dbfs": true,
+    "encoded_decoded_duration": 321.6559375,
+    "source_decoded_duration": 321.656,
+    "decoded_duration_difference_ms": -0.06250000001273293,
+    "first_active_time": 0,
+    "last_active_end": 320,
+    "active_100ms_bins_match_source": true,
+    "max_voiced_bin_rms_difference_db": 0.06219375948887773,
+    "speed_waits": [
+      {
+        "start": 36.25,
+        "end": 37.333333333333336,
+        "peak_dbfs": -145.3006,
+        "active_sample_frames": 0,
+        "first_active": null,
+        "last_active_end": null,
+        "frames": 26
+      },
+      {
+        "start": 84.25,
+        "end": 86.91666666666667,
+        "peak_dbfs": -103.0365,
+        "active_sample_frames": 0,
+        "first_active": null,
+        "last_active_end": null,
+        "frames": 64
+      },
+      {
+        "start": 149.0,
+        "end": 149.75,
+        "peak_dbfs": -240.0,
+        "active_sample_frames": 0,
+        "first_active": null,
+        "last_active_end": null,
+        "frames": 18
+      }
+    ],
+    "cues": [
+      {
+        "start": 0.0,
+        "end": 6.0,
+        "peak_dbfs": -2.9013,
+        "active_sample_frames": 188490,
+        "first_active": 0.04704,
+        "last_active_end": 4.5111,
+        "cue": 1,
+        "text": "마실 커머스 마케팅 담당자의 캠페인 확대 기안 25건을 다룹니다."
+      },
+      {
+        "start": 6.0,
+        "end": 12.0,
+        "peak_dbfs": -3.4644,
+        "active_sample_frames": 183162,
+        "first_active": 6.04569,
+        "last_active_end": 10.89731,
+        "cue": 2,
+        "text": "확정기한 전에 진행할지, 바꿀지, 철회할지 결정하도록 돕습니다."
+      },
+      {
+        "start": 12.0,
+        "end": 18.0,
+        "peak_dbfs": -3.1557,
+        "active_sample_frames": 181897,
+        "first_active": 12.02642,
+        "last_active_end": 16.72912,
+        "cue": 3,
+        "text": "수요 입력, 공급 확인, 승인과 후속 처리를 한 흐름으로 연결합니다."
+      },
+      {
+        "start": 18.0,
+        "end": 24.0,
+        "peak_dbfs": -5.0629,
+        "active_sample_frames": 120522,
+        "first_active": 18.04296,
+        "last_active_end": 20.88223,
+        "cue": 4,
+        "text": "다른 부서의 회신과 승인은 모의 입력입니다."
+      },
+      {
+        "start": 24.0,
+        "end": 30.0,
+        "peak_dbfs": -3.704,
+        "active_sample_frames": 185883,
+        "first_active": 24.02506,
+        "last_active_end": 28.79867,
+        "cue": 5,
+        "text": "그 입력에 따른 계산, 재판정과 상태 기록은 구현이 직접 처리합니다."
+      },
+      {
+        "start": 30.0,
+        "end": 36.25,
+        "peak_dbfs": -3.8504,
+        "active_sample_frames": 219194,
+        "first_active": 30.02531,
+        "last_active_end": 35.18648,
+        "cue": 6,
+        "text": "시연용 가상 회신 문장을 불러오고, 실제 엘엘엠 에이피아이로 항목을 정리합니다."
+      },
+      {
+        "start": 37.33,
+        "end": 44.33,
+        "peak_dbfs": -2.9328,
+        "active_sample_frames": 207095,
+        "first_active": 37.36481,
+        "last_active_end": 42.59577,
+        "cue": 7,
+        "text": "에이아이는 모호한 증가율을 추측하지 않고 비웁니다. 담당자가 확인해야 합니다."
+      },
+      {
+        "start": 44.33,
+        "end": 52.33,
+        "peak_dbfs": -3.5156,
+        "active_sample_frames": 250285,
+        "first_active": 44.37362,
+        "last_active_end": 51.08058,
+        "cue": 8,
+        "text": "예시 값으로 공통 20%, 7월 20일 주부터 4주, 아이팔레트 0%를 확인합니다."
+      },
+      {
+        "start": 52.33,
+        "end": 59.33,
+        "peak_dbfs": -3.7139,
+        "active_sample_frames": 183453,
+        "first_active": 52.37048,
+        "last_active_end": 56.88992,
+        "cue": 9,
+        "text": "확인한 수요를 등록하면 공급 가능과 다음 승인 요청이 표시됩니다."
+      },
+      {
+        "start": 59.33,
+        "end": 67.33,
+        "peak_dbfs": -3.4337,
+        "active_sample_frames": 255399,
+        "first_active": 59.37746,
+        "last_active_end": 65.7459,
+        "cue": 10,
+        "text": "품목별 추가 수량은 총 1,404개입니다. 수량 계산과 공급 판정은 에이아이가 하지 않습니다."
+      },
+      {
+        "start": 67.33,
+        "end": 73.42,
+        "peak_dbfs": -3.6621,
+        "active_sample_frames": 225762,
+        "first_active": 67.37125,
+        "last_active_end": 72.92319,
+        "cue": 11,
+        "text": "사람 입력과 원본 판매 데이터에서 계산 규칙, 결과로 이어지는 흐름을 확인합니다."
+      },
+      {
+        "start": 73.42,
+        "end": 80.42,
+        "peak_dbfs": -2.2737,
+        "active_sample_frames": 196407,
+        "first_active": 73.47223,
+        "last_active_end": 78.41079,
+        "cue": 12,
+        "text": "8월 6일 집행이 현금 하회 구간에 들어가 그룹 씨이오 승인이 필요합니다."
+      },
+      {
+        "start": 80.42,
+        "end": 84.23,
+        "peak_dbfs": -4.1467,
+        "active_sample_frames": 141468,
+        "first_active": 80.458,
+        "last_active_end": 83.79383,
+        "cue": 13,
+        "text": "실제 엘엘엠 호출로 승인 요청 초안을 만듭니다."
+      },
+      {
+        "start": 86.9,
+        "end": 92.9,
+        "peak_dbfs": -2.6359,
+        "active_sample_frames": 213290,
+        "first_active": 86.94292,
+        "last_active_end": 92.33654,
+        "cue": 14,
+        "text": "초안은 확인 전 상태입니다. 사람이 문서를 확인해야 승인 요청을 올릴 수 있습니다."
+      },
+      {
+        "start": 92.9,
+        "end": 99.9,
+        "peak_dbfs": -3.3077,
+        "active_sample_frames": 117991,
+        "first_active": 92.9479,
+        "last_active_end": 95.87129,
+        "cue": 15,
+        "text": "내용을 확인하고 이대로 확인을 누릅니다."
+      },
+      {
+        "start": 99.9,
+        "end": 107.9,
+        "peak_dbfs": -3.3141,
+        "active_sample_frames": 196462,
+        "first_active": 99.93815,
+        "last_active_end": 104.70469,
+        "cue": 16,
+        "text": "승인 요청을 올리면 그룹 씨이오의 7월 3일 회신을 기다리는 상태가 됩니다."
+      },
+      {
+        "start": 107.9,
+        "end": 113.9,
+        "peak_dbfs": -3.2976,
+        "active_sample_frames": 205019,
+        "first_active": 107.94971,
+        "last_active_end": 113.32231,
+        "cue": 17,
+        "text": "그룹 씨이오의 승인은 모의 회신입니다. 조건이 닫히면 담당자가 직접 확정합니다."
+      },
+      {
+        "start": 113.9,
+        "end": 118.9,
+        "peak_dbfs": -4.7192,
+        "active_sample_frames": 100319,
+        "first_active": 113.9434,
+        "last_active_end": 116.37202,
+        "cue": 18,
+        "text": "7월 3일 확정한 기안으로 기록됩니다."
+      },
+      {
+        "start": 118.9,
+        "end": 124.9,
+        "peak_dbfs": -2.6495,
+        "active_sample_frames": 203038,
+        "first_active": 118.95538,
+        "last_active_end": 124.28398,
+        "cue": 19,
+        "text": "결정 시점의 공급 판정, 승인 상태, 확정 규칙과 결과가 함께 남습니다."
+      },
+      {
+        "start": 124.9,
+        "end": 129.6,
+        "peak_dbfs": -3.9679,
+        "active_sample_frames": 164544,
+        "first_active": 124.94029,
+        "last_active_end": 129.10979,
+        "cue": 20,
+        "text": "초기화 후 전체 자동 처리입니다. 행동과 회신은 모의입니다."
+      },
+      {
+        "start": 129.6,
+        "end": 134.6,
+        "peak_dbfs": -3.212,
+        "active_sample_frames": 158818,
+        "first_active": 129.64129,
+        "last_active_end": 133.49408,
+        "cue": 21,
+        "text": "처음에는 공급 가능이며, 승인권자는 마실 대표입니다."
+      },
+      {
+        "start": 134.6,
+        "end": 139.15,
+        "peak_dbfs": -5.3696,
+        "active_sample_frames": 176494,
+        "first_active": 134.65677,
+        "last_active_end": 138.7059,
+        "cue": 22,
+        "text": "보충 발주 승인으로 현금이 30억 원 아래인 기간이 늘어납니다."
+      },
+      {
+        "start": 139.15,
+        "end": 143.67,
+        "peak_dbfs": -4.1582,
+        "active_sample_frames": 175357,
+        "first_active": 139.1839,
+        "last_active_end": 143.36325,
+        "cue": 23,
+        "text": "집행일이 그 기간에 들어가 승인권자가 그룹 씨이오로 바뀝니다."
+      },
+      {
+        "start": 143.67,
+        "end": 149.0,
+        "peak_dbfs": -2.716,
+        "active_sample_frames": 203996,
+        "first_active": 143.72352,
+        "last_active_end": 148.58573,
+        "cue": 24,
+        "text": "하회 구간의 끝이 8월 21일에서 28일로 늘어난 계산 기록입니다."
+      },
+      {
+        "start": 149.75,
+        "end": 155.75,
+        "peak_dbfs": -5.1566,
+        "active_sample_frames": 156111,
+        "first_active": 149.79754,
+        "last_active_end": 153.60027,
+        "cue": 25,
+        "text": "원료 지연 회신이 들어오자 공급 판정이 부족으로 바뀝니다."
+      },
+      {
+        "start": 155.75,
+        "end": 161.75,
+        "peak_dbfs": -3.795,
+        "active_sample_frames": 148828,
+        "first_active": 155.80242,
+        "last_active_end": 159.55948,
+        "cue": 26,
+        "text": "판매 시기 이동, 조기 공급 요청 등 대안을 비교합니다."
+      },
+      {
+        "start": 161.75,
+        "end": 167.75,
+        "peak_dbfs": -4.1022,
+        "active_sample_frames": 167658,
+        "first_active": 161.79346,
+        "last_active_end": 165.80738,
+        "cue": 27,
+        "text": "추천 대안은 판매 시작을 9월 14일로 늦추는 것입니다."
+      },
+      {
+        "start": 167.75,
+        "end": 172.75,
+        "peak_dbfs": -3.9156,
+        "active_sample_frames": 152724,
+        "first_active": 167.79558,
+        "last_active_end": 171.34792,
+        "cue": 28,
+        "text": "원료 지연을 반영한 새 계획으로 공급을 다시 계산합니다."
+      },
+      {
+        "start": 172.75,
+        "end": 178.75,
+        "peak_dbfs": -4.7387,
+        "active_sample_frames": 122651,
+        "first_active": 172.80194,
+        "last_active_end": 175.82508,
+        "cue": 29,
+        "text": "판매 시작을 옮기자 공급 가능으로 바뀝니다."
+      },
+      {
+        "start": 178.75,
+        "end": 182.85,
+        "peak_dbfs": -3.6422,
+        "active_sample_frames": 147048,
+        "first_active": 178.79231,
+        "last_active_end": 182.42075,
+        "cue": 30,
+        "text": "공급과 승인을 다시 확인한 뒤 확정 상태를 남깁니다."
+      },
+      {
+        "start": 182.85,
+        "end": 187.73,
+        "peak_dbfs": -4.1909,
+        "active_sample_frames": 177841,
+        "first_active": 182.87806,
+        "last_active_end": 187.38258,
+        "cue": 31,
+        "text": "수요 회신이 없으면 판정불가입니다. 기한 경과 경위도 남깁니다."
+      },
+      {
+        "start": 187.73,
+        "end": 191.67,
+        "peak_dbfs": -4.1633,
+        "active_sample_frames": 146960,
+        "first_active": 187.77281,
+        "last_active_end": 191.25752,
+        "cue": 32,
+        "text": "공급이 부족해 코어비아에 조기·분할 공급을 요청합니다."
+      },
+      {
+        "start": 191.67,
+        "end": 196.06,
+        "peak_dbfs": -4.1837,
+        "active_sample_frames": 166269,
+        "first_active": 191.71923,
+        "last_active_end": 195.69125,
+        "cue": 33,
+        "text": "요청한 대안과 다음 회신 대기가 데이터 흐름 카드에 남습니다."
+      },
+      {
+        "start": 196.06,
+        "end": 202.06,
+        "peak_dbfs": -2.7573,
+        "active_sample_frames": 200531,
+        "first_active": 196.105,
+        "last_active_end": 201.107,
+        "cue": 34,
+        "text": "생산·원료 제약으로 조기 공급이 불가합니다. 이 대안을 제외하고 재계산합니다."
+      },
+      {
+        "start": 202.06,
+        "end": 208.06,
+        "peak_dbfs": -4.048,
+        "active_sample_frames": 188543,
+        "first_active": 202.09067,
+        "last_active_end": 206.97319,
+        "cue": 35,
+        "text": "시기를 옮겨도 공급은 조건부입니다. 코어비아 확약을 계속 기다립니다."
+      },
+      {
+        "start": 208.06,
+        "end": 212.08,
+        "peak_dbfs": -3.5518,
+        "active_sample_frames": 143296,
+        "first_active": 208.10258,
+        "last_active_end": 211.68079,
+        "cue": 36,
+        "text": "기안은 승인됐지만 공급 조건이 남아 확정 대기합니다."
+      },
+      {
+        "start": 212.08,
+        "end": 218.51,
+        "peak_dbfs": -3.6978,
+        "active_sample_frames": 241554,
+        "first_active": 212.11856,
+        "last_active_end": 218.09896,
+        "cue": 37,
+        "text": "내부 발주 승인 후에도 공급은 미확약입니다. 승인권자의 위험 수용이 별도로 필요합니다."
+      },
+      {
+        "start": 218.51,
+        "end": 226.3,
+        "peak_dbfs": -4.2692,
+        "active_sample_frames": 226842,
+        "first_active": 218.55931,
+        "last_active_end": 224.39115,
+        "cue": 38,
+        "text": "위험 수용으로 확정돼도 공급 판정은 조건부로 남습니다. 확약 회신을 계속 확인합니다."
+      },
+      {
+        "start": 226.3,
+        "end": 230.11,
+        "peak_dbfs": -3.4093,
+        "active_sample_frames": 142625,
+        "first_active": 226.32812,
+        "last_active_end": 229.7294,
+        "cue": 39,
+        "text": "별도 실행: 씨이오 최저 잔액 조건은 추가 가정입니다."
+      },
+      {
+        "start": 230.11,
+        "end": 236.38,
+        "peak_dbfs": -4.0895,
+        "active_sample_frames": 238410,
+        "first_active": 230.15106,
+        "last_active_end": 235.95385,
+        "cue": 40,
+        "text": "승인 후 최저 14.16억 원이 기준 15억 원보다 낮아 발주안을 거절했습니다."
+      },
+      {
+        "start": 236.38,
+        "end": 242.07,
+        "peak_dbfs": -3.6511,
+        "active_sample_frames": 207891,
+        "first_active": 236.43342,
+        "last_active_end": 241.68029,
+        "cue": 41,
+        "text": "해당 발주에 기대던 기안은 공급 부족입니다. 품목 구성을 바꾸는 대안이 제시됩니다."
+      },
+      {
+        "start": 242.07,
+        "end": 246.82,
+        "peak_dbfs": -4.0989,
+        "active_sample_frames": 170906,
+        "first_active": 242.11931,
+        "last_active_end": 246.41756,
+        "cue": 42,
+        "text": "구성 변경으로 수요를 정정하면, 부족에서 가능으로 바뀝니다."
+      },
+      {
+        "start": 246.82,
+        "end": 251.82,
+        "peak_dbfs": -4.8321,
+        "active_sample_frames": 120313,
+        "first_active": 246.86406,
+        "last_active_end": 249.9679,
+        "cue": 43,
+        "text": "7월 21일, 변경한 구성으로 확정됩니다."
+      },
+      {
+        "start": 251.82,
+        "end": 256.21,
+        "peak_dbfs": -4.1283,
+        "active_sample_frames": 160910,
+        "first_active": 251.86858,
+        "last_active_end": 255.86208,
+        "cue": 44,
+        "text": "다른 사례인 기안 11은 공급 위험 수용 없이 철회합니다."
+      },
+      {
+        "start": 256.21,
+        "end": 260.71,
+        "peak_dbfs": -3.5896,
+        "active_sample_frames": 84950,
+        "first_active": 256.23904,
+        "last_active_end": 258.29823,
+        "cue": 45,
+        "text": "발주 전 보충안을 취소했습니다."
+      },
+      {
+        "start": 260.71,
+        "end": 265.33,
+        "peak_dbfs": -3.3259,
+        "active_sample_frames": 163876,
+        "first_active": 260.75858,
+        "last_active_end": 264.90415,
+        "cue": 46,
+        "text": "약정과 예정 현금 유출에서 5.24억 원을 뺐습니다."
+      },
+      {
+        "start": 265.33,
+        "end": 270.83,
+        "peak_dbfs": -3.565,
+        "active_sample_frames": 194234,
+        "first_active": 265.38133,
+        "last_active_end": 270.37094,
+        "cue": 47,
+        "text": "내부 발주 승인은 구매·지출 허용입니다. 코어비아 공급 확약과 분리합니다."
+      },
+      {
+        "start": 270.83,
+        "end": 275.33,
+        "peak_dbfs": -3.6128,
+        "active_sample_frames": 160785,
+        "first_active": 270.853,
+        "last_active_end": 274.77069,
+        "cue": 48,
+        "text": "재무의 현금 하회 구간이 바뀌면 관련 판단을 다시 엽니다."
+      },
+      {
+        "start": 275.33,
+        "end": 280.33,
+        "peak_dbfs": -3.5078,
+        "active_sample_frames": 182908,
+        "first_active": 275.36608,
+        "last_active_end": 279.72267,
+        "cue": 49,
+        "text": "결론이 같은 건은 유지하고, 바뀐 건은 승인 경로를 재검토합니다."
+      },
+      {
+        "start": 280.33,
+        "end": 285.33,
+        "peak_dbfs": -3.925,
+        "active_sample_frames": 176943,
+        "first_active": 280.37477,
+        "last_active_end": 284.55523,
+        "cue": 50,
+        "text": "공급 회신에는 원료 확보일과 생산 라인 배정이 함께 들어갑니다."
+      },
+      {
+        "start": 285.33,
+        "end": 290.33,
+        "peak_dbfs": -3.3952,
+        "active_sample_frames": 185716,
+        "first_active": 285.36617,
+        "last_active_end": 289.84802,
+        "cue": 51,
+        "text": "기발주 24,000개 중 12,000개만 공급 가능하다는 회신입니다."
+      },
+      {
+        "start": 290.33,
+        "end": 295.58,
+        "peak_dbfs": -3.2546,
+        "active_sample_frames": 193712,
+        "first_active": 290.37202,
+        "last_active_end": 295.21056,
+        "cue": 52,
+        "text": "원료·생산 일정 자체는 계산하지 않습니다. 받은 회신을 검증해 판정합니다."
+      },
+      {
+        "start": 295.58,
+        "end": 303.58,
+        "peak_dbfs": -4.1881,
+        "active_sample_frames": 198991,
+        "first_active": 295.61383,
+        "last_active_end": 300.44833,
+        "cue": 53,
+        "text": "회수일 지연 시나리오에서는 현금 하회 구간이 9월 4일까지 늘어납니다."
+      },
+      {
+        "start": 303.58,
+        "end": 308.62,
+        "peak_dbfs": -4.5274,
+        "active_sample_frames": 186566,
+        "first_active": 303.62771,
+        "last_active_end": 308.15744,
+        "cue": 54,
+        "text": "정기 보충 발주 지급은 기준선에 넣지 않고 민감도로 따로 봅니다."
+      },
+      {
+        "start": 308.62,
+        "end": 313.66,
+        "peak_dbfs": -4.9535,
+        "active_sample_frames": 201647,
+        "first_active": 308.65427,
+        "last_active_end": 313.34408,
+        "cue": 55,
+        "text": "향후 판매대금 유입이 없어, 지급만 더하면 잔액이 과도하게 낮아집니다."
+      },
+      {
+        "start": 313.66,
+        "end": 321.66,
+        "peak_dbfs": -3.8975,
+        "active_sample_frames": 251738,
+        "first_active": 313.69273,
+        "last_active_end": 319.97992,
+        "cue": 56,
+        "text": "직접 처리 기안을 방치하면 경고 후 기한 경과 확정됩니다. 담당자 입력 없음이 남습니다."
+      }
+    ]
+  },
+  "tts_provenance": {
+    "app": "Vrew",
+    "voice_display_name": "태형",
+    "speaker_name": "el_taehyung",
+    "provider": "elevenlabs",
+    "model_label": "Eleven v4",
+    "speed": 1,
+    "pitch": 0,
+    "volume": 0,
+    "generated_spoken_cues": 56,
+    "generation": "Actual Vrew UI TTS generation and UI WAV export, verified by root; project exported for inspection"
+  },
+  "video_retiming": {
+    "source_duration": 308.25,
+    "duration": 321.6666666666667,
+    "added_hold_frames": 322,
+    "original_frames_dropped": 0,
+    "original_frame_order_preserved": true,
+    "wait_frames_unchanged": [
+      26,
+      64,
+      18
+    ],
+    "policy": "Original source frames play once at 24fps; only cue-ending still frames added. No global speed alteration."
+  },
+  "validation_scope": [
+    "All final video frames decoded and pixel-identical to retimed silent source",
+    "All audio decoded to Float32 PCM; 56 subtitle cue regions have audio above -45dBFS",
+    "Actual synthesized pronunciation was not manually listened to in every cue",
+    "Only upper-right small speed badge retained; root/peer visual verification recorded separately"
+  ],
+  "verification_elapsed_seconds": 38.59
+}

@@ -1,0 +1,448 @@
+{
+  "recorded_at": "2026-11-15",
+  "silent": true,
+  "actual_pointer_captured": true,
+  "sources_used": [
+    "B_base.webm",
+    "B_continue.webm",
+    "E_final_takes.webm"
+  ],
+  "retake_start_utc": "2026-11-15T10:21:53.964Z",
+  "retake_seconds": 1048.59,
+  "retake_bytes": 163285090,
+  "timeline": [
+    {
+      "id": "A01-01",
+      "scene": "1",
+      "output_start": 0.0,
+      "output_end": 30.0,
+      "source_seconds": 30,
+      "speed": 1,
+      "label": "W01 · 캠페인 수요와 공급 일정"
+    },
+    {
+      "id": "A02-01",
+      "scene": "2",
+      "output_start": 30.0,
+      "output_end": 36.25,
+      "source_seconds": 6.25,
+      "speed": 1,
+      "label": "정상 · PLAN-002 · 수요 입력"
+    },
+    {
+      "id": "A02-02",
+      "scene": "2",
+      "output_start": 36.25,
+      "output_end": 37.333333333333336,
+      "source_seconds": 8.800000000000068,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 9초)"
+    },
+    {
+      "id": "A02-03",
+      "scene": "2",
+      "output_start": 37.333333333333336,
+      "output_end": 44.333333333333336,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · AI 정리 결과 확인"
+    },
+    {
+      "id": "A02-04",
+      "scene": "2",
+      "output_start": 44.333333333333336,
+      "output_end": 52.333333333333336,
+      "source_seconds": 8.0,
+      "speed": 1,
+      "label": "정상 · 사람이 고정 입력값 확인"
+    },
+    {
+      "id": "A02-05",
+      "scene": "2",
+      "output_start": 52.333333333333336,
+      "output_end": 59.333333333333336,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · 확인하고 등록"
+    },
+    {
+      "id": "A02-06",
+      "scene": "2",
+      "output_start": 59.333333333333336,
+      "output_end": 67.33333333333334,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "정상 · 계산 근거와 품목별 수량"
+    },
+    {
+      "id": "A02-07",
+      "scene": "2",
+      "output_start": 67.33333333333333,
+      "output_end": 73.33333333333333,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "정상 · 실제 데이터 흐름"
+    },
+    {
+      "id": "A02-08",
+      "scene": "2",
+      "output_start": 73.33333333333333,
+      "output_end": 80.33333333333333,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · 승인권자와 현금 영향"
+    },
+    {
+      "id": "A02-09",
+      "scene": "2",
+      "output_start": 80.33333333333333,
+      "output_end": 83.83333333333333,
+      "source_seconds": 3.5,
+      "speed": 1,
+      "label": "정상 · 승인 요청 초안 만들기"
+    },
+    {
+      "id": "A02-10",
+      "scene": "2",
+      "output_start": 83.83333333333333,
+      "output_end": 86.5,
+      "source_seconds": 21.5,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 22초)"
+    },
+    {
+      "id": "A02-11",
+      "scene": "2",
+      "output_start": 86.5,
+      "output_end": 92.5,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "정상 · AI 초안 확인"
+    },
+    {
+      "id": "A02-12",
+      "scene": "2",
+      "output_start": 92.5,
+      "output_end": 99.5,
+      "source_seconds": 7,
+      "speed": 1,
+      "label": "정상 · 사람이 승인 요청 문서 확인"
+    },
+    {
+      "id": "A02-13",
+      "scene": "2",
+      "output_start": 99.5,
+      "output_end": 107.5,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "정상 · 승인 요청 올리기"
+    },
+    {
+      "id": "A02-16",
+      "scene": "2",
+      "output_start": 107.5,
+      "output_end": 113.5,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "정상 · 7월 3일 · 승인 회신 후 직접 확정"
+    },
+    {
+      "id": "A02-17",
+      "scene": "2",
+      "output_start": 113.5,
+      "output_end": 118.5,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "정상 · 확정 상태 기록"
+    },
+    {
+      "id": "A02-18",
+      "scene": "2",
+      "output_start": 118.5,
+      "output_end": 124.5,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "정상 · 확정까지의 데이터 흐름"
+    },
+    {
+      "id": "B03-00",
+      "scene": "3",
+      "output_start": 124.5,
+      "output_end": 127.5,
+      "source_seconds": 3.0,
+      "speed": 1,
+      "label": "조건 변경 · 초기화 후 기본 시나리오"
+    },
+    {
+      "id": "B03-01",
+      "scene": "3",
+      "output_start": 127.5,
+      "output_end": 132.5,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "조건 변경 · PLAN-004 · 7월 9일"
+    },
+    {
+      "id": "B03-02",
+      "scene": "3",
+      "output_start": 132.5,
+      "output_end": 141.0,
+      "source_seconds": 8.5,
+      "speed": 1,
+      "label": "조건 변경 · 7월 10일 · 승인권자 재판정"
+    },
+    {
+      "id": "B03-03",
+      "scene": "3",
+      "output_start": 141.0,
+      "output_end": 146.0,
+      "source_seconds": 5.0,
+      "speed": 1,
+      "label": "조건 변경 · 데이터 흐름 근거 확대"
+    },
+    {
+      "id": "B03-04",
+      "scene": "3",
+      "output_start": 146.0,
+      "output_end": 146.75,
+      "source_seconds": 6.0,
+      "speed": 8,
+      "label": "7월 13일로 진행 · 날짜 이동 대기(8배속)"
+    },
+    {
+      "id": "B03-05",
+      "scene": "3",
+      "output_start": 146.75,
+      "output_end": 152.75,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "조건 변경 · 7월 13일 · 원료 지연 회신"
+    },
+    {
+      "id": "B03-06",
+      "scene": "3",
+      "output_start": 152.75,
+      "output_end": 164.75,
+      "source_seconds": 12.0,
+      "speed": 1,
+      "label": "조건 변경 · 대안 비교"
+    },
+    {
+      "id": "B03-07",
+      "scene": "3",
+      "output_start": 164.75,
+      "output_end": 175.75,
+      "source_seconds": 11,
+      "speed": 1,
+      "label": "조건 변경 · 7월 14일 · 시기 이동 후 재계산"
+    },
+    {
+      "id": "B03-08",
+      "scene": "3",
+      "output_start": 175.75,
+      "output_end": 178.75,
+      "source_seconds": 3,
+      "speed": 1,
+      "label": "조건 변경 · 7월 16일 · 확정"
+    },
+    {
+      "id": "B04-01",
+      "scene": "4B",
+      "output_start": 178.75,
+      "output_end": 182.95833333333334,
+      "source_seconds": 4.199999999999989,
+      "speed": 1,
+      "label": "정보 부족 · PLAN-005 · 7월 20일"
+    },
+    {
+      "id": "B04-02",
+      "scene": "4B",
+      "output_start": 182.95833333333334,
+      "output_end": 189.95833333333334,
+      "source_seconds": 7,
+      "speed": 1,
+      "label": "공급 미확약 · PLAN-011 · 8월 5일"
+    },
+    {
+      "id": "B04-03",
+      "scene": "4B",
+      "output_start": 189.95833333333334,
+      "output_end": 195.95833333333334,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 6일 · Corevia 불가 회신"
+    },
+    {
+      "id": "B04-04",
+      "scene": "4B",
+      "output_start": 195.95833333333334,
+      "output_end": 201.95833333333334,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 7일 · 시기 이동"
+    },
+    {
+      "id": "B04-05",
+      "scene": "4B",
+      "output_start": 201.95833333333334,
+      "output_end": 205.95833333333334,
+      "source_seconds": 4,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 10일 · 기안 승인"
+    },
+    {
+      "id": "B04-06",
+      "scene": "4B",
+      "output_start": 205.95833333333334,
+      "output_end": 210.95833333333334,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 13일 · 위험 수용"
+    },
+    {
+      "id": "B04-07",
+      "scene": "4B",
+      "output_start": 210.95833333333334,
+      "output_end": 218.75,
+      "source_seconds": 7.7999999999999545,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 14일 · 확정"
+    },
+    {
+      "id": "C04-01",
+      "scene": "4C",
+      "output_start": 218.75,
+      "output_end": 221.75,
+      "source_seconds": 3,
+      "speed": 1,
+      "label": "승인 거절 · 초기화 후 CEO 현금 조건(가정)"
+    },
+    {
+      "id": "C04-02",
+      "scene": "4C",
+      "output_start": 221.75,
+      "output_end": 231.75,
+      "source_seconds": 10,
+      "speed": 1,
+      "label": "승인 거절 · PLAN-014 · 7월 16일"
+    },
+    {
+      "id": "C04-03",
+      "scene": "4C",
+      "output_start": 231.75,
+      "output_end": 235.75,
+      "source_seconds": 4.0,
+      "speed": 1,
+      "label": "대안 실행 · PLAN-014 · 7월 20일"
+    },
+    {
+      "id": "C04-04",
+      "scene": "4C",
+      "output_start": 235.75,
+      "output_end": 240.75,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "대안 실행 결과 · PLAN-014 · 7월 21일"
+    },
+    {
+      "id": "C04-05",
+      "scene": "4C",
+      "output_start": 240.75,
+      "output_end": 244.75,
+      "source_seconds": 4,
+      "speed": 1,
+      "label": "다른 기안의 철회 · PLAN-011 · 8월 13일"
+    },
+    {
+      "id": "C04-06",
+      "scene": "4C",
+      "output_start": 244.75,
+      "output_end": 253.75,
+      "source_seconds": 9,
+      "speed": 1,
+      "label": "철회 후속 처리 · PLAN-011 · 8월 13일"
+    },
+    {
+      "id": "B05-01",
+      "scene": "5",
+      "output_start": 253.75,
+      "output_end": 258.75,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "필수 확장 되짚기 · 앞선 8월 13일 화면"
+    },
+    {
+      "id": "B05-02",
+      "scene": "5",
+      "output_start": 258.75,
+      "output_end": 263.25,
+      "source_seconds": 4.5,
+      "speed": 1,
+      "label": "다른 부서 영향 되짚기 · 앞선 7월 10일"
+    },
+    {
+      "id": "B05-03",
+      "scene": "5",
+      "output_start": 263.25,
+      "output_end": 268.25,
+      "source_seconds": 5.0,
+      "speed": 1,
+      "label": "다른 부서 영향 · 현금 구간과 재검토 기록"
+    },
+    {
+      "id": "B05-04",
+      "scene": "5",
+      "output_start": 268.25,
+      "output_end": 283.25,
+      "source_seconds": 15,
+      "speed": 1,
+      "label": "다른 부서 영향 · 앞선 8월 6일 Corevia 카드"
+    },
+    {
+      "id": "D06-01",
+      "scene": "6D",
+      "output_start": 283.25,
+      "output_end": 291.25,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "추가 확장 · 회수일 지연(가정) · 별도 실행 · 7월 10일"
+    },
+    {
+      "id": "B06-01",
+      "scene": "6",
+      "output_start": 291.25,
+      "output_end": 300.25,
+      "source_seconds": 9,
+      "speed": 1,
+      "label": "추가 확장 · 정기 보충 발주 민감도"
+    },
+    {
+      "id": "A06-01",
+      "scene": "6A",
+      "output_start": 300.25,
+      "output_end": 308.25,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "추가 확장 · 직접 처리 기안 방치"
+    }
+  ],
+  "ai_visible_wait_seconds": {
+    "demand": 8.977,
+    "approval_draft": 21.833
+  },
+  "recording_server_stopped": true,
+  "final_validation": {
+    "frames_decoded": 7398,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "seconds": 308.25,
+    "track_handlers": [
+      "vide"
+    ],
+    "no_audio_track": true,
+    "sha256": "39c670ed5af62c96d1b3926d09b6239649d3b6f9d33a399ebd148e12b2e55988",
+    "bytes": 6445226,
+    "dark_app_frame_count": 0
+  }
+}

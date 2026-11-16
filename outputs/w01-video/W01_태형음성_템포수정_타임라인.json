@@ -1,0 +1,2350 @@
+{
+  "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/W01_시연영상_배속표시.mp4",
+  "fps": 24,
+  "source_frames": 7398,
+  "target_frames": 6322,
+  "target_duration": 263.4166666666667,
+  "source_duration": 308.25,
+  "cue_count": 56,
+  "wait_count": 3,
+  "audio_rate": 1.1,
+  "pitch_shift_semitones": 0,
+  "intro_text_removal": {
+    "source_frames": [
+      0,
+      720
+    ],
+    "rect_xywh": [
+      397,
+      37,
+      86,
+      24
+    ],
+    "removed_text": " · 무음 자막",
+    "fill_method": "Copy adjacent blank header pixels from same rows, x500:586, to preserve decoded background color"
+  },
+  "video_speed": "All kept ordinary source frames played at 1x; existing 8x waits retain all frames and duration. One static-run cut at most per cue.",
+  "total_skipped_frames": 1187,
+  "total_hold_frames": 111,
+  "parts": [
+    {
+      "kind": "cue",
+      "cue": 1,
+      "text": "마실 커머스 마케팅 담당자의 캠페인 확대 기안 25건을 다룹니다.",
+      "source_start_frame": 0,
+      "source_end_frame": 144,
+      "source_duration": 6.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.1818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-01.wav",
+      "desired_target_frames": 106,
+      "target_frames": 106,
+      "kept_source_ranges": [
+        [
+          0,
+          82
+        ],
+        [
+          120,
+          144
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          82,
+          120
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 38,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 0,
+      "target_end_frame": 106,
+      "target_start": 0.0,
+      "target_end": 4.416666666666667,
+      "display_text": "Masil Commerce 마케팅 담당자의 캠페인 확대 기안 25건을 다룹니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 2,
+      "text": "확정기한 전에 진행할지, 바꿀지, 철회할지 결정하도록 돕습니다.",
+      "source_start_frame": 144,
+      "source_end_frame": 288,
+      "source_duration": 6.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.509083333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-02.wav",
+      "desired_target_frames": 114,
+      "target_frames": 114,
+      "kept_source_ranges": [
+        [
+          144,
+          214
+        ],
+        [
+          244,
+          288
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          214,
+          244
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 30,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 106,
+      "target_end_frame": 220,
+      "target_start": 4.416666666666667,
+      "target_end": 9.166666666666666,
+      "display_text": "확정기한 전에 진행할지, 바꿀지, 철회할지 결정하도록 돕습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 3,
+      "text": "수요 입력, 공급 확인, 승인과 후속 처리를 한 흐름으로 연결합니다.",
+      "source_start_frame": 288,
+      "source_end_frame": 432,
+      "source_duration": 6.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.363645833333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-03.wav",
+      "desired_target_frames": 110,
+      "target_frames": 110,
+      "kept_source_ranges": [
+        [
+          288,
+          374
+        ],
+        [
+          408,
+          432
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          374,
+          408
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 34,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 220,
+      "target_end_frame": 330,
+      "target_start": 9.166666666666666,
+      "target_end": 13.75,
+      "display_text": "수요 입력, 공급 확인, 승인과 후속 처리를 한 흐름으로 연결합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 4,
+      "text": "다른 부서의 회신과 승인은 모의 입력입니다.",
+      "source_start_frame": 432,
+      "source_end_frame": 576,
+      "source_duration": 6.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 2.6818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-04.wav",
+      "desired_target_frames": 70,
+      "target_frames": 94,
+      "kept_source_ranges": [
+        [
+          432,
+          444
+        ],
+        [
+          494,
+          576
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          444,
+          494
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 50,
+      "untrimmed_due_to_motion_frames": 24,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 330,
+      "target_end_frame": 424,
+      "target_start": 13.75,
+      "target_end": 17.666666666666668,
+      "display_text": "다른 부서의 회신과 승인은 모의 입력입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 5,
+      "text": "그 입력에 따른 계산, 재판정과 상태 기록은 구현이 직접 처리합니다.",
+      "source_start_frame": 576,
+      "source_end_frame": 720,
+      "source_duration": 6.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.445458333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-05.wav",
+      "desired_target_frames": 112,
+      "target_frames": 112,
+      "kept_source_ranges": [
+        [
+          576,
+          664
+        ],
+        [
+          696,
+          720
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          664,
+          696
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 32,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 424,
+      "target_end_frame": 536,
+      "target_start": 17.666666666666668,
+      "target_end": 22.333333333333332,
+      "display_text": "그 입력에 따른 계산, 재판정과 상태 기록은 구현이 직접 처리합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 6,
+      "text": "시연용 가상 회신 문장을 불러오고, 실제 엘엘엠 에이피아이로 항목을 정리합니다.",
+      "source_start_frame": 720,
+      "source_end_frame": 870,
+      "source_duration": 6.25,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.772729166666666,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-06.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          720,
+          816
+        ],
+        [
+          846,
+          870
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          816,
+          846
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 30,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 536,
+      "target_end_frame": 656,
+      "target_start": 22.333333333333332,
+      "target_end": 27.333333333333332,
+      "display_text": "시연용 가상 회신 문장을 불러오고, 실제 LLM API로 항목을 정리합니다."
+    },
+    {
+      "kind": "wait",
+      "source_start_frame": 870,
+      "source_end_frame": 896,
+      "kept_source_ranges": [
+        [
+          870,
+          896
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "target_frames": 26,
+      "speed": 8,
+      "target_start_frame": 656,
+      "target_end_frame": 682,
+      "target_start": 27.333333333333332,
+      "target_end": 28.416666666666668
+    },
+    {
+      "kind": "cue",
+      "cue": 7,
+      "text": "에이아이는 모호한 증가율을 추측하지 않고 비웁니다. 담당자가 확인해야 합니다.",
+      "source_start_frame": 896,
+      "source_end_frame": 1064,
+      "source_duration": 7.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.854541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-07.wav",
+      "desired_target_frames": 122,
+      "target_frames": 122,
+      "kept_source_ranges": [
+        [
+          896,
+          994
+        ],
+        [
+          1040,
+          1064
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          994,
+          1040
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 46,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 682,
+      "target_end_frame": 804,
+      "target_start": 28.416666666666668,
+      "target_end": 33.5,
+      "display_text": "AI는 모호한 증가율을 추측하지 않고 비웁니다. 담당자가 확인해야 합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 8,
+      "text": "예시 값으로 공통 20%, 7월 20일 주부터 4주, 아이팔레트 0%를 확인합니다.",
+      "source_start_frame": 1064,
+      "source_end_frame": 1256,
+      "source_duration": 8.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 6.2,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-08.wav",
+      "desired_target_frames": 154,
+      "target_frames": 154,
+      "kept_source_ranges": [
+        [
+          1064,
+          1194
+        ],
+        [
+          1232,
+          1256
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1194,
+          1232
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 38,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 804,
+      "target_end_frame": 958,
+      "target_start": 33.5,
+      "target_end": 39.916666666666664,
+      "display_text": "예시 값으로 공통 20%, 7월 20일 주부터 4주, 아이팔레트 0%를 확인합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 9,
+      "text": "확인한 수요를 등록하면 공급 가능과 다음 승인 요청이 표시됩니다.",
+      "source_start_frame": 1256,
+      "source_end_frame": 1424,
+      "source_duration": 7.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.2,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-09.wav",
+      "desired_target_frames": 106,
+      "target_frames": 128,
+      "kept_source_ranges": [
+        [
+          1256,
+          1360
+        ],
+        [
+          1400,
+          1424
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1360,
+          1400
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 40,
+      "untrimmed_due_to_motion_frames": 22,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 958,
+      "target_end_frame": 1086,
+      "target_start": 39.916666666666664,
+      "target_end": 45.25,
+      "display_text": "확인한 수요를 등록하면 공급 가능과 다음 승인 요청이 표시됩니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 10,
+      "text": "품목별 추가 수량은 총 1,404개입니다. 수량 계산과 공급 판정은 에이아이가 하지 않습니다.",
+      "source_start_frame": 1424,
+      "source_end_frame": 1616,
+      "source_duration": 8.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.927270833333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-10.wav",
+      "desired_target_frames": 148,
+      "target_frames": 148,
+      "kept_source_ranges": [
+        [
+          1424,
+          1548
+        ],
+        [
+          1592,
+          1616
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1548,
+          1592
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 44,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1086,
+      "target_end_frame": 1234,
+      "target_start": 45.25,
+      "target_end": 51.416666666666664,
+      "display_text": "품목별 추가 수량은 총 1,404개입니다. 수량 계산과 공급 판정은 AI가 하지 않습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 11,
+      "text": "사람 입력과 원본 판매 데이터에서 계산 규칙, 결과로 이어지는 흐름을 확인합니다.",
+      "source_start_frame": 1616,
+      "source_end_frame": 1760,
+      "source_duration": 6.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5,
+      "processed_audio_duration": 5.154541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-11.wav",
+      "desired_target_frames": 129,
+      "target_frames": 129,
+      "kept_source_ranges": [
+        [
+          1616,
+          1721
+        ],
+        [
+          1736,
+          1760
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1721,
+          1736
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 15,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1234,
+      "target_end_frame": 1363,
+      "target_start": 51.416666666666664,
+      "target_end": 56.791666666666664,
+      "display_text": "사람 입력과 원본 판매 데이터에서 계산 규칙, 결과로 이어지는 흐름을 확인합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 12,
+      "text": "8월 6일 집행이 현금 하회 구간에 들어가 그룹 씨이오 승인이 필요합니다.",
+      "source_start_frame": 1760,
+      "source_end_frame": 1928,
+      "source_duration": 7.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.590916666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-12.wav",
+      "desired_target_frames": 116,
+      "target_frames": 116,
+      "kept_source_ranges": [
+        [
+          1760,
+          1852
+        ],
+        [
+          1904,
+          1928
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1852,
+          1904
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 52,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1363,
+      "target_end_frame": 1479,
+      "target_start": 56.791666666666664,
+      "target_end": 61.625,
+      "display_text": "8월 6일 집행이 현금 하회 구간에 들어가 그룹 CEO 승인이 필요합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 13,
+      "text": "실제 엘엘엠 호출로 승인 요청 초안을 만듭니다.",
+      "source_start_frame": 1928,
+      "source_end_frame": 2012,
+      "source_duration": 3.5,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 3.127270833333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-13.wav",
+      "desired_target_frames": 80,
+      "target_frames": 80,
+      "kept_source_ranges": [
+        [
+          1928,
+          1984
+        ],
+        [
+          1988,
+          2012
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          1984,
+          1988
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 4,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1479,
+      "target_end_frame": 1559,
+      "target_start": 61.625,
+      "target_end": 64.95833333333333,
+      "display_text": "실제 LLM 호출로 승인 요청 초안을 만듭니다."
+    },
+    {
+      "kind": "wait",
+      "source_start_frame": 2012,
+      "source_end_frame": 2076,
+      "kept_source_ranges": [
+        [
+          2012,
+          2076
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "target_frames": 64,
+      "speed": 8,
+      "target_start_frame": 1559,
+      "target_end_frame": 1623,
+      "target_start": 64.95833333333333,
+      "target_end": 67.625
+    },
+    {
+      "kind": "cue",
+      "cue": 14,
+      "text": "초안은 확인 전 상태입니다. 사람이 문서를 확인해야 승인 요청을 올릴 수 있습니다.",
+      "source_start_frame": 2076,
+      "source_end_frame": 2220,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.027270833333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-14.wav",
+      "desired_target_frames": 126,
+      "target_frames": 126,
+      "kept_source_ranges": [
+        [
+          2076,
+          2178
+        ],
+        [
+          2196,
+          2220
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2178,
+          2196
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 18,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1623,
+      "target_end_frame": 1749,
+      "target_start": 67.625,
+      "target_end": 72.875,
+      "display_text": "초안은 확인 전 상태입니다. 사람이 문서를 확인해야 승인 요청을 올릴 수 있습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 15,
+      "text": "내용을 확인하고 이대로 확인을 누릅니다.",
+      "source_start_frame": 2220,
+      "source_end_frame": 2388,
+      "source_duration": 7.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 2.7727291666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-15.wav",
+      "desired_target_frames": 72,
+      "target_frames": 100,
+      "kept_source_ranges": [
+        [
+          2220,
+          2241
+        ],
+        [
+          2309,
+          2388
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2241,
+          2309
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 68,
+      "untrimmed_due_to_motion_frames": 28,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1749,
+      "target_end_frame": 1849,
+      "target_start": 72.875,
+      "target_end": 77.04166666666667,
+      "display_text": "내용을 확인하고 이대로 확인을 누릅니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 16,
+      "text": "승인 요청을 올리면 그룹 씨이오의 7월 3일 회신을 기다리는 상태가 됩니다.",
+      "source_start_frame": 2388,
+      "source_end_frame": 2580,
+      "source_duration": 8.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 4.445458333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-16.wav",
+      "desired_target_frames": 112,
+      "target_frames": 125,
+      "kept_source_ranges": [
+        [
+          2388,
+          2400
+        ],
+        [
+          2467,
+          2580
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2400,
+          2467
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 67,
+      "untrimmed_due_to_motion_frames": 13,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1849,
+      "target_end_frame": 1974,
+      "target_start": 77.04166666666667,
+      "target_end": 82.25,
+      "display_text": "승인 요청을 올리면 그룹 CEO의 7월 3일 회신을 기다리는 상태가 됩니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 17,
+      "text": "그룹 씨이오의 승인은 모의 회신입니다. 조건이 닫히면 담당자가 직접 확정합니다.",
+      "source_start_frame": 2580,
+      "source_end_frame": 2724,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.027270833333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-17.wav",
+      "desired_target_frames": 126,
+      "target_frames": 126,
+      "kept_source_ranges": [
+        [
+          2580,
+          2682
+        ],
+        [
+          2700,
+          2724
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2682,
+          2700
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 18,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 1974,
+      "target_end_frame": 2100,
+      "target_start": 82.25,
+      "target_end": 87.5,
+      "display_text": "그룹 CEO의 승인은 모의 회신입니다. 조건이 닫히면 담당자가 직접 확정합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 18,
+      "text": "7월 3일 확정한 기안으로 기록됩니다.",
+      "source_start_frame": 2724,
+      "source_end_frame": 2844,
+      "source_duration": 5.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 2.3181875,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-18.wav",
+      "desired_target_frames": 61,
+      "target_frames": 74,
+      "kept_source_ranges": [
+        [
+          2724,
+          2774
+        ],
+        [
+          2820,
+          2844
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2774,
+          2820
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 46,
+      "untrimmed_due_to_motion_frames": 13,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2100,
+      "target_end_frame": 2174,
+      "target_start": 87.5,
+      "target_end": 90.58333333333333,
+      "display_text": "7월 3일 확정한 기안으로 기록됩니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 19,
+      "text": "결정 시점의 공급 판정, 승인 상태, 확정 규칙과 결과가 함께 남습니다.",
+      "source_start_frame": 2844,
+      "source_end_frame": 2988,
+      "source_duration": 6.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5,
+      "processed_audio_duration": 4.945458333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-19.wav",
+      "desired_target_frames": 124,
+      "target_frames": 124,
+      "kept_source_ranges": [
+        [
+          2844,
+          2944
+        ],
+        [
+          2964,
+          2988
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          2944,
+          2964
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 20,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2174,
+      "target_end_frame": 2298,
+      "target_start": 90.58333333333333,
+      "target_end": 95.75,
+      "display_text": "결정 시점의 공급 판정, 승인 상태, 확정 규칙과 결과가 함께 남습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 20,
+      "text": "초기화 후 전체 자동 처리입니다. 행동과 회신은 모의입니다.",
+      "source_start_frame": 2988,
+      "source_end_frame": 3060,
+      "source_duration": 3.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 3.8909166666666666,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-20.wav",
+      "desired_target_frames": 99,
+      "target_frames": 99,
+      "kept_source_ranges": [
+        [
+          2988,
+          3060
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 27,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2298,
+      "target_end_frame": 2397,
+      "target_start": 95.75,
+      "target_end": 99.875,
+      "display_text": "초기화 뒤 전체 기안을 자동 처리합니다. 이 조작과 회신은 모의입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 21,
+      "text": "처음에는 공급 가능이며, 승인권자는 마실 대표입니다.",
+      "source_start_frame": 3060,
+      "source_end_frame": 3180,
+      "source_duration": 5.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.6090833333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-21.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          3060,
+          3132
+        ],
+        [
+          3156,
+          3180
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3132,
+          3156
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 24,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2397,
+      "target_end_frame": 2493,
+      "target_start": 99.875,
+      "target_end": 103.875,
+      "display_text": "처음에는 공급 가능이며, 승인권자는 Masil 대표입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 22,
+      "text": "보충 발주 승인으로 현금이 30억 원 아래인 기간이 늘어납니다.",
+      "source_start_frame": 3180,
+      "source_end_frame": 3282,
+      "source_duration": 4.25,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.8,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-22.wav",
+      "desired_target_frames": 97,
+      "target_frames": 97,
+      "kept_source_ranges": [
+        [
+          3180,
+          3253
+        ],
+        [
+          3258,
+          3282
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3253,
+          3258
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 5,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2493,
+      "target_end_frame": 2590,
+      "target_start": 103.875,
+      "target_end": 107.91666666666667,
+      "display_text": "보충 발주 승인으로 현금이 30억 원 아래인 기간이 늘어납니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 23,
+      "text": "집행일이 그 기간에 들어가 승인권자가 그룹 씨이오로 바뀝니다.",
+      "source_start_frame": 3282,
+      "source_end_frame": 3384,
+      "source_duration": 4.25,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.9,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-23.wav",
+      "desired_target_frames": 99,
+      "target_frames": 99,
+      "kept_source_ranges": [
+        [
+          3282,
+          3357
+        ],
+        [
+          3360,
+          3384
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3357,
+          3360
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 3,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2590,
+      "target_end_frame": 2689,
+      "target_start": 107.91666666666667,
+      "target_end": 112.04166666666667,
+      "display_text": "집행일이 그 기간에 들어가 승인권자가 그룹 CEO로 바뀝니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 24,
+      "text": "하회 구간의 끝이 8월 21일에서 28일로 늘어난 계산 기록입니다.",
+      "source_start_frame": 3384,
+      "source_end_frame": 3504,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 4.527270833333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-24.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          3384,
+          3504
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2689,
+      "target_end_frame": 2809,
+      "target_start": 112.04166666666667,
+      "target_end": 117.04166666666667,
+      "display_text": "하회 구간의 끝이 8월 21일에서 28일로 늘어난 계산 기록입니다."
+    },
+    {
+      "kind": "wait",
+      "source_start_frame": 3504,
+      "source_end_frame": 3522,
+      "kept_source_ranges": [
+        [
+          3504,
+          3522
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "target_frames": 18,
+      "speed": 8,
+      "target_start_frame": 2809,
+      "target_end_frame": 2827,
+      "target_start": 117.04166666666667,
+      "target_end": 117.79166666666667
+    },
+    {
+      "kind": "cue",
+      "cue": 25,
+      "text": "원료 지연 회신이 들어오자 공급 판정이 부족으로 바뀝니다.",
+      "source_start_frame": 3522,
+      "source_end_frame": 3666,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.563645833333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-25.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          3522,
+          3575
+        ],
+        [
+          3623,
+          3666
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3575,
+          3623
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 48,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2827,
+      "target_end_frame": 2923,
+      "target_start": 117.79166666666667,
+      "target_end": 121.79166666666667,
+      "display_text": "원료 지연 회신이 들어오자 공급 판정이 부족으로 바뀝니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 26,
+      "text": "판매 시기 이동, 조기 공급 요청 등 대안을 비교합니다.",
+      "source_start_frame": 3666,
+      "source_end_frame": 3810,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.5454583333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-26.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          3666,
+          3700
+        ],
+        [
+          3748,
+          3810
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3700,
+          3748
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 48,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 2923,
+      "target_end_frame": 3019,
+      "target_start": 121.79166666666667,
+      "target_end": 125.79166666666667,
+      "display_text": "판매 시기 이동, 조기 공급 요청 등 대안을 비교합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 27,
+      "text": "추천 대안은 판매 시작을 9월 14일로 늦추는 것입니다.",
+      "source_start_frame": 3810,
+      "source_end_frame": 3954,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.745458333333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-27.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          3810,
+          3882
+        ],
+        [
+          3930,
+          3954
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          3882,
+          3930
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 48,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3019,
+      "target_end_frame": 3115,
+      "target_start": 125.79166666666667,
+      "target_end": 129.79166666666666,
+      "display_text": "추천 대안은 판매 시작을 9월 14일로 늦추는 것입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 28,
+      "text": "원료 지연을 반영한 새 계획으로 공급을 다시 계산합니다.",
+      "source_start_frame": 3954,
+      "source_end_frame": 4074,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 3.3272708333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-28.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          3954,
+          4074
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3115,
+      "target_end_frame": 3235,
+      "target_start": 129.79166666666666,
+      "target_end": 134.79166666666666,
+      "display_text": "원료 지연을 반영한 새 계획으로 공급을 다시 계산합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 29,
+      "text": "판매 시작을 옮기자 공급 가능으로 바뀝니다.",
+      "source_start_frame": 4074,
+      "source_end_frame": 4218,
+      "source_duration": 6.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5,
+      "processed_audio_duration": 2.8272708333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-29.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          4074,
+          4170
+        ],
+        [
+          4194,
+          4218
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          4170,
+          4194
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 24,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3235,
+      "target_end_frame": 3355,
+      "target_start": 134.79166666666666,
+      "target_end": 139.79166666666666,
+      "display_text": "판매 시작을 옮기자 공급 가능으로 바뀝니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 30,
+      "text": "공급과 승인을 다시 확인한 뒤 확정 상태를 남깁니다.",
+      "source_start_frame": 4218,
+      "source_end_frame": 4290,
+      "source_duration": 3.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 3.4,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-30.wav",
+      "desired_target_frames": 87,
+      "target_frames": 87,
+      "kept_source_ranges": [
+        [
+          4218,
+          4290
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 15,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3355,
+      "target_end_frame": 3442,
+      "target_start": 139.79166666666666,
+      "target_end": 143.41666666666666,
+      "display_text": "공급과 승인을 다시 확인한 뒤 확정 상태를 남깁니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 31,
+      "text": "수요 회신이 없으면 판정불가입니다. 기한 경과 경위도 남깁니다.",
+      "source_start_frame": 4290,
+      "source_end_frame": 4391,
+      "source_duration": 4.208333333333333,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.2181875,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-31.wav",
+      "desired_target_frames": 107,
+      "target_frames": 107,
+      "kept_source_ranges": [
+        [
+          4290,
+          4391
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 6,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3442,
+      "target_end_frame": 3549,
+      "target_start": 143.41666666666666,
+      "target_end": 147.875,
+      "display_text": "수요 회신이 없으면 판정불가입니다. 기한 경과 경위도 남깁니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 32,
+      "text": "공급이 부족해 코어비아에 조기·분할 공급을 요청합니다.",
+      "source_start_frame": 4391,
+      "source_end_frame": 4475,
+      "source_duration": 3.5,
+      "category": "data_flow",
+      "minimum_read_seconds": 3.5,
+      "processed_audio_duration": 3.2818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-32.wav",
+      "desired_target_frames": 84,
+      "target_frames": 84,
+      "kept_source_ranges": [
+        [
+          4391,
+          4475
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3549,
+      "target_end_frame": 3633,
+      "target_start": 147.875,
+      "target_end": 151.375,
+      "display_text": "공급이 부족해 Corevia에 조기·분할 공급을 요청합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 33,
+      "text": "요청한 대안과 다음 회신 대기가 데이터 흐름 카드에 남습니다.",
+      "source_start_frame": 4475,
+      "source_end_frame": 4559,
+      "source_duration": 3.5,
+      "category": "data_flow",
+      "minimum_read_seconds": 3.5,
+      "processed_audio_duration": 3.7,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-33.wav",
+      "desired_target_frames": 94,
+      "target_frames": 94,
+      "kept_source_ranges": [
+        [
+          4475,
+          4559
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 10,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3633,
+      "target_end_frame": 3727,
+      "target_start": 151.375,
+      "target_end": 155.29166666666666,
+      "display_text": "요청한 대안과 다음 회신 대기가 데이터 흐름 카드에 남습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 34,
+      "text": "생산·원료 제약으로 조기 공급이 불가합니다. 이 대안을 제외하고 재계산합니다.",
+      "source_start_frame": 4559,
+      "source_end_frame": 4703,
+      "source_duration": 6.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.654541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-34.wav",
+      "desired_target_frames": 117,
+      "target_frames": 117,
+      "kept_source_ranges": [
+        [
+          4559,
+          4652
+        ],
+        [
+          4679,
+          4703
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          4652,
+          4679
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 27,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3727,
+      "target_end_frame": 3844,
+      "target_start": 155.29166666666666,
+      "target_end": 160.16666666666666,
+      "display_text": "생산·원료 제약으로 조기 공급이 불가합니다. 이 대안을 제외하고 재계산합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 35,
+      "text": "시기를 옮겨도 공급은 조건부입니다. 코어비아 확약을 계속 기다립니다.",
+      "source_start_frame": 4703,
+      "source_end_frame": 4847,
+      "source_duration": 6.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5,
+      "processed_audio_duration": 4.5363541666666665,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-35.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          4703,
+          4777
+        ],
+        [
+          4801,
+          4847
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          4777,
+          4801
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 24,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3844,
+      "target_end_frame": 3964,
+      "target_start": 160.16666666666666,
+      "target_end": 165.16666666666666,
+      "display_text": "시기를 옮겨도 공급은 조건부입니다. Corevia 확약을 계속 기다립니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 36,
+      "text": "기안은 승인됐지만 공급 조건이 남아 확정 대기합니다.",
+      "source_start_frame": 4847,
+      "source_end_frame": 4943,
+      "source_duration": 4.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4.0,
+      "processed_audio_duration": 3.3363541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-36.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          4847,
+          4943
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 3964,
+      "target_end_frame": 4060,
+      "target_start": 165.16666666666666,
+      "target_end": 169.16666666666666,
+      "display_text": "기안은 승인됐지만 공급 조건이 남아 확정 대기합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 37,
+      "text": "내부 발주 승인 후에도 공급은 미확약입니다. 승인권자의 위험 수용이 별도로 필요합니다.",
+      "source_start_frame": 4943,
+      "source_end_frame": 5063,
+      "source_duration": 5.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.5363541666666665,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-37.wav",
+      "desired_target_frames": 138,
+      "target_frames": 138,
+      "kept_source_ranges": [
+        [
+          4943,
+          5063
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 18,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4060,
+      "target_end_frame": 4198,
+      "target_start": 169.16666666666666,
+      "target_end": 174.91666666666666,
+      "display_text": "내부 발주 승인 후에도 공급은 미확약입니다. 승인권자의 위험 수용이 별도로 필요합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 38,
+      "text": "위험 수용으로 확정돼도 공급 판정은 조건부로 남습니다. 확약 회신을 계속 확인합니다.",
+      "source_start_frame": 5063,
+      "source_end_frame": 5250,
+      "source_duration": 7.791666666666667,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.4,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-38.wav",
+      "desired_target_frames": 135,
+      "target_frames": 135,
+      "kept_source_ranges": [
+        [
+          5063,
+          5174
+        ],
+        [
+          5226,
+          5250
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          5174,
+          5226
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 52,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4198,
+      "target_end_frame": 4333,
+      "target_start": 174.91666666666666,
+      "target_end": 180.54166666666666,
+      "display_text": "위험 수용으로 확정돼도 공급 판정은 조건부로 남습니다. 확약 회신을 계속 확인합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 39,
+      "text": "별도 실행: 씨이오 최저 잔액 조건은 추가 가정입니다.",
+      "source_start_frame": 5250,
+      "source_end_frame": 5322,
+      "source_duration": 3.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 3.190916666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-39.wav",
+      "desired_target_frames": 82,
+      "target_frames": 82,
+      "kept_source_ranges": [
+        [
+          5250,
+          5322
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 10,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4333,
+      "target_end_frame": 4415,
+      "target_start": 180.54166666666666,
+      "target_end": 183.95833333333334,
+      "display_text": "별도 실행: CEO 최저 잔액 조건은 추가 가정입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 40,
+      "text": "승인 후 최저 14.16억 원이 기준 15억 원보다 낮아 발주안을 거절했습니다.",
+      "source_start_frame": 5322,
+      "source_end_frame": 5442,
+      "source_duration": 5.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 5.3818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-40.wav",
+      "desired_target_frames": 135,
+      "target_frames": 135,
+      "kept_source_ranges": [
+        [
+          5322,
+          5442
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 15,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4415,
+      "target_end_frame": 4550,
+      "target_start": 183.95833333333334,
+      "target_end": 189.58333333333334,
+      "display_text": "승인 후 최저 14.16억 < 기준 15억\n보충 발주안이 거절됐습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 41,
+      "text": "해당 발주에 기대던 기안은 공급 부족입니다. 품목 구성을 바꾸는 대안이 제시됩니다.",
+      "source_start_frame": 5442,
+      "source_end_frame": 5562,
+      "source_duration": 5.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.854541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-41.wav",
+      "desired_target_frames": 122,
+      "target_frames": 122,
+      "kept_source_ranges": [
+        [
+          5442,
+          5562
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 2,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4550,
+      "target_end_frame": 4672,
+      "target_start": 189.58333333333334,
+      "target_end": 194.66666666666666,
+      "display_text": "해당 발주에 기대던 기안은 공급 부족입니다.\n품목 구성을 바꾸는 대안이 제시됩니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 42,
+      "text": "구성 변경으로 수요를 정정하면, 부족에서 가능으로 바뀝니다.",
+      "source_start_frame": 5562,
+      "source_end_frame": 5658,
+      "source_duration": 4.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 4.0,
+      "processed_audio_duration": 4.027270833333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-42.wav",
+      "desired_target_frames": 102,
+      "target_frames": 102,
+      "kept_source_ranges": [
+        [
+          5562,
+          5658
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 6,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4672,
+      "target_end_frame": 4774,
+      "target_start": 194.66666666666666,
+      "target_end": 198.91666666666666,
+      "display_text": "품목 구성 변경 → 수요 정정\n재판정 결과: 부족 → 가능"
+    },
+    {
+      "kind": "cue",
+      "cue": 43,
+      "text": "7월 21일, 변경한 구성으로 확정됩니다.",
+      "source_start_frame": 5658,
+      "source_end_frame": 5778,
+      "source_duration": 5.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 2.936354166666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-43.wav",
+      "desired_target_frames": 76,
+      "target_frames": 76,
+      "kept_source_ranges": [
+        [
+          5658,
+          5710
+        ],
+        [
+          5754,
+          5778
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          5710,
+          5754
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 44,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4774,
+      "target_end_frame": 4850,
+      "target_start": 198.91666666666666,
+      "target_end": 202.08333333333334,
+      "display_text": "7월 21일, 변경한 구성으로 확정됩니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 44,
+      "text": "다른 사례인 기안 11은 공급 위험 수용 없이 철회합니다.",
+      "source_start_frame": 5778,
+      "source_end_frame": 5874,
+      "source_duration": 4.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4.0,
+      "processed_audio_duration": 3.7272708333333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-44.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          5778,
+          5874
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4850,
+      "target_end_frame": 4946,
+      "target_start": 202.08333333333334,
+      "target_end": 206.08333333333334,
+      "display_text": "다른 기안 PLAN-011은\n공급 위험 수용 없이 철회합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 45,
+      "text": "발주 전 보충안을 취소했습니다.",
+      "source_start_frame": 5874,
+      "source_end_frame": 5982,
+      "source_duration": 4.5,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 1.9727291666666666,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-45.wav",
+      "desired_target_frames": 96,
+      "target_frames": 96,
+      "kept_source_ranges": [
+        [
+          5874,
+          5946
+        ],
+        [
+          5958,
+          5982
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          5946,
+          5958
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 12,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 4946,
+      "target_end_frame": 5042,
+      "target_start": 206.08333333333334,
+      "target_end": 210.08333333333334,
+      "display_text": "발주 전 보충안을 취소했습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 46,
+      "text": "약정과 예정 현금 유출에서 5.24억 원을 뺐습니다.",
+      "source_start_frame": 5982,
+      "source_end_frame": 6090,
+      "source_duration": 4.5,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 3.872729166666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-46.wav",
+      "desired_target_frames": 98,
+      "target_frames": 98,
+      "kept_source_ranges": [
+        [
+          5982,
+          6056
+        ],
+        [
+          6066,
+          6090
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          6056,
+          6066
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 10,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5042,
+      "target_end_frame": 5140,
+      "target_start": 210.08333333333334,
+      "target_end": 214.16666666666666,
+      "display_text": "약정과 예정 현금 유출에서\n5.24억 원을 뺐습니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 47,
+      "text": "내부 발주 승인은 구매·지출 허용입니다. 코어비아 공급 확약과 분리합니다.",
+      "source_start_frame": 6090,
+      "source_end_frame": 6210,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 4.654541666666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-47.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          6090,
+          6210
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5140,
+      "target_end_frame": 5260,
+      "target_start": 214.16666666666666,
+      "target_end": 219.16666666666666,
+      "display_text": "내부 발주 승인은 구매·지출 허용입니다. Corevia 공급 확약과 분리합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 48,
+      "text": "재무의 현금 하회 구간이 바뀌면 관련 판단을 다시 엽니다.",
+      "source_start_frame": 6210,
+      "source_end_frame": 6318,
+      "source_duration": 4.5,
+      "category": "data_flow",
+      "minimum_read_seconds": 4.5,
+      "processed_audio_duration": 3.6636458333333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-48.wav",
+      "desired_target_frames": 108,
+      "target_frames": 108,
+      "kept_source_ranges": [
+        [
+          6210,
+          6318
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5260,
+      "target_end_frame": 5368,
+      "target_start": 219.16666666666666,
+      "target_end": 223.66666666666666,
+      "display_text": "재무의 현금 하회 구간이 바뀌면 관련 판단을 다시 엽니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 49,
+      "text": "결론이 같은 건은 유지하고, 바뀐 건은 승인 경로를 재검토합니다.",
+      "source_start_frame": 6318,
+      "source_end_frame": 6438,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 4.063645833333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-49.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          6318,
+          6438
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5368,
+      "target_end_frame": 5488,
+      "target_start": 223.66666666666666,
+      "target_end": 228.66666666666666,
+      "display_text": "결론이 같은 건은 유지하고, 바뀐 건은 승인 경로를 재검토합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 50,
+      "text": "공급 회신에는 원료 확보일과 생산 라인 배정이 함께 들어갑니다.",
+      "source_start_frame": 6438,
+      "source_end_frame": 6558,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 3.9454583333333333,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-50.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          6438,
+          6558
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5488,
+      "target_end_frame": 5608,
+      "target_start": 228.66666666666666,
+      "target_end": 233.66666666666666,
+      "display_text": "공급 회신에는 원료 확보일과 생산 라인 배정이 함께 들어갑니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 51,
+      "text": "기발주 24,000개 중 12,000개만 공급 가능하다는 회신입니다.",
+      "source_start_frame": 6558,
+      "source_end_frame": 6678,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 4.1818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-51.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          6558,
+          6678
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5608,
+      "target_end_frame": 5728,
+      "target_start": 233.66666666666666,
+      "target_end": 238.66666666666666,
+      "display_text": "기발주 24,000개 중 12,000개만 공급 가능하다는 회신입니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 52,
+      "text": "원료·생산 일정 자체는 계산하지 않습니다. 받은 회신을 검증해 판정합니다.",
+      "source_start_frame": 6678,
+      "source_end_frame": 6798,
+      "source_duration": 5.0,
+      "category": "data_flow",
+      "minimum_read_seconds": 5.0,
+      "processed_audio_duration": 4.509083333333334,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-52.wav",
+      "desired_target_frames": 120,
+      "target_frames": 120,
+      "kept_source_ranges": [
+        [
+          6678,
+          6798
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 0,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5728,
+      "target_end_frame": 5848,
+      "target_start": 238.66666666666666,
+      "target_end": 243.66666666666666,
+      "display_text": "원료·생산 일정 자체는 계산하지 않습니다. 받은 회신을 검증해 판정합니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 53,
+      "text": "회수일 지연 시나리오에서는 현금 하회 구간이 9월 4일까지 늘어납니다.",
+      "source_start_frame": 6798,
+      "source_end_frame": 6990,
+      "source_duration": 8.0,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.4818125,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-53.wav",
+      "desired_target_frames": 113,
+      "target_frames": 113,
+      "kept_source_ranges": [
+        [
+          6798,
+          6887
+        ],
+        [
+          6966,
+          6990
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          6887,
+          6966
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 79,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5848,
+      "target_end_frame": 5961,
+      "target_start": 243.66666666666666,
+      "target_end": 248.375,
+      "display_text": "회수일 지연 시나리오에서는\n현금 하회 구간이 9월 4일까지 늘어납니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 54,
+      "text": "정기 보충 발주 지급은 기준선에 넣지 않고 민감도로 따로 봅니다.",
+      "source_start_frame": 6990,
+      "source_end_frame": 7098,
+      "source_duration": 4.5,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.2181875,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-54.wav",
+      "desired_target_frames": 107,
+      "target_frames": 107,
+      "kept_source_ranges": [
+        [
+          6990,
+          7073
+        ],
+        [
+          7074,
+          7098
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          7073,
+          7074
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 1,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 5961,
+      "target_end_frame": 6068,
+      "target_start": 248.375,
+      "target_end": 252.83333333333334,
+      "display_text": "정기 보충 발주 지급은 기준선에 넣지 않고 민감도로 따로 봅니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 55,
+      "text": "향후 판매대금 유입이 없어, 지급만 더하면 잔액이 과도하게 낮아집니다.",
+      "source_start_frame": 7098,
+      "source_end_frame": 7206,
+      "source_duration": 4.5,
+      "category": "decision_evidence",
+      "minimum_read_seconds": 4,
+      "processed_audio_duration": 4.372729166666667,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-55.wav",
+      "desired_target_frames": 110,
+      "target_frames": 110,
+      "kept_source_ranges": [
+        [
+          7098,
+          7206
+        ]
+      ],
+      "skipped_source_ranges": [],
+      "hold_frames": 2,
+      "cut_source_frames": 0,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 6068,
+      "target_end_frame": 6178,
+      "target_start": 252.83333333333334,
+      "target_end": 257.4166666666667,
+      "display_text": "향후 판매대금 유입이 없어, 지급만 더하면 잔액이 과도하게 낮아집니다."
+    },
+    {
+      "kind": "cue",
+      "cue": 56,
+      "text": "직접 처리 기안을 방치하면 경고 후 기한 경과 확정됩니다. 담당자 입력 없음이 남습니다.",
+      "source_start_frame": 7206,
+      "source_end_frame": 7398,
+      "source_duration": 8.0,
+      "category": "general",
+      "minimum_read_seconds": 2.5,
+      "processed_audio_duration": 5.8181875,
+      "audio_duration_is_actual": true,
+      "audio_path": "/private/tmp/w01-audio-pacing/clips-fast/cue-56.wav",
+      "desired_target_frames": 144,
+      "target_frames": 144,
+      "kept_source_ranges": [
+        [
+          7206,
+          7326
+        ],
+        [
+          7374,
+          7398
+        ]
+      ],
+      "skipped_source_ranges": [
+        [
+          7326,
+          7374
+        ]
+      ],
+      "hold_frames": 0,
+      "cut_source_frames": 48,
+      "untrimmed_due_to_motion_frames": 0,
+      "static_test": "480x218 UI grayscale vs run anchor: mean abs diff <=0.10, pixels >12 <=60; exclude header/footer; preserve first 12 / last 24 boundary frames and 6 run-edge frames",
+      "target_start_frame": 6178,
+      "target_end_frame": 6322,
+      "target_start": 257.4166666666667,
+      "target_end": 263.4166666666667,
+      "display_text": "직접 처리 기안을 방치하면 경고 후 기한 경과 확정됩니다. 담당자 입력 없음이 남습니다."
+    }
+  ],
+  "output_silent_video": "/private/tmp/w01-paced/retimed-silent.mp4",
+  "display_srt": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/W01_시연영상_태형음성_템포수정.srt",
+  "source_sha256_unchanged": "1b1cad2012c8f62f6a0264259e9164dc7e962bdf2af0c107e8416ac6d9daa57a",
+  "source_frames_consumed": 7398,
+  "source_frames_skipped": 1187,
+  "hold_frames_added": 111,
+  "source_frame_order_preserved": true,
+  "output_audio_status": "silent; 56 processed Taehyung clips muxed separately",
+  "approved_by_root": true,
+  "temporary_render_script": "/private/tmp/w01-paced-render.py",
+  "all_output_frames_decoded": 6322,
+  "qa_images": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-00000-boundary.jpg"
+    },
+    {
+      "frame": 20,
+      "time": 0.8333333333333334,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-00020-boundary.jpg"
+    },
+    {
+      "frame": 669,
+      "time": 27.875,
+      "label": "wait",
+      "path": "/private/tmp/w01-paced/qa-00669-wait.jpg"
+    },
+    {
+      "frame": 743,
+      "time": 30.958333333333332,
+      "label": "cue-07",
+      "path": "/private/tmp/w01-paced/qa-00743-cue-07.jpg"
+    },
+    {
+      "frame": 957,
+      "time": 39.875,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-00957-boundary.jpg"
+    },
+    {
+      "frame": 958,
+      "time": 39.916666666666664,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-00958-boundary.jpg"
+    },
+    {
+      "frame": 1022,
+      "time": 42.583333333333336,
+      "label": "cue-09",
+      "path": "/private/tmp/w01-paced/qa-01022-cue-09.jpg"
+    },
+    {
+      "frame": 1298,
+      "time": 54.083333333333336,
+      "label": "cue-11",
+      "path": "/private/tmp/w01-paced/qa-01298-cue-11.jpg"
+    },
+    {
+      "frame": 1421,
+      "time": 59.208333333333336,
+      "label": "cue-12",
+      "path": "/private/tmp/w01-paced/qa-01421-cue-12.jpg"
+    },
+    {
+      "frame": 1591,
+      "time": 66.29166666666667,
+      "label": "wait",
+      "path": "/private/tmp/w01-paced/qa-01591-wait.jpg"
+    },
+    {
+      "frame": 1799,
+      "time": 74.95833333333333,
+      "label": "cue-15",
+      "path": "/private/tmp/w01-paced/qa-01799-cue-15.jpg"
+    },
+    {
+      "frame": 1848,
+      "time": 77.0,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-01848-boundary.jpg"
+    },
+    {
+      "frame": 1849,
+      "time": 77.04166666666667,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-01849-boundary.jpg"
+    },
+    {
+      "frame": 1911,
+      "time": 79.625,
+      "label": "cue-16",
+      "path": "/private/tmp/w01-paced/qa-01911-cue-16.jpg"
+    },
+    {
+      "frame": 2236,
+      "time": 93.16666666666667,
+      "label": "cue-19",
+      "path": "/private/tmp/w01-paced/qa-02236-cue-19.jpg"
+    },
+    {
+      "frame": 2749,
+      "time": 114.54166666666667,
+      "label": "cue-24",
+      "path": "/private/tmp/w01-paced/qa-02749-cue-24.jpg"
+    },
+    {
+      "frame": 2808,
+      "time": 117.0,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-02808-boundary.jpg"
+    },
+    {
+      "frame": 2809,
+      "time": 117.04166666666667,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-02809-boundary.jpg"
+    },
+    {
+      "frame": 2818,
+      "time": 117.41666666666667,
+      "label": "wait",
+      "path": "/private/tmp/w01-paced/qa-02818-wait.jpg"
+    },
+    {
+      "frame": 3295,
+      "time": 137.29166666666666,
+      "label": "cue-29",
+      "path": "/private/tmp/w01-paced/qa-03295-cue-29.jpg"
+    },
+    {
+      "frame": 3680,
+      "time": 153.33333333333334,
+      "label": "cue-33",
+      "path": "/private/tmp/w01-paced/qa-03680-cue-33.jpg"
+    },
+    {
+      "frame": 4482,
+      "time": 186.75,
+      "label": "cue-40",
+      "path": "/private/tmp/w01-paced/qa-04482-cue-40.jpg"
+    },
+    {
+      "frame": 4549,
+      "time": 189.54166666666666,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-04549-boundary.jpg"
+    },
+    {
+      "frame": 4550,
+      "time": 189.58333333333334,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-04550-boundary.jpg"
+    },
+    {
+      "frame": 4723,
+      "time": 196.79166666666666,
+      "label": "cue-42",
+      "path": "/private/tmp/w01-paced/qa-04723-cue-42.jpg"
+    },
+    {
+      "frame": 5200,
+      "time": 216.66666666666666,
+      "label": "cue-47",
+      "path": "/private/tmp/w01-paced/qa-05200-cue-47.jpg"
+    },
+    {
+      "frame": 5668,
+      "time": 236.16666666666666,
+      "label": "cue-51",
+      "path": "/private/tmp/w01-paced/qa-05668-cue-51.jpg"
+    },
+    {
+      "frame": 5904,
+      "time": 246.0,
+      "label": "cue-53",
+      "path": "/private/tmp/w01-paced/qa-05904-cue-53.jpg"
+    },
+    {
+      "frame": 6321,
+      "time": 263.375,
+      "label": "boundary",
+      "path": "/private/tmp/w01-paced/qa-06321-boundary.jpg"
+    }
+  ],
+  "elapsed_seconds": 41.22,
+  "output_bytes": 6408665,
+  "no_video_speed_change": true,
+  "structural_validation": {
+    "display_srt_cues": 56,
+    "display_srt_all_texts_identical_to_original_burned_captions": true,
+    "timeline_contiguous": true,
+    "at_most_one_static_cut_per_cue": true,
+    "cue_first_12_last_24_source_frames_preserved": true,
+    "all_audio_fits_without_truncation": true,
+    "required_wait_frame_counts": [
+      26,
+      64,
+      18
+    ],
+    "kept_frames_played_at_original_speed": true,
+    "source_frame_accounting": "7398 originals - 1187 idle frames + 111 held frames = 6322 output frames"
+  },
+  "visual_samples_reviewed": [
+    "소개 헤더의 무음 자막 문구 삭제 및 세 배속 표시",
+    "cue11 사람 입력 → 원본 데이터 → 규칙 → 결과 카드",
+    "cue40 승인 후 최저 14.16억 원과 추가 가정 기준 15억 원의 비교 및 발주안 거절",
+    "cue51 Corevia 요청 24,000개 / 공급 가능 12,000개"
+  ]
+}

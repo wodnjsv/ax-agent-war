@@ -1,0 +1,1335 @@
+{
+  "crop": [
+    55,
+    80,
+    1612,
+    914
+  ],
+  "segments": [
+    {
+      "id": "A01-01",
+      "scene": "1",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 551,
+      "end": 581,
+      "speed": 1,
+      "label": "W01 · 캠페인 수요와 공급 일정",
+      "status": "삼일PwC AX 인재전쟁 예선 시연 | 실제 화면 녹화 · 무음 자막",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Masil Commerce 마케팅 담당자의 캠페인 확대 기안 25건을 다룹니다."
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "확정기한 전에 진행할지, 바꿀지, 철회할지 결정하도록 돕습니다."
+        },
+        {
+          "start": 12,
+          "end": 18,
+          "text": "수요 입력, 공급 확인, 승인과 후속 처리를 한 흐름으로 연결합니다."
+        },
+        {
+          "start": 18,
+          "end": 24,
+          "text": "다른 부서의 회신과 승인은 모의 입력입니다."
+        },
+        {
+          "start": 24,
+          "end": 30,
+          "text": "그 입력에 따른 계산, 재판정과 상태 기록은 구현이 직접 처리합니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-01",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 596.5,
+      "end": 602.75,
+      "speed": 1,
+      "label": "정상 · PLAN-002 · 수요 입력",
+      "status": "직접 조작 · 실제 구현 | 가상 일자 2026년 7월 1일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6.25,
+          "text": "시연용 가상 회신 문장을 불러오고, 실제 LLM API로 항목을 정리합니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-02",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 602.8,
+      "end": 611.6,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 9초)",
+      "status": "실제 LLM API 호출 · 수요 문장 정리 | 대기 화면만 배속",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 1.0833333333333333,
+          "text": "AI 호출 대기(8배속, 실제 약 9초)"
+        }
+      ]
+    },
+    {
+      "id": "A02-03",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 611.8,
+      "end": 618.8,
+      "speed": 1,
+      "label": "정상 · AI 정리 결과 확인",
+      "status": "실제 AI 응답 | 값은 사람 확인 후 등록",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "AI는 모호한 증가율을 추측하지 않고 비웁니다. 담당자가 확인해야 합니다."
+        }
+      ],
+      "crop": [
+        255,
+        490,
+        1211,
+        504
+      ]
+    },
+    {
+      "id": "A02-04",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 639.5,
+      "end": 647.5,
+      "speed": 1,
+      "label": "정상 · 사람이 고정 입력값 확인",
+      "status": "시연용 가상 입력 | AI 결과를 확인하고 예시 값으로 맞춤",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 8.0,
+          "text": "예시 값으로 공통 20%, 7월 20일 주부터 4주, 아이팔레트 0%를 확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-05",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 647.5,
+      "end": 654.5,
+      "speed": 1,
+      "label": "정상 · 확인하고 등록",
+      "status": "직접 조작 · 실제 구현 | 가상 일자 2026년 7월 1일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 7.0,
+          "text": "확인한 수요를 등록하면 공급 가능과 다음 승인 요청이 표시됩니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-06",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 675,
+      "end": 683,
+      "speed": 1,
+      "label": "정상 · 계산 근거와 품목별 수량",
+      "status": "규칙·계산: 실제 구현 | 요청액은 표본 규모이며 회사 현금과 합산하지 않음",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 8.0,
+          "text": "품목별 추가 수량은 총 1,404개입니다. 수량 계산과 공급 판정은 AI가 하지 않습니다."
+        }
+      ],
+      "crop": [
+        255,
+        340,
+        1211,
+        585
+      ]
+    },
+    {
+      "id": "A02-07",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 695.5,
+      "end": 701.5,
+      "speed": 1,
+      "label": "정상 · 실제 데이터 흐름",
+      "status": "데이터 흐름 카드 · 정속 | 사용 자료 → 규칙 → 계산 결과",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6.0,
+          "text": "사람 입력과 원본 판매 데이터에서 계산 규칙, 결과로 이어지는 흐름을 확인합니다."
+        }
+      ],
+      "crop": [
+        1040,
+        452,
+        610,
+        542
+      ]
+    },
+    {
+      "id": "A02-08",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 703.6,
+      "end": 710.6,
+      "speed": 1,
+      "label": "정상 · 승인권자와 현금 영향",
+      "status": "승인 경로: 원본 정책과 현금 재전망으로 계산",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 7.0,
+          "text": "8월 6일 집행이 현금 하회 구간에 들어가 그룹 CEO 승인이 필요합니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-09",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 712.5,
+      "end": 716,
+      "speed": 1,
+      "label": "정상 · 승인 요청 초안 만들기",
+      "status": "직접 조작 · 실제 구현 | 가상 일자 2026년 7월 1일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 3.5,
+          "text": "실제 LLM 호출로 승인 요청 초안을 만듭니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-10",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 716,
+      "end": 737.5,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 22초)",
+      "status": "실제 LLM API 호출 · 승인 요청 초안 | 대기 화면만 배속",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 2.6666666666666665,
+          "text": "AI 호출 대기(8배속, 실제 약 22초)"
+        }
+      ]
+    },
+    {
+      "id": "A02-11",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 738,
+      "end": 744,
+      "speed": 1,
+      "label": "정상 · AI 초안 확인",
+      "status": "직접 조작 · 실제 구현 | 가상 일자 2026년 7월 1일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6.0,
+          "text": "초안은 확인 전 상태입니다. 사람이 문서를 확인해야 승인 요청을 올릴 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-12",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 873,
+      "end": 880,
+      "speed": 1,
+      "label": "정상 · 사람이 승인 요청 문서 확인",
+      "status": "직접 조작 | 문서 검토 사이의 공백은 편집에서 생략",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 7.0,
+          "text": "내용을 확인하고 이대로 확인을 누릅니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-13",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 881,
+      "end": 889,
+      "speed": 1,
+      "label": "정상 · 승인 요청 올리기",
+      "status": "직접 조작 · 실제 구현 | 가상 일자 2026년 7월 1일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 8.0,
+          "text": "승인 요청을 올리면 그룹 CEO의 7월 3일 회신을 기다리는 상태가 됩니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-16",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 928.5,
+      "end": 934.5,
+      "speed": 1,
+      "label": "정상 · 7월 3일 · 승인 회신 후 직접 확정",
+      "status": "두 영업일 진행·대기 생략 | 승인 회신: 모의, 확정: 직접 조작",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6.0,
+          "text": "그룹 CEO의 승인은 모의 회신입니다. 조건이 닫히면 담당자가 직접 확정합니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-17",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 936,
+      "end": 941,
+      "speed": 1,
+      "label": "정상 · 확정 상태 기록",
+      "status": "사람의 확정 조작을 시스템 상태에 반영",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "text": "7월 3일 확정한 기안으로 기록됩니다."
+        }
+      ]
+    },
+    {
+      "id": "A02-18",
+      "scene": "2",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 943,
+      "end": 949,
+      "speed": 1,
+      "label": "정상 · 확정까지의 데이터 흐름",
+      "status": "확정 사건 카드 · 정속 | 후속 판단의 근거 기록",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "결정 시점의 공급 판정, 승인 상태, 확정 규칙과 결과가 함께 남습니다."
+        }
+      ],
+      "crop": [
+        1040,
+        428,
+        610,
+        304
+      ]
+    },
+    {
+      "id": "B03-00",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_base.webm",
+      "start": 39.5,
+      "end": 42.5,
+      "speed": 1,
+      "label": "조건 변경 · 초기화 후 기본 시나리오",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "초기화 뒤 전체 기안을 자동 처리합니다. 이 조작과 회신은 모의입니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-01",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 19,
+      "end": 24,
+      "speed": 1,
+      "label": "조건 변경 · PLAN-004 · 7월 9일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "처음에는 공급 가능이며, 승인권자는 Masil 대표입니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-02",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 34.5,
+      "end": 43,
+      "speed": 1,
+      "label": "조건 변경 · 7월 10일 · 승인권자 재판정",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4.25,
+          "text": "보충 발주 승인으로 현금이 30억 원 아래인 기간이 늘어납니다."
+        },
+        {
+          "start": 4.25,
+          "end": 8.5,
+          "text": "집행일이 그 기간에 들어가 승인권자가 그룹 CEO로 바뀝니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-03",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 94,
+      "end": 99.0,
+      "speed": 1,
+      "label": "조건 변경 · 데이터 흐름 근거 확대",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "text": "하회 구간의 끝이 8월 21일에서 28일로 늘어난 계산 기록입니다."
+        }
+      ],
+      "crop": [
+        1040,
+        660,
+        610,
+        354
+      ]
+    },
+    {
+      "id": "B03-04",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 104.7,
+      "end": 110.7,
+      "speed": 8,
+      "label": "7월 13일로 진행 · 날짜 이동 대기(8배속)",
+      "status": "실제 처리 중인 대기 화면 | 6초를 0.75초로 압축",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 0.75,
+          "text": "날짜 이동 대기(8배속)"
+        }
+      ]
+    },
+    {
+      "id": "B03-05",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 118.5,
+      "end": 124.5,
+      "speed": 1,
+      "label": "조건 변경 · 7월 13일 · 원료 지연 회신",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "원료 지연 회신이 들어오자 공급 판정이 부족으로 바뀝니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-06",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 128.5,
+      "end": 140.5,
+      "speed": 1,
+      "label": "조건 변경 · 대안 비교",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "판매 시기 이동, 조기 공급 요청 등 대안을 비교합니다."
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "추천 대안은 판매 시작을 9월 14일로 늦추는 것입니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-07",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 150,
+      "end": 161,
+      "speed": 1,
+      "label": "조건 변경 · 7월 14일 · 시기 이동 후 재계산",
+      "status": "담당자의 대안 선택: 모의 | 날짜 이동 대기 일부 생략",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "원료 지연을 반영한 새 계획으로 공급을 다시 계산합니다."
+        },
+        {
+          "start": 5,
+          "end": 11,
+          "text": "판매 시작을 옮기자 공급 가능으로 바뀝니다."
+        }
+      ]
+    },
+    {
+      "id": "B03-08",
+      "scene": "3",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 209,
+      "end": 212,
+      "speed": 1,
+      "label": "조건 변경 · 7월 16일 · 확정",
+      "status": "확정 행동: 모의 | 판정·상태 기록: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "공급과 승인을 다시 확인한 뒤 확정 상태를 남깁니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-01",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 260.8,
+      "end": 265,
+      "speed": 1,
+      "label": "정보 부족 · PLAN-005 · 7월 20일",
+      "status": "기본 시나리오 | 날짜 이동 대기 일부 생략",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4.2,
+          "text": "수요 회신이 없으면 판정불가입니다. 기한 경과 경위도 남깁니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-02",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 327,
+      "end": 334,
+      "speed": 1,
+      "label": "공급 미확약 · PLAN-011 · 8월 5일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 3.5,
+          "text": "공급이 부족해 Corevia에 조기·분할 공급을 요청합니다."
+        },
+        {
+          "start": 3.5,
+          "end": 7,
+          "text": "요청한 대안과 다음 회신 대기가 데이터 흐름 카드에 남습니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-03",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 386,
+      "end": 392,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 6일 · Corevia 불가 회신",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "생산·원료 제약으로 조기 공급이 불가합니다. 이 대안을 제외하고 재계산합니다."
+        }
+      ],
+      "crop": [
+        1040,
+        315,
+        610,
+        447
+      ]
+    },
+    {
+      "id": "B04-04",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 450,
+      "end": 456,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 7일 · 시기 이동",
+      "status": "담당자 선택: 모의 | 날짜 이동 대기 일부 생략",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "시기를 옮겨도 공급은 조건부입니다. Corevia 확약을 계속 기다립니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-05",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 478,
+      "end": 482,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 10일 · 기안 승인",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "기안은 승인됐지만 공급 조건이 남아 확정 대기합니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-06",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 522,
+      "end": 527,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 13일 · 위험 수용",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "내부 발주 승인 후에도 공급은 미확약입니다. 승인권자의 위험 수용이 별도로 필요합니다."
+        }
+      ]
+    },
+    {
+      "id": "B04-07",
+      "scene": "4B",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 573,
+      "end": 580.8,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 14일 · 확정",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 7.79,
+          "text": "위험 수용으로 확정돼도 공급 판정은 조건부로 남습니다. 확약 회신을 계속 확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "C04-01",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 105,
+      "end": 108,
+      "speed": 1,
+      "label": "승인 거절 · 초기화 후 CEO 현금 조건(가정)",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "별도 실행: CEO 최저 잔액 조건은 추가 가정입니다."
+        }
+      ]
+    },
+    {
+      "id": "C04-02",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 181,
+      "end": 191,
+      "speed": 1,
+      "label": "승인 거절 · PLAN-014 · 7월 16일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "승인 후 최저 14.16억 < 기준 15억\n보충 발주안이 거절됐습니다."
+        },
+        {
+          "start": 5,
+          "end": 10,
+          "text": "해당 발주에 기대던 기안은 공급 부족입니다.\n품목 구성을 바꾸는 대안이 제시됩니다."
+        }
+      ]
+    },
+    {
+      "id": "C04-03",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 230.97,
+      "end": 234.97,
+      "speed": 1,
+      "label": "대안 실행 · PLAN-014 · 7월 20일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "품목 구성 변경 → 수요 정정\n재판정 결과: 부족 → 가능"
+        }
+      ]
+    },
+    {
+      "id": "C04-04",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 254,
+      "end": 259,
+      "speed": 1,
+      "label": "대안 실행 결과 · PLAN-014 · 7월 21일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "7월 21일, 변경한 구성으로 확정됩니다."
+        }
+      ]
+    },
+    {
+      "id": "C04-05",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 425,
+      "end": 429,
+      "speed": 1,
+      "label": "다른 기안의 철회 · PLAN-011 · 8월 13일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "다른 기안 PLAN-011은\n공급 위험 수용 없이 철회합니다."
+        }
+      ]
+    },
+    {
+      "id": "C04-06",
+      "scene": "4C",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 438,
+      "end": 447,
+      "speed": 1,
+      "label": "철회 후속 처리 · PLAN-011 · 8월 13일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4.5,
+          "text": "발주 전 보충안을 취소했습니다."
+        },
+        {
+          "start": 4.5,
+          "end": 9,
+          "text": "약정과 예정 현금 유출에서\n5.24억 원을 뺐습니다."
+        }
+      ]
+    },
+    {
+      "id": "B05-01",
+      "scene": "5",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 522,
+      "end": 527,
+      "speed": 1,
+      "label": "필수 확장 되짚기 · 앞선 8월 13일 화면",
+      "status": "앞 장면 재사용 · 정속 | 내부 승인과 공급 확약 분리",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "내부 발주 승인은 구매·지출 허용입니다. Corevia 공급 확약과 분리합니다."
+        }
+      ]
+    },
+    {
+      "id": "B05-02",
+      "scene": "5",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 89.5,
+      "end": 94,
+      "speed": 1,
+      "label": "다른 부서 영향 되짚기 · 앞선 7월 10일",
+      "status": "앞 장면 재사용 · 정속 | 재무 계산 → 재검토 → 승인 경로",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4.5,
+          "text": "재무의 현금 하회 구간이 바뀌면 관련 판단을 다시 엽니다."
+        }
+      ],
+      "crop": [
+        1040,
+        315,
+        610,
+        465
+      ]
+    },
+    {
+      "id": "B05-03",
+      "scene": "5",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 94,
+      "end": 99.0,
+      "speed": 1,
+      "label": "다른 부서 영향 · 현금 구간과 재검토 기록",
+      "status": "앞 장면 재사용 · 정속 | 입력·규칙·결과를 연결해 기록",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "text": "결론이 같은 건은 유지하고, 바뀐 건은 승인 경로를 재검토합니다."
+        }
+      ],
+      "crop": [
+        1040,
+        660,
+        610,
+        354
+      ]
+    },
+    {
+      "id": "B05-04",
+      "scene": "5",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 402,
+      "end": 417,
+      "speed": 1,
+      "label": "다른 부서 영향 · 앞선 8월 6일 Corevia 카드",
+      "status": "앞 장면 재사용 · 정속 | 원본 자료·모의 회신·계산값 구분",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "공급 회신에는 원료 확보일과 생산 라인 배정이 함께 들어갑니다."
+        },
+        {
+          "start": 5,
+          "end": 10,
+          "text": "기발주 24,000개 중 12,000개만 공급 가능하다는 회신입니다."
+        },
+        {
+          "start": 10,
+          "end": 15,
+          "text": "원료·생산 일정 자체는 계산하지 않습니다. 받은 회신을 검증해 판정합니다."
+        }
+      ],
+      "crop": [
+        1042,
+        614,
+        608,
+        400
+      ]
+    },
+    {
+      "id": "D06-01",
+      "scene": "6D",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 64,
+      "end": 72,
+      "speed": 1,
+      "label": "추가 확장 · 회수일 지연(가정) · 별도 실행 · 7월 10일",
+      "status": "부서 회신·담당자 행동: 모의 입력 | 판정·상태 갱신: 실제 구현",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "회수일 지연 시나리오에서는\n현금 하회 구간이 9월 4일까지 늘어납니다."
+        }
+      ]
+    },
+    {
+      "id": "B06-01",
+      "scene": "6",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/B_continue.webm",
+      "start": 590,
+      "end": 599,
+      "speed": 1,
+      "label": "추가 확장 · 정기 보충 발주 민감도",
+      "status": "기안 상세의 참고 계산 · 정속 | 기준선의 한계 표시",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 4.5,
+          "text": "정기 보충 발주 지급은 기준선에 넣지 않고 민감도로 따로 봅니다."
+        },
+        {
+          "start": 4.5,
+          "end": 9,
+          "text": "향후 판매대금 유입이 없어, 지급만 더하면 잔액이 과도하게 낮아집니다."
+        }
+      ],
+      "crop": [
+        255,
+        647,
+        1211,
+        280
+      ]
+    },
+    {
+      "id": "A06-01",
+      "scene": "6A",
+      "source": "/Users/kimjaewon/Downloads/삼일PwC_프로젝트폴더/outputs/w01-video/raw/E_final_takes.webm",
+      "start": 1036,
+      "end": 1044,
+      "speed": 1,
+      "label": "추가 확장 · 직접 처리 기안 방치",
+      "status": "별도 확인 · 직접 처리 유지 · 7월 20일",
+      "subtitles": [
+        {
+          "start": 0,
+          "end": 8.0,
+          "text": "직접 처리 기안을 방치하면 경고 후 기한 경과 확정됩니다. 담당자 입력 없음이 남습니다."
+        }
+      ]
+    }
+  ],
+  "duration_seconds": 308.25,
+  "fps": 24,
+  "timeline": [
+    {
+      "id": "A01-01",
+      "scene": "1",
+      "output_start": 0.0,
+      "output_end": 30.0,
+      "source_seconds": 30,
+      "speed": 1,
+      "label": "W01 · 캠페인 수요와 공급 일정"
+    },
+    {
+      "id": "A02-01",
+      "scene": "2",
+      "output_start": 30.0,
+      "output_end": 36.25,
+      "source_seconds": 6.25,
+      "speed": 1,
+      "label": "정상 · PLAN-002 · 수요 입력"
+    },
+    {
+      "id": "A02-02",
+      "scene": "2",
+      "output_start": 36.25,
+      "output_end": 37.333333333333336,
+      "source_seconds": 8.800000000000068,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 9초)"
+    },
+    {
+      "id": "A02-03",
+      "scene": "2",
+      "output_start": 37.333333333333336,
+      "output_end": 44.333333333333336,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · AI 정리 결과 확인"
+    },
+    {
+      "id": "A02-04",
+      "scene": "2",
+      "output_start": 44.333333333333336,
+      "output_end": 52.333333333333336,
+      "source_seconds": 8.0,
+      "speed": 1,
+      "label": "정상 · 사람이 고정 입력값 확인"
+    },
+    {
+      "id": "A02-05",
+      "scene": "2",
+      "output_start": 52.333333333333336,
+      "output_end": 59.333333333333336,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · 확인하고 등록"
+    },
+    {
+      "id": "A02-06",
+      "scene": "2",
+      "output_start": 59.333333333333336,
+      "output_end": 67.33333333333334,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "정상 · 계산 근거와 품목별 수량"
+    },
+    {
+      "id": "A02-07",
+      "scene": "2",
+      "output_start": 67.33333333333333,
+      "output_end": 73.33333333333333,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "정상 · 실제 데이터 흐름"
+    },
+    {
+      "id": "A02-08",
+      "scene": "2",
+      "output_start": 73.33333333333333,
+      "output_end": 80.33333333333333,
+      "source_seconds": 7.0,
+      "speed": 1,
+      "label": "정상 · 승인권자와 현금 영향"
+    },
+    {
+      "id": "A02-09",
+      "scene": "2",
+      "output_start": 80.33333333333333,
+      "output_end": 83.83333333333333,
+      "source_seconds": 3.5,
+      "speed": 1,
+      "label": "정상 · 승인 요청 초안 만들기"
+    },
+    {
+      "id": "A02-10",
+      "scene": "2",
+      "output_start": 83.83333333333333,
+      "output_end": 86.5,
+      "source_seconds": 21.5,
+      "speed": 8,
+      "label": "AI 호출 대기(8배속, 실제 약 22초)"
+    },
+    {
+      "id": "A02-11",
+      "scene": "2",
+      "output_start": 86.5,
+      "output_end": 92.5,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "정상 · AI 초안 확인"
+    },
+    {
+      "id": "A02-12",
+      "scene": "2",
+      "output_start": 92.5,
+      "output_end": 99.5,
+      "source_seconds": 7,
+      "speed": 1,
+      "label": "정상 · 사람이 승인 요청 문서 확인"
+    },
+    {
+      "id": "A02-13",
+      "scene": "2",
+      "output_start": 99.5,
+      "output_end": 107.5,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "정상 · 승인 요청 올리기"
+    },
+    {
+      "id": "A02-16",
+      "scene": "2",
+      "output_start": 107.5,
+      "output_end": 113.5,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "정상 · 7월 3일 · 승인 회신 후 직접 확정"
+    },
+    {
+      "id": "A02-17",
+      "scene": "2",
+      "output_start": 113.5,
+      "output_end": 118.5,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "정상 · 확정 상태 기록"
+    },
+    {
+      "id": "A02-18",
+      "scene": "2",
+      "output_start": 118.5,
+      "output_end": 124.5,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "정상 · 확정까지의 데이터 흐름"
+    },
+    {
+      "id": "B03-00",
+      "scene": "3",
+      "output_start": 124.5,
+      "output_end": 127.5,
+      "source_seconds": 3.0,
+      "speed": 1,
+      "label": "조건 변경 · 초기화 후 기본 시나리오"
+    },
+    {
+      "id": "B03-01",
+      "scene": "3",
+      "output_start": 127.5,
+      "output_end": 132.5,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "조건 변경 · PLAN-004 · 7월 9일"
+    },
+    {
+      "id": "B03-02",
+      "scene": "3",
+      "output_start": 132.5,
+      "output_end": 141.0,
+      "source_seconds": 8.5,
+      "speed": 1,
+      "label": "조건 변경 · 7월 10일 · 승인권자 재판정"
+    },
+    {
+      "id": "B03-03",
+      "scene": "3",
+      "output_start": 141.0,
+      "output_end": 146.0,
+      "source_seconds": 5.0,
+      "speed": 1,
+      "label": "조건 변경 · 데이터 흐름 근거 확대"
+    },
+    {
+      "id": "B03-04",
+      "scene": "3",
+      "output_start": 146.0,
+      "output_end": 146.75,
+      "source_seconds": 6.0,
+      "speed": 8,
+      "label": "7월 13일로 진행 · 날짜 이동 대기(8배속)"
+    },
+    {
+      "id": "B03-05",
+      "scene": "3",
+      "output_start": 146.75,
+      "output_end": 152.75,
+      "source_seconds": 6.0,
+      "speed": 1,
+      "label": "조건 변경 · 7월 13일 · 원료 지연 회신"
+    },
+    {
+      "id": "B03-06",
+      "scene": "3",
+      "output_start": 152.75,
+      "output_end": 164.75,
+      "source_seconds": 12.0,
+      "speed": 1,
+      "label": "조건 변경 · 대안 비교"
+    },
+    {
+      "id": "B03-07",
+      "scene": "3",
+      "output_start": 164.75,
+      "output_end": 175.75,
+      "source_seconds": 11,
+      "speed": 1,
+      "label": "조건 변경 · 7월 14일 · 시기 이동 후 재계산"
+    },
+    {
+      "id": "B03-08",
+      "scene": "3",
+      "output_start": 175.75,
+      "output_end": 178.75,
+      "source_seconds": 3,
+      "speed": 1,
+      "label": "조건 변경 · 7월 16일 · 확정"
+    },
+    {
+      "id": "B04-01",
+      "scene": "4B",
+      "output_start": 178.75,
+      "output_end": 182.95833333333334,
+      "source_seconds": 4.199999999999989,
+      "speed": 1,
+      "label": "정보 부족 · PLAN-005 · 7월 20일"
+    },
+    {
+      "id": "B04-02",
+      "scene": "4B",
+      "output_start": 182.95833333333334,
+      "output_end": 189.95833333333334,
+      "source_seconds": 7,
+      "speed": 1,
+      "label": "공급 미확약 · PLAN-011 · 8월 5일"
+    },
+    {
+      "id": "B04-03",
+      "scene": "4B",
+      "output_start": 189.95833333333334,
+      "output_end": 195.95833333333334,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 6일 · Corevia 불가 회신"
+    },
+    {
+      "id": "B04-04",
+      "scene": "4B",
+      "output_start": 195.95833333333334,
+      "output_end": 201.95833333333334,
+      "source_seconds": 6,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 7일 · 시기 이동"
+    },
+    {
+      "id": "B04-05",
+      "scene": "4B",
+      "output_start": 201.95833333333334,
+      "output_end": 205.95833333333334,
+      "source_seconds": 4,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 10일 · 기안 승인"
+    },
+    {
+      "id": "B04-06",
+      "scene": "4B",
+      "output_start": 205.95833333333334,
+      "output_end": 210.95833333333334,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 13일 · 위험 수용"
+    },
+    {
+      "id": "B04-07",
+      "scene": "4B",
+      "output_start": 210.95833333333334,
+      "output_end": 218.75,
+      "source_seconds": 7.7999999999999545,
+      "speed": 1,
+      "label": "공급 미확약 · 8월 14일 · 확정"
+    },
+    {
+      "id": "C04-01",
+      "scene": "4C",
+      "output_start": 218.75,
+      "output_end": 221.75,
+      "source_seconds": 3,
+      "speed": 1,
+      "label": "승인 거절 · 초기화 후 CEO 현금 조건(가정)"
+    },
+    {
+      "id": "C04-02",
+      "scene": "4C",
+      "output_start": 221.75,
+      "output_end": 231.75,
+      "source_seconds": 10,
+      "speed": 1,
+      "label": "승인 거절 · PLAN-014 · 7월 16일"
+    },
+    {
+      "id": "C04-03",
+      "scene": "4C",
+      "output_start": 231.75,
+      "output_end": 235.75,
+      "source_seconds": 4.0,
+      "speed": 1,
+      "label": "대안 실행 · PLAN-014 · 7월 20일"
+    },
+    {
+      "id": "C04-04",
+      "scene": "4C",
+      "output_start": 235.75,
+      "output_end": 240.75,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "대안 실행 결과 · PLAN-014 · 7월 21일"
+    },
+    {
+      "id": "C04-05",
+      "scene": "4C",
+      "output_start": 240.75,
+      "output_end": 244.75,
+      "source_seconds": 4,
+      "speed": 1,
+      "label": "다른 기안의 철회 · PLAN-011 · 8월 13일"
+    },
+    {
+      "id": "C04-06",
+      "scene": "4C",
+      "output_start": 244.75,
+      "output_end": 253.75,
+      "source_seconds": 9,
+      "speed": 1,
+      "label": "철회 후속 처리 · PLAN-011 · 8월 13일"
+    },
+    {
+      "id": "B05-01",
+      "scene": "5",
+      "output_start": 253.75,
+      "output_end": 258.75,
+      "source_seconds": 5,
+      "speed": 1,
+      "label": "필수 확장 되짚기 · 앞선 8월 13일 화면"
+    },
+    {
+      "id": "B05-02",
+      "scene": "5",
+      "output_start": 258.75,
+      "output_end": 263.25,
+      "source_seconds": 4.5,
+      "speed": 1,
+      "label": "다른 부서 영향 되짚기 · 앞선 7월 10일"
+    },
+    {
+      "id": "B05-03",
+      "scene": "5",
+      "output_start": 263.25,
+      "output_end": 268.25,
+      "source_seconds": 5.0,
+      "speed": 1,
+      "label": "다른 부서 영향 · 현금 구간과 재검토 기록"
+    },
+    {
+      "id": "B05-04",
+      "scene": "5",
+      "output_start": 268.25,
+      "output_end": 283.25,
+      "source_seconds": 15,
+      "speed": 1,
+      "label": "다른 부서 영향 · 앞선 8월 6일 Corevia 카드"
+    },
+    {
+      "id": "D06-01",
+      "scene": "6D",
+      "output_start": 283.25,
+      "output_end": 291.25,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "추가 확장 · 회수일 지연(가정) · 별도 실행 · 7월 10일"
+    },
+    {
+      "id": "B06-01",
+      "scene": "6",
+      "output_start": 291.25,
+      "output_end": 300.25,
+      "source_seconds": 9,
+      "speed": 1,
+      "label": "추가 확장 · 정기 보충 발주 민감도"
+    },
+    {
+      "id": "A06-01",
+      "scene": "6A",
+      "output_start": 300.25,
+      "output_end": 308.25,
+      "source_seconds": 8,
+      "speed": 1,
+      "label": "추가 확장 · 직접 처리 기안 방치"
+    }
+  ]
+}
